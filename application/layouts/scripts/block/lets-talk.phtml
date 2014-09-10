@@ -1,0 +1,21 @@
+<?php $modelStatic = new Admin_Model_StaticContents();
+    $letTalk = $modelStatic->getContentValueByCode("FOOTER_CONTACT");
+    $letTalkFooter = (!empty($letTalk->StaticContent))?unserialize($letTalk->StaticContent):NULL;
+?>
+<div class="lets-talk">
+        <ul class="list-media custom-list">
+            <li>Talk to us</li>
+            <li><strong><?php echo (!empty($letTalkFooter['name']))?$letTalkFooter['name']:"";?></strong></li>
+            <?php if (!empty($letTalkFooter['phone'])) : ?>
+                <li>
+                    <img src="/images/footer/phone-icon.png"/>
+                    <span class="phone-number-with-command"><a href="tel:<?php echo $letTalkFooter['phone']; ?>"><?php echo $letTalkFooter['phone']; ?></a></span>
+                    <span class="phone-number-without-command"><?php echo $letTalkFooter['phone']; ?></span>
+                </li>
+            <?php endif; ?>
+            <li><img src="/images/footer/email-icon.png"/>
+                <a style="color: white" href="mailto:<?php echo (!empty($letTalkFooter['email']))?$letTalkFooter['email']:"";?>">
+                <?php echo (!empty($letTalkFooter['email']))?$letTalkFooter['email']:"";?></a></li>
+         </ul>
+</div>
+<div class="clear-both"></div>

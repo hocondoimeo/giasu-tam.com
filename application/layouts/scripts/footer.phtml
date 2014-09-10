@@ -1,6 +1,130 @@
 
-<div class="row-fluid show-grid">
-    <div class="span12">
-        <div style="text-align:center;">Copyright &copy; Tung Ly.</div>
+    <div class="footer">
+        <div class="container padding-top-footer">
+            <div class="row-fluid" style="position: relative;">
+                <div id="social-link-footer" class="span5" style="">
+                    <?php echo $this->render('/block/social-links.phtml'); ?>
+                </div>
+                <div id="let-talk-footer" class="span3">
+                    <?php echo $this->render('/block/lets-talk.phtml'); ?>
+                </div>
+                <div id="logo-footer" class="span4">
+                    <?php echo $this->render('/block/part-of-the-4impact-group.phtml'); ?>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="URL" value="<?php  echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>"></div>
+
+<!-- -------------------------------------STAST TRACKING WITH CRAZY EGG AND GOOGLE ANALYTIS------------------------------------- -->
+
+    <!-- start tracking code with crazy egg -->
+    <script type="text/javascript">
+    setTimeout(function(){var a=document.createElement("script");
+    var b=document.getElementsByTagName("script")[0];
+    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/4906.js?"+Math.floor(new Date().getTime()/3600000);
+    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+    </script>
+    <!-- end tracking code with crazy egg -->
+
+
+
+<?php //if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1') : ?>
+    <?php
+            $modelConfig = new Application_Model_Configs();
+            $analyticCode = $modelConfig->getConfigValue("analytic-code");
+    ?>
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '<?php echo $analyticCode; ?>']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+<?php //endif; ?>
+
+<script type="text/javascript">
+
+function showFooterInSmallViewPort(){
+
+    var bodyWidth = $(window).width();
+    if(bodyWidth > 767){
+        $(".social-links-linkedIn").tooltip();
+        $(".social-links-twitter").tooltip();
+        $(".social-links-facebook").tooltip();
+        $(".social-links-google-plus").tooltip();
+        $(".social-links-linkedIn").hover(function(){
+            $(".tooltip").show();
+        });
+        $(".social-links-twitter").hover(function(){
+          $(".tooltip").show();
+        });
+        $(".social-links-facebook").hover(function(){
+          $(".tooltip").show();
+        });
+        $(".social-links-google-plus").hover(function(){
+          $(".tooltip").show();
+        });
+    }
+    else{
+        $(".social-links-linkedIn").hover(function(){
+              $(".tooltip").hide();
+        });
+        $(".social-links-twitter").hover(function(){
+            $(".tooltip").hide();
+        });
+        $(".social-links-facebook").hover(function(){
+            $(".tooltip").hide();
+        });
+        $(".social-links-google-plus").hover(function(){
+            $(".tooltip").hide();
+        });
+    }
+}
+
+function showGroupSocialLinkInSmall(){
+    var bodyWidth = $(window).width();
+    if(bodyWidth < 767){
+        var countSocialLink = eval($(".social-links").attr("count"));
+        var widthOneSocialLink = "width: "+100/countSocialLink + "% !important";
+        $(".one-link-footer").attr("style",widthOneSocialLink);
+    }else{
+        $(".one-link-footer").attr("style", "width: auto");
+    }
+}
+
+function editCssForIe8(){
+    if($.browser.msie  && parseInt($.browser.version, 10) === 8){
+        var bodyWidth = $(window).width();
+        if(bodyWidth < 767){
+            $(".content-right").attr("style","text-align: left;margin: 0px !important;padding-left: 5px;padding-right: 5px;");
+            $(".image-left").attr("style","margin: 0px !important;padding: 0px !important;");
+        }
+        else{
+            $(".content-right").attr("style","");
+            $(".image-left").attr("style","");
+        }
+    }
+}
+
+showGroupSocialLinkInSmall();
+showFooterInSmallViewPort();
+
+
+$(window).resize(function () {
+    showGroupSocialLinkInSmall();
+    showFooterInSmallViewPort();
+    editCssForIe8();
+});
+
+
+$(document).ready(function() {
+    editCssForIe8();
+});
+</script>

@@ -1,0 +1,80 @@
+<?php
+$arrCategories = $this->common()->getConfigByCategoryCode('group-button-social');
+
+$likeFaceBookUser = null;
+$followTwitterUser = null;
+$followLinkedInUser = null;
+$folowGooglePlusUser = null;
+$count = 0;
+
+foreach ($arrCategories as $key => $arrCategory) {
+    switch ($arrCategory->ConfigCode) {
+        case 'account-facebook': {
+                $likeFaceBookUser = $arrCategory->ConfigValue;
+                $count++;
+                break;
+            }
+        case 'account-linkedin': {
+                $followLinkedInUser = $arrCategory->ConfigValue;
+                $count++;
+                break;
+            }
+        case 'account-twitter': {
+                $followTwitterUser = $arrCategory->ConfigValue;
+                $count++;
+                break;
+            }
+        case 'account-google-plus': {
+                $folowGooglePlusUser = $arrCategory->ConfigValue;
+                $count++;
+                break;
+            }
+    }
+}
+?>
+<?php if ($count): ?>
+    <div class="social-links" count="<?php echo $count; ?>" style="width: 100%;">
+                <div class="social-link-custom-div1">&nbsp</div>
+                <div class="social-link-custom-div2">
+                    <div class="group-social-link-footer" >
+
+                        <ul class="list-media">
+                        <li>Follow Us</li>
+                        <?php if (!empty($followLinkedInUser)):?>
+                        <li class="one-link-footer footer-link-media" <?php if (empty($followLinkedInUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
+                            <a style="width: 30px;" href="http://www.linkedin.com/company/<?php $linkedInUser = explode("_", $followLinkedInUser); echo $linkedInUser[1]; ?>" target="_blank">
+                                <img class="social-links-linkedIn" src= "/images/footer/linkin.png" rel="tooltip" data-placement="bottom"
+                                     data-original-title="<?php $userNameLinkedIn = $linkedInUser[0]; echo "Open $userNameLinkedIn's LinkedIn page"; ?>"/></a>
+                        </li>
+                        <?php endif;?>
+                        <?php if (!empty($followTwitterUser)):?>
+                        <li  class="one-link-footer <?php echo (empty($followLinkedInUser))?'footer-link-media':"";?>" <?php if (empty($followTwitterUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
+                            <a href="https://twitter.com/<?php echo $followTwitterUser; ?>" target="_blank">
+                                <img class="social-links-twitter" src= "/images/footer/twitter.png" rel="tooltip" data-placement="bottom"
+                                     data-original-title="<?php echo "Open $followTwitterUser's Twitter page"; ?>"/></a>
+                        </li>
+                        <?php endif;?>
+                        <?php if (!empty($likeFaceBookUser)):?>
+                        <li class="one-link-footer <?php echo (($this->format()->isShowClassFB($followLinkedInUser, $followTwitterUser)))?'footer-link-media':"";?>" <?php if (empty($likeFaceBookUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
+                            <a href="http://www.facebook.com/<?php echo $likeFaceBookUser; ?>" target="_blank">
+                                <img class="social-links-facebook" src= "/images/footer/facebook.png" rel="tooltip" data-placement="bottom"
+                                     data-original-title="<?php echo "Open $likeFaceBookUser's Facebook page"; ?>"/></a>
+                        </li>
+                        <?php endif;?>
+                        <?php if (!empty($folowGooglePlusUser)):?>
+                        <li class="one-link-footer" <?php if (empty($folowGooglePlusUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
+                            <a href="https://plus.google.com/<?php $googlePlusUser = explode("_", $folowGooglePlusUser);   echo $googlePlusUser[1]; ?>/posts" target="_blank">
+                                <img class="social-links-google-plus" src= "/images/footer/google.png" rel="tooltip" data-placement="bottom"
+                                     data-original-title="<?php $userNameGooglePlus = $googlePlusUser[0];  echo "Open $userNameGooglePlus's Google Plus page"; ?>"/></a>
+                        </li>
+                        <?php endif;?>
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="social-link-custom-div3">&nbsp</div>
+    </div>
+    <address id="large-view-port-copy-right" class="copyright">
+             &copy; 2012 4impact All Rights Reserved | Privacy Policy
+    </address>
+<?php endif; ?>

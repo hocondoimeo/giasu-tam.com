@@ -22,7 +22,9 @@ if(APPLICATION_ENV != 'development') {
         }
     }
 }
-    
+
+//config for layout
+require_once APPLICATION_PATH . '/../library/Function/layout.php';
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
