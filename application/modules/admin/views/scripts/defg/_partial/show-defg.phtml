@@ -1,0 +1,28 @@
+<?php
+/**
+ * partial loop of Defg
+ * Defg
+ */
+ 
+    $dataRow       = $this->dataRow;
+    
+?>
+<tr>
+    
+    <td>
+        <?php echo $dataRow->id;?>
+    </td>
+
+    <td>
+        <?php echo $dataRow->value;?>
+    </td>
+    
+    <td>
+        <a href="/defg/update-defg/id/<?php echo $dataRow->id; ?>" class="btn btn-warning"> <i class="icon-edit"></i> 
+           Update
+        </a>
+        <a href="/defg/delete-defg/id/<?php echo $dataRow->id; ?>" class="btn btn-danger btn-delete"> <i class="icon-remove icon-white"></i> 
+           Delete
+        </a>
+    </td>
+</tr>

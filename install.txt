@@ -1,0 +1,10 @@
+
+    
+    
+
+Document Root: C:/wamp/www/giasu.com/public
+
+<br/>
+
+Server Name: giasu.com
+    

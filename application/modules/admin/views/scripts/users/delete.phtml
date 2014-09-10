@@ -1,0 +1,51 @@
+
+            <div class="row-fluid">
+                <div class="span12">
+                     <div class="alert alert-warning fade in">
+                        <button class="close" data-dismiss="alert" type="button">x</button>
+                        <?php echo str_replace(array("error/","{subject}"),array("","user"),ALERT_MESSAGES_DELETE_WARNING);?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row-fluid">
+                <div class="span12">
+                        <p>
+                            <a href="/admin/users" class="btn btn-medium btn-primary"><i class="icon-chevron-left icon-white"></i> Back to User list</a>
+                        </p>
+                </div>
+            </div>
+            <div class="row-fluid">
+                <div class="box span12">
+                    <div class="box-header well">
+                        <h2><i class="icon-user"></i> Delete User</h2>
+                    </div>
+                    <div class="box-content">
+                        <h2><?php echo str_replace(array("{OBJECT}","{INFORMATION}"),array("User",$this->User->FirstName." ".$this->User->LastName), WARNING_DELETE_PAGE);?></h2>
+
+                        <table>
+                        <tr><td class="td-left-customize-view"><b>Email: </b></td><td class="td-right-customize-view"><?php echo $this->User->Email;?></td></tr>
+                        <tr><td class="td-left-customize-view"><b>Date Created: </b></td><td class="td-right-customize-view"><?php
+                        $createdDate = new Zend_Date($this->User->CreatedDate,DATE_FORMAT_DATABASE);echo $createdDate->toString(DATE_FORMAT_FULL);?>
+                        </td></tr>
+                        <tr><td class="td-left-customize-view"><b>Last Login: </b></td><td class="td-right-customize-view"><?php
+                           if(!empty($this->User->LastLogin)){
+                                $lastLogin = new Zend_Date($this->User->LastLogin,DATE_FORMAT_DATABASE);echo $lastLogin->toString(DATE_FORMAT_FULL);
+                           }
+                           else echo 'N/A';
+                        ?></td></tr>
+                        <tr><td class="td-left-customize-view"><b>Status: </b></td><td class="td-right-customize-view">
+                             <?php if(!$this->User->IsDisabled):?><span class="label label-success">Active</span><?php endif;?>
+                             <?php if($this->User->IsDisabled):?><span class="label">Inactive</span><?php endif;?>
+                        </td></tr>
+                        </table>
+                        <div class="clearfix"></div>
+
+                        <p style="padding-top: 20px;">
+                            <a href="/admin/users/delete/id/<?php echo $this->User->UserId;?>/confirm/1" class="btn btn-medium btn-danger"><i class="icon-trash icon-white"></i> Delete</a>
+                            <a href="javascript:history.go(-1)" class="btn btn-medium" style="height: 20px;">Cancel</a>
+                        </p>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>

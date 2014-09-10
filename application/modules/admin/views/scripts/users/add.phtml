@@ -1,0 +1,258 @@
+
+            <div class="row-fluid">
+                <?php if(isset($this->message)):?>
+                <?php $message = explode("/", $this->message);?>
+                <div class="span12">
+                     <div class="alert alert-error fade in">
+                        <button class="close" data-dismiss="alert" type="button">x</button>
+                        <?php echo $message[1];?>
+                        <ul><?php if(isset($message[2])){for($i=2;$i<count($message);$i++) echo '<li>'.$message[$i].'</li>';}?></ul>
+                    </div>
+                </div>
+                <?php endif;?>
+            </div>
+
+            <div class="row-fluid sortable">
+                <div class="box span12">
+                    <div class="box-header well" data-original-title>
+                        <h2><i class="icon-user"></i> Add User</h2>
+                    </div>
+                    <div class="box-content">
+                        <form class="form-horizontal" id="frmConfirm" method="post" action="/admin/users/add" >
+                            <fieldset>
+                              <div class="control-group <?php $messageFirstName = $this->userForm->FirstName->getMessages();
+                              if(count($messageFirstName)) echo ' error';?>">
+                                <label class="control-label" for="FirstName">First Name</label>
+                                <div class="controls">
+                                  <?php echo $this->userForm->FirstName->setDecorators(array('ViewHelper'));?>
+                                  <span class="help-inline"><?php
+                                  if(isset($messageFirstName["isEmpty"])) echo 'Please enter First Name';
+                                  if(isset($messageFirstName["stringLengthTooShort"])) echo 'First Name must be between 2-50 characters long';?></span>
+                                </div>
+                              </div>
+
+                             <div class="control-group <?php $messageLastName = $this->userForm->LastName->getMessages();
+                              if(count($messageLastName)) echo ' error';?>">
+                                <label class="control-label" for="LastName">Last Name</label>
+                                <div class="controls">
+                                  <?php echo $this->userForm->LastName->setDecorators(array('ViewHelper'));?>
+                                  <span class="help-inline"><?php
+                                  if(isset($messageLastName["isEmpty"])) echo 'Please enter Last Name';
+                                  if(isset($messageLastName["stringLengthTooShort"])) echo 'Last Name must be between 2-50 characters long';?></span>
+                                </div>
+                              </div>
+
+                              <div class="control-group <?php $messageEmail = $this->userForm->Email->getMessages();
+                              if(count($messageEmail)) echo ' error';?>">
+                                <label class="control-label" for="Email">Email</label>
+                                <div class="controls">
+                                  <?php echo $this->userForm->Email->setDecorators(array('ViewHelper'));?>
+                                  <span class="help-inline"><?php if(count($messageEmail)){if(isset($messageEmail["isEmpty"])) echo 'Please enter Email';
+                                  else echo 'Email is invalid or already exists';}?></span>
+                                </div>
+                              </div>
+
+                              <div class="control-group<?php $messagePassword = $this->userForm->Password->getMessages();
+                              if(count($messagePassword)) echo ' error';?>">
+                                <label class="control-label" for="Password">Password</label>
+                                <div class="controls">
+                                  <?php echo $this->userForm->Password->setDecorators(array('ViewHelper'));?>
+                                  <span class="help-inline"><?php if(count($messagePassword))
+                                  if(isset($messagePassword["isEmpty"]))echo 'Please enter Password';
+                                  else echo 'Password must be between 6-20 characters long';?></span>
+                                </div>
+                              </div>
+
+                              <div class="control-group <?php $messageConfirmPassword = $this->userForm->ConfirmPassword->getMessages();
+                              if(count($messageConfirmPassword)) echo ' error';?>">
+                                <label class="control-label" for="ConfirmPassword">Confirm Password</label>
+                                <div class="controls">
+                                  <?php echo $this->userForm->ConfirmPassword->setDecorators(array('ViewHelper'));?>
+                                  <span class="help-inline"><?php if(count($messageConfirmPassword)) echo 'Password and Confirm Password do not match';?></span>
+                                </div>
+                              </div>
+
+                              <div class="control-group" id="groupCheckBoxAccount">
+                                <label class="control-label">Disable User</label>
+                                <div class="controls">
+                                  <label class="checkbox inline" style="padding-left: 0px !important;">
+                                    <input type="checkbox" name="selectStatus">
+                                  </label>
+                                </div>
+                              </div>
+
+                              <div class="form-actions">
+                                <button id="buttonSave" type="button" class="btn btn-primary">Add</button>
+                                <a href="/admin/users" class="btn btn-medium" style="height: 20px;">Cancel</a>
+                              </div>
+                            </fieldset>
+                          </form>
+
+                    </div>
+                </div><!--/span-->
+
+            </div><!--/row-->
+
+<script type="text/javascript">
+
+$("#Email").change(function(event) {
+
+   if($("#Email").val().length != 0){
+        $.ajax({
+            url: '/admin/users/check-validate-email/format/json/email/' + $("#Email").val(),
+            success: function(data) {
+                if(data.check){
+                    $("#Email").parent().parent().attr('class','control-group');
+                    $("#Email").attr("countError","0");
+                    $("#Email").parent().find("span").html('');
+                }
+                else{
+                    $("#Email").parent().parent().attr('class','control-group error');
+                    $("#Email").parent().find("span").html('Email is invalid or already exists');
+                    $("#Email").attr("countError","1");
+                }
+            }
+       });
+   }
+   else {
+       $(this).parent().parent().attr('class','control-group error');
+       $(this).parent().find("span").html('Please enter Email');
+       $(this).attr("countError","1");
+   }
+});
+
+$("#FirstName").keyup(function(event) {
+
+    if($("#FirstName").val().length != 0){
+        if($("#FirstName").val().length >=2 && $("#FirstName").val().length<=50){
+            $(this).parent().parent().attr('class','control-group');
+            $(this).attr("countError","0");
+            $(this).parent().find("span").html('');
+        }
+        else{
+            $(this).parent().parent().attr('class','control-group error');
+            $(this).parent().find("span").html('First Name must be between 2-50 characters long');
+            $(this).attr("countError","1");
+        }
+     }
+     else {
+         $(this).parent().parent().attr('class','control-group error');
+         $(this).parent().find("span").html('Please enter First Name');
+         $(this).attr("countError","1");
+     }
+});
+
+function runScript(e) {
+    if (e.keyCode == 13) {
+        return false;
+    }
+}
+
+$("#LastName").keyup(function(event) {
+
+     if($("#LastName").val().length != 0){
+        if($("#LastName").val().length >=2 && $("#LastName").val().length<=50){
+            $(this).parent().parent().attr('class','control-group');
+            $(this).attr("countError","0");
+            $(this).parent().find("span").html('');
+        }
+        else{
+            $(this).parent().parent().attr('class','control-group error');
+            $(this).parent().find("span").html('Last Name must be between 2-50 characters long');
+            $(this).attr("countError","1");
+        }
+     }
+     else {
+         $(this).parent().parent().attr('class','control-group error');
+         $(this).parent().find("span").html('Please enter Last Name');
+         $(this).attr("countError","1");
+     }
+});
+
+$("#Password").keyup(function(event) {
+
+     if($("#Password").val().length > 0){
+             if($("#Password").val().length >=6 && $("#Password").val().length<=20){
+                 $(this).parent().parent().attr('class','control-group');
+                $(this).attr("countError","0");
+                $(this).parent().find("span").html('');
+             }
+             else{
+                 $(this).parent().parent().attr('class','control-group error');
+                 $(this).parent().find("span").html('Password must be between 6-20 characters long');
+                 $(this).attr("countError","1");
+             }
+     }
+     else {
+         $(this).parent().parent().attr('class','control-group error');
+         $(this).parent().find("span").html('Please enter Password');
+         $(this).attr("countError","1");
+     }
+});
+
+
+$("#ConfirmPassword").keyup(function(event) {
+
+     if($("#ConfirmPassword").val().length >=6 && $("#Password").val().length<=20){
+        if($(this).val() == $("#Password").val()){
+            $(this).parent().parent().attr('class','control-group');
+             $(this).attr("countError","0");
+             $(this).parent().find("span").html('');
+        }
+        else{
+            $(this).parent().parent().attr('class','control-group error');
+            $(this).parent().find("span").html('Password and Confirm Password do not match');
+            $(this).attr("countError","1");
+        }
+     }
+     else {
+         $(this).parent().parent().attr('class','control-group error');
+         $(this).parent().find("span").html('Password must be between 6-20 characters long');
+         $(this).attr("countError","1");
+     }
+});
+
+$("#buttonSave").click(function(){
+
+    //validate card
+    $checkSubmit = $('#FirstName').attr('countError') == '0' && $('#LastName').attr('countError') == '0' && $('#Email').attr('countError') == '0'
+         && $('#Password').attr('countError') == '0' && $('#ConfirmPassword').attr('countError') == '0';
+
+    if($checkSubmit){
+        $('#frmConfirm').submit();
+    }
+    else{
+           if($('#FirstName').attr('countError') == '1') {
+               if($('#FirstName').val().length == 0)
+                   $('#FirstName').parent().find("span").html("Please enter First Name");
+               else $('#FirstName').parent().find("span").html("First Name must be between 2-50 characters long");
+               $('#FirstName').parent().parent().attr('class','control-group error');
+           }
+           if($('#LastName').attr('countError') == '1'){
+               $('#LastName').parent().find("span").html("Please enter Last Name");
+               if($('#LastName').val().length == 0)
+                   $('#LastName').parent().find("span").html("Please enter Last Name");
+               else $('#LastName').parent().find("span").html("Last Name must be between 2-50 characters long");
+               $('#LastName').parent().parent().attr('class','control-group error');
+           }
+           if($('#Email').attr('countError') == '1'){
+               if($("#Email").val().length == 0){
+                    $('#Email').parent().find("span").html("Please enter Email");
+               }
+               else $('#Email').parent().find("span").html("Email is invalid or already exists");
+               $('#Email').parent().parent().attr('class','control-group error');
+           }
+           if($('#Password').attr('countError') == '1'){
+               $('#Password').parent().find("span").html("Please enter Password");
+               $('#Password').parent().parent().attr('class','control-group error');
+           }
+           if($('#ConfirmPassword').attr('countError') == '1'){
+               $('#ConfirmPassword').parent().find("span").html("Password and Confirm Password do not match");
+               $('#ConfirmPassword').parent().parent().attr('class','control-group error');
+           }
+    }
+
+    return false;
+});
+
+</script>

@@ -1,0 +1,46 @@
+        <div class="container-fluid">
+        <div class="row-fluid">
+
+            <div class="row-fluid">
+                <div class="span12 center login-header">
+                    <h2>Welcome to Giasu-tam	 administration website</h2>
+                </div><!--/span-->
+            </div><!--/row-->
+
+            <div class="row-fluid">
+                <div class="well span5 center login-box">
+                    <div class="alert  <?php if(isset($this->rs)) echo 'alert-danger';else echo 'alert-info'?>">
+                        <?php
+                                if(isset($this->rs)) echo 'The Email or Password you entered is incorrect.';
+                                else echo 'Please enter your Email and Password below.';
+                        ?>
+                    </div>
+                    <form action="/admin/users/login" method="post" role="form">
+                            <div class="form-group" title="Email" data-rel="tooltip">
+                                <span class="add-on"><i class="icon-user"></i></span>
+                                <input autofocus class="input-large span10" name="username" id="username" type="text"  placeholder="Enter email"/>
+                            </div>
+                            <div class="clearfix"></div>
+
+                            <div class="form-group" title="Password" data-rel="tooltip">
+                                <span class="add-on"><i class="icon-lock"></i></span>
+                                <input class="input-large span10" name="password" id="password" type="password" placeholder="Password"/>
+                            </div>
+
+                            <div class="checkbox">
+                            	<label><input type="checkbox" id="remember" name="remember"/> Remember me</label>
+                            </div>
+
+                            <div class="clearfix"></div>	
+							
+                            <button id="btnLogin" type="submit" class="btn btn-primary">Login</button>
+                            <input type="hidden" name="backLink" value="<?php if(isset($this->backLink)) echo $this->backLink; ?>"/>
+
+                            <div class="clearfix"></div>
+                            <p class="center">Can't access your account? <a href="/admin/users/forgot-password"> Reset password </a></p>
+                    </form>
+                </div><!--/span-->
+            </div><!--/row-->
+                </div><!--/fluid-row-->
+
+    </div><!--/.fluid-container-->
