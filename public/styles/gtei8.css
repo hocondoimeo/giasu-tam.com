@@ -1,0 +1,16 @@
+/* 
+    Document   : ie9 up new ei version
+    Created on : Feb 27, 2013
+    Author     : tri.van
+    Description:
+        Purpose of the stylesheet follows.
+*/
+.one-link-footer img {
+    height: 40px;
+    width: 40px;
+    margin-left:0px !important;
+}
+
+.one-link-footer {
+    margin-right: 10px;
+}

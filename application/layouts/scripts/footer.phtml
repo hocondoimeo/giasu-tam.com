@@ -16,38 +16,6 @@
     </div>
     <div class="URL" value="<?php  echo "http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>"></div>
 
-<!-- -------------------------------------STAST TRACKING WITH CRAZY EGG AND GOOGLE ANALYTIS------------------------------------- -->
-
-    <!-- start tracking code with crazy egg -->
-    <script type="text/javascript">
-    setTimeout(function(){var a=document.createElement("script");
-    var b=document.getElementsByTagName("script")[0];
-    a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0013/4906.js?"+Math.floor(new Date().getTime()/3600000);
-    a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-    </script>
-    <!-- end tracking code with crazy egg -->
-
-
-
-<?php //if ($_SERVER['REMOTE_ADDR'] != '127.0.0.1') : ?>
-    <?php
-            $modelConfig = new Application_Model_Configs();
-            $analyticCode = $modelConfig->getConfigValue("analytic-code");
-    ?>
-    <script type="text/javascript">
-
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '<?php echo $analyticCode; ?>']);
-      _gaq.push(['_trackPageview']);
-
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-
-    </script>
-<?php //endif; ?>
 
 <script type="text/javascript">
 

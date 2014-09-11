@@ -4,16 +4,15 @@ $menus = $menusModel->groupMenuByParent($menusModel->fetchAll($menusModel->getAl
 $url = base64_encode($this->common()->curPageURL());
 ?>
 
-<div class="header opacity-60">
+<div class="span">
     <div class="container">
         <div class="row-fluid">
-            <div class="span4 logo">
-                        <a href="/"><img src="/images/logo.png" /></a>
-                        <div class="menu-small-viewport">
-                            <span>Menu</span>
-                        </div>
-            </div>
-            <div id="menus" class="span8">
+<!--             <div class="span4"> -->
+<!--                         <div class="menu-small-viewport"> -->
+<!--                             <span>Menu</span> -->
+<!--                         </div> -->
+<!--             </div> -->
+            <div id="menus" class="span12">
                 <ul class="navigation sf-menu display-menu">
                     <?php foreach ($menus as $menu) : ?>
                         <?php if (isset($menu['ClassName']) && $menu['ClassName'] != '') : ?>
@@ -40,39 +39,6 @@ $url = base64_encode($this->common()->curPageURL());
                             </li>
                         <?php endif; ?>
                     <?php endforeach; ?>
-                    <li class ="blue-menu menu-device">
-                        <a style="height: 74px"><span class="menu-device-icon"></span></a>
-                        <ul>
-                            <li class="tablet device-active">
-                                <a title="Desktop" href="#">
-                                    <span class="device-icon-desktop device-icon-active"></span>
-                                </a>
-                            </li>
-                            <li class="phone">
-                                <a title="Iphone5" href="/devices/index/device/iphone/url/<?php echo $url ?>">
-                                    <span class="device-icon-iphone"></span>
-                                </a>
-                            </li>
-                            <li class="phone">
-                                <a title="Galaxy S3" href="/devices/index/device/androidphone/url/<?php echo $url ?>">
-                                    <span class="device-icon-androidphone"></span>
-                                </a>
-                            </li>
-                            <li class="tablet">
-                                <a title="Ipad Mini" href="/devices/index/device/ipadmini/url/<?php echo $url ?>">
-                                    <span class="device-icon-ipadmini"></span>
-                                </a>
-                            </li>
-                            <li class="tablet">
-                                <a title="Ipad" href="/devices/index/device/ipad/url/<?php echo $url ?>">
-                                    <span class="device-icon-ipad"></span>
-                                </a>
-                            </li>
-                            <li class="tablet">
-                                <a title="Galaxy Note 10.1" href="/devices/index/device/androidtablet/url/<?php echo $url ?>">
-                                    <span class="device-icon-androidtablet"></span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
                 </ul>

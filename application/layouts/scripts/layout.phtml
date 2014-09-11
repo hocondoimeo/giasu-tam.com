@@ -21,13 +21,13 @@ getHeaders($this, $controller, $action);
         <!--[if gt IE 8]><link rel="stylesheet" type="text/css" href="/styles/gtei8.css" /><![endif]-->
 
         <!-- The fav icon -->
-        <link href="/images/favicon.ico" rel="SHORTCUT ICON">
+        <link href="/images/logo_256px.ico" rel="SHORTCUT ICON">
     </head>
 
     <body data-spy="scroll">
         <div id="contentall">
-            <?php echo $this->render('menu-top.phtml'); ?>
             <?php echo $this->render('header.phtml'); ?>
+            <?php echo $this->render('menu-top.phtml'); ?>
             <?php echo $this->layout()->content; ?>
             <?php echo $this->render('footer.phtml'); ?>
         </div>

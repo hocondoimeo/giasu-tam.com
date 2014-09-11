@@ -1,0 +1,26 @@
+/* 
+    Document   : ie8
+    Created on : Dec 3, 2012
+    Author     : tri.van
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#myModal{top:30% !important;}
+#copy-right-footer-small-view-port{margin: 0px !important;padding: 0px !important;}
+#let-talk-footer{margin: 0px !important;padding: 0px !important;}
+
+@media (max-width: 767px) {
+#copy-right-footer-small-view-port{margin: 0px !important;padding: 0px !important;}
+#let-talk-footer{margin: 0px !important;padding: 0px !important;}
+#logo-footer{display: none;}
+.content-right{text-align: left;margin: 0px !important;padding: 0px !important;}
+}
+
+.content-right{text-align: left;}
+
+body{filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/bg-4impact.jpg', sizingMethod='scale')}

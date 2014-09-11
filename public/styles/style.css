@@ -1,0 +1,206 @@
+.page-title {
+    display: inline-block;    
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFF;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+.page-title-icon {  
+    background: url("/images/page-title-large-icon.png") no-repeat;
+    height: 23px;
+    width: 43px;
+    position: absolute;
+    margin-left: -43px;
+}
+.page-title-text {
+    background: #009be1;
+    border-radius: 0 10px 10px 0;
+    line-height: 70px;
+    padding: 5px 30px 0 43px;
+    margin: 23px 0 0 -32px;
+    box-shadow: 1px 4px 5px #555;
+}
+
+.pitch-title {
+    display: inline-block;  
+/*    line-height: 40px;*/
+}
+.pitch-title h2 {
+    font-size: 40px;
+}
+.pitch-dark-blue {
+    background: none repeat scroll 0 0 #015A82;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    padding: 2px 10px;
+}
+.pitch-gray {
+    background: none repeat scroll 0 0 #666666;
+    border-radius: 6px 6px 6px 6px;
+    color: #FFFFFF;
+    opacity: 0.8;
+    padding: 2px 10px;
+}
+
+.phone-number-with-command { display: none; }
+.phone-number-with-command a:hover { color: #FFF; }
+
+
+
+
+/**
+ * Responsive for all browser ==========================================================================================
+ */
+
+@media (min-width: 1200px) {
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+    .page-title { font-size: 34px; }    
+    .page-title-icon {  
+        height: 23px;
+        width: 43px;
+        margin-left: -43px;
+    }
+    .page-title-text {
+        line-height: 60px;
+        padding: 0px 30px 0 43px;
+        margin: 23px 0 0 -32px;
+    }    
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+    .content{
+        padding: 0px;
+    }    
+    .footer{
+        padding-top: 50px;
+    }    
+
+    .page-title { font-size: 26px; }    
+    .pitch-title h1, .pitch-title h2 { font-size: 26px; line-height: 22px;}
+
+    .page-title-icon {  
+        height: 23px;
+        width: 43px;
+        margin-left: -43px;
+    }
+    .page-title-text {
+        line-height: 45px;
+        padding: 0px 30px 0 43px;
+        margin: 23px 0 0 -32px;
+    }    
+}
+
+@media (max-width: 767px) {
+    .page-title { font-size: 16px; }    
+    .pitch-title h1, .pitch-title h2 { font-size: 15px; line-height: 5px;}
+    
+    .phone-number-with-command { display: inline; }
+    .phone-number-without-command { display: none; }
+
+    .page-title-icon {  
+        background: url("/images/page-title-medium-icon.png") no-repeat;
+        height: 10px;
+        width: 19px;
+        margin-left: -25px;
+    }
+    .page-title-text {
+        line-height: 35px;
+        padding: 0px 15px 0 20px;
+        margin: 10px 0 0 -19px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+ * Responsive for IE browser ==========================================================================================
+ */
+@media screen and (min-width: 1200px){
+    
+}
+
+@media screen and (min-width: 980px) and (max-width: 1199px) {
+    
+    .page-title { font-size: 34px; }    
+    .page-title-icon {  
+        height: 23px;
+        width: 43px;
+        margin-left: -43px;
+    }
+    .page-title-text {
+        line-height: 60px;
+        padding: 0px 30px 0 43px;
+        margin: 23px 0 0 -32px;
+    }    
+}
+
+@media screen and (min-width: 768px) and (max-width: 979px) {
+    .content{
+        padding: 0px;
+    }    
+    .footer{
+        padding-top: 50px;
+    }    
+
+    .page-title { font-size: 26px; }    
+    .pitch-title h2 { font-size: 26px; }    
+    
+    .page-title-icon {  
+        height: 23px;
+        width: 43px;
+        margin-left: -43px;
+    }
+    .page-title-text {
+        line-height: 45px;
+        padding: 0px 30px 0 43px;
+        margin: 23px 0 0 -32px;
+    }    
+}
+
+@media screen and (max-width: 767px){
+    .page-title { font-size: 16px; }    
+    .pitch-title h2 { font-size: 15px; }
+
+    .page-title-icon {  
+        background: url("/images/page-title-medium-icon.png") no-repeat;
+        height: 10px;
+        width: 19px;
+        margin-left: -25px;
+    }
+    .page-title-text {
+        line-height: 35px;
+        padding: 0px 15px 0 20px;
+        margin: 10px 0 0 -19px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+}

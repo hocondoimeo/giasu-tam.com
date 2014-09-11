@@ -12,16 +12,7 @@ getHeaders($this, $controller, $action);
         endif;
         getStyleContents($this, $controller, $action);
         getScriptContents($this, $controller, $action);
-        if ($controller == 'index' && $action == 'index'):
-            $snapShots = $this->common()->getImageCrazyEgg();
             ?>
-            <script type="text/javascript">
-                var myImage1 = new Image();
-                myImage1.src = '<?php echo $snapShots["screenshot_url"] ?>';
-                var myImage2 = new Image();
-                myImage2.src = '<?php echo $snapShots["heatmap_url"] ?>';
-            </script>
-        <?php endif; ?>
         <!--[if IE 8]>
         <link rel="stylesheet" type="text/css" href="/styles/ie8.css" />
         <script src="/scripts/ie8.js" type="text/javascript"></script>
@@ -30,7 +21,7 @@ getHeaders($this, $controller, $action);
         <!--[if gt IE 8]><link rel="stylesheet" type="text/css" href="/styles/gtei8.css" /><![endif]-->
 
         <!-- The fav icon -->
-        <link href="/images/favicon.ico" rel="SHORTCUT ICON">
+        <link href="/images/logo_256px.ico" rel="SHORTCUT ICON">
     </head>
 
     <body data-spy="scroll">
