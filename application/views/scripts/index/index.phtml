@@ -1,31 +1,177 @@
-<div class="span">
-    <div class="container">
-        <div class="row-fluid">
-        	<div id="content-top-left" class="span2"> 
-        			<div class="content-top-left-title">
-        					DÀNH CHO PHỤ HUYNH
-        			</div>
-        			<ul class="content-top-menu">
-        				<li>ĐĂNG KÍ TÌM GS</li>
-        				<li>BẢNG HỌC PHÍ THAM KHẢO</li>
-        				<li>PHỤ HUYNH CẦN BIẾT</li>
-        			</ul>
-        	</div>
-        	
-        	<div id="content-top-center" class="span8">
-        	
-        	</div>
-        	
-        	<div id="content-top-right" class="span2">
-        		  <div class="content-top-rightt-title">
-        					DÀNH CHO GIA SƯ
-        			</div>
-        		<ul class="content-top-menu">
-        				<li>ĐĂNG KÍ LÀM GIA SƯ</li>
-        				<li>LỚP HIỆN CÓ</li>
-        				<li>NỘI QUY NHẬN LỚP</li>
-        			</ul>
-        	</div>
-        </div>
-    </div>
+<?php
+$modelStatic = new Admin_Model_StaticContents();
+$modelImage  = new Admin_Model_Images();
+
+$heading     = $modelStatic->getContentValueByCode("ALL_HEADING");
+$headingText = (!empty($heading->StaticContent)) ? unserialize($heading->StaticContent) : null;
+?>
+
+<div class="content">
+	<div class="content-top">
+	    <div class="container">
+	        <div class="row-fluid">
+	        	<div id="content-top-left" class="span2 content-top-left"> 
+	        			<div class="content-top-left-title">
+	        					<img src="/images/icons/16x16/graduation-hat.png" />
+	        					DÀNH CHO PHỤ HUYNH
+	        			</div>
+	        			<ul class="content-top-menu">
+	        				<li>ĐĂNG KÍ TÌM GS</li>
+	        				<li>BẢNG HỌC PHÍ THAM KHẢO</li>
+	        				<li>PHỤ HUYNH CẦN BIẾT</li>
+	        			</ul>
+	        	</div>
+	        	
+	        	<div id="content-top-center" class="span8 content-top-center">
+	        		<div id="myCarousel" class="carousel slide">
+						  <ol class="carousel-indicators">
+						    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+						    <li data-target="#myCarousel" data-slide-to="1"></li>
+						    <li data-target="#myCarousel" data-slide-to="2"></li>
+						  </ol>
+						  <!-- Carousel items -->
+						  <div class="carousel-inner">
+						    <div class="active item">
+						    	<img src="/images/carousel/bootstrap-mdo-sfmoma-01.jpg" alt="">
+						    	<div class="carousel-caption">
+			                      <h4>First Thumbnail label</h4>
+			                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			                    </div>
+						    </div>	
+						    <div class="item">
+						    	<img src="/images/carousel/bootstrap-mdo-sfmoma-02.jpg" alt="">
+				                    <div class="carousel-caption">
+				                      <h4>Second Thumbnail label</h4>
+				                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				                    </div>
+						    </div>
+						    <div class="item">
+						    	<img src="/images/carousel/bootstrap-mdo-sfmoma-03.jpg" alt="">
+				                    <div class="carousel-caption">
+				                      <h4>Third Thumbnail label</h4>
+				                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				                    </div>
+						     </div>
+						  </div>
+						  <!-- Carousel nav -->
+						  <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+						  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+						</div>
+	        	</div>
+	        	<script>$('.carousel').carousel();</script>
+	        	
+	        	<div id="content-top-right" class="span2 content-top-right">
+	        		  <div class="content-top-rightt-title">
+	        					<img src="/images/icons/16x16/leather-bag.png" />
+	        					DÀNH CHO GIA SƯ
+	        			</div>
+	        		<ul class="content-top-menu">
+	        				<li>ĐĂNG KÍ LÀM GIA SƯ</li>
+	        				<li>LỚP HIỆN CÓ</li>
+	        				<li>NỘI QUY NHẬN LỚP</li>
+	        			</ul>
+	        	</div>
+	        </div>
+	    </div>
+	</div>
+	<div class="content-main">
+		<div id="home-page">
+            <div class="row-fluid">
+		<!--News Sections-->
+                <div class="span4 news-block1">
+<!--                    <h3>News</h3>-->
+<!--                     <div class="content-top">	 -->
+					    <div class="container">
+<!-- 					        <div class="row-fluid"> -->
+					        	<div id="content-top-left" class="span4">
+					        			<div class="content-top-left-title">
+					        					<img src="/images/icons/16x16/graduation-hat.png" />
+					        					TIN TUC
+					        			</div>
+					        			<ul class="content-top-menu">
+					        				<li>ĐĂNG KÍ TÌM GS</li>
+					        				<li>BẢNG HỌC PHÍ THAM KHẢO</li>
+					        				<li>PHỤ HUYNH CẦN BIẾT</li>
+					        			</ul>
+					        	</div>
+<!-- 					        </div> -->
+<!-- 					    </div> -->
+					</div>
+                </div>
+                
+             <!--Main Sections-->
+                <div class="span8 content-block">
+                 <!--People Sections-->
+                    <div id="people-block">
+                        <h3><?php echo (!empty($headingText['home_people'])) ? $headingText['home_people'] : ""; ?></h3>
+
+                        <div class="row-fluid">
+                            <div class="span12 people-right-block">
+                                <div class="row-fluid">
+                                    <div class="span7">
+                                        <p><?php $peopleRight = $modelStatic->getContentValueByCode("PEOPLE_HOME_LEFT");
+                                            if (!empty($peopleRight->StaticContent)) {
+                                                echo $peopleRight->StaticContent;
+                                            }?>
+                                        </p>
+                                    </div>
+                                    <div class="span5">
+                                        <?php $imageAbout = $modelImage->fetchRow("ImageCode = 'HOME_RIGHT_PEOPLE'");
+                                        if (!empty($imageAbout) && file_exists(IMAGE_UPLOAD_PATH.$imageAbout->ImageName)): ?>
+                                            <img alt="<?php echo $imageAbout->ImageName?>" src="<?php echo IMAGE_UPLOAD_URI.$imageAbout->ImageName?>"/>
+                                        <?php else: ?>
+                                            <img src="http://placehold.it/320x320">
+                                        <?php endif; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Technology Sections-->
+                    <div id="technology-block">
+                        <h3><?php echo (!empty($headingText['home_technology'])) ? $headingText['home_technology'] : ""; ?></h3>
+
+                        <div class="row-fluid">
+                            <div class="span12 tech-small">
+                                <div class="span7">
+                                    <p><?php
+                                        $technology = $modelStatic->getContentValueByCode("HOME_TECHNOLOGY");
+                                        if (!empty($technology->StaticContent)) {
+                                            echo $technology->StaticContent;
+                                        }?>
+                                    </p>
+                                </div>
+                                <div class="span5">
+                                    <?php $imageAbout = $modelImage->fetchRow("ImageCode = 'HOME_LEFT_TECHNOLOGY'");
+                                    if (!empty($imageAbout) && file_exists(IMAGE_UPLOAD_PATH.$imageAbout->ImageName)): ?>
+                                        <img alt="<?php echo $imageAbout->ImageName?>" src="<?php echo IMAGE_UPLOAD_URI.$imageAbout->ImageName?>"/>
+                                    <?php else: ?>
+                                        <img src="http://placehold.it/320x320">
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="span12 tech-large">
+                                <div class="span5">
+                                    <?php if (!empty($imageAbout) && file_exists(IMAGE_UPLOAD_PATH.$imageAbout->ImageName)): ?>
+                                        <img alt="<?php echo $imageAbout->ImageName?>" src="<?php echo IMAGE_UPLOAD_URI.$imageAbout->ImageName?>"/>
+                                    <?php else: ?>
+                                        <img src="http://placehold.it/320x320">
+                                    <?php endif; ?>
+                                </div>
+                                <div class="span7">
+                                    <p><?php
+                                        if (!empty($technology->StaticContent)) {
+                                            echo $technology->StaticContent;
+                                        }?>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                	
+              </div>
+           </div>
+	</div>
 </div>
