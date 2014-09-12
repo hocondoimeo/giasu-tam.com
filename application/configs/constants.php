@@ -9,24 +9,24 @@ define('NUMBER_OF_ITEM_PER_PAGE', 20);
 
 /************************* Domain *******************************/
 if (APPLICATION_ENV == 'local') {
-	define('FRONTEND_DOMAIN_NAME', 'http://local.mobile-4impact');
-	define('BACKEND_DOMAIN_NAME', 'http://local.mobile-4impact/admin');
+	define('FRONTEND_DOMAIN_NAME', 'http://giasu.com');
+	define('BACKEND_DOMAIN_NAME', 'http://giasu.com/admin');
 
 } elseif (APPLICATION_ENV == 'dev') {
-	define('FRONTEND_DOMAIN_NAME', 'http://mobile-site-dev.4impact.net.au');
-	define('BACKEND_DOMAIN_NAME', 'http://mobile-site-dev.4impact.net.au/admin');
+	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
+	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
 
 }elseif (APPLICATION_ENV == 'test') {
-	define('FRONTEND_DOMAIN_NAME', 'http://mobile-site-test.4impact.net.au');
-	define('BACKEND_DOMAIN_NAME', 'http://mobile-site-test.4impact.net.au/admin');
+	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
+	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
 
 } elseif (APPLICATION_ENV == 'showcase') {
-	define('FRONTEND_DOMAIN_NAME', 'http://mobile-site-showcase.4impact.net.au');
-	define('BACKEND_DOMAIN_NAME', 'http://mobile-site-showcase.4impact.net.au/admin');
+	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
+	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
 
 } else {
-	define('FRONTEND_DOMAIN_NAME', 'http://mobile-site-showcase.4impact.net.au');
-	define('BACKEND_DOMAIN_NAME', 'http://mobile-site-showcase.4impact.net.au/admin');
+	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
+	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
 }
 
 /************************* Date Format *******************************/
