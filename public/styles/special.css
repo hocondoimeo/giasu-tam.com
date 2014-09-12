@@ -330,6 +330,8 @@
     padding-right: 2.2%;
     padding-right: 2.2%\9;
     *padding-right: 2.2%;
+    margin-top: 20px;
+	margin-bottom: 20px;
 }
 /*
 #home-page .news-block,  #about-page .about-right-block{    
@@ -359,7 +361,7 @@
 
 #home-page .news-block {
     position: relative;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 #home-page .news-block .img {
@@ -1784,3 +1786,4 @@ li.menu-device ul li:hover {
 .social-link-custom-div1,.social-link-custom-div3{display: none;}
 .social-links{float: left;width: 100%;}
 .part-of-the-4impact-group h3{margin-top: 3px;}
+j
