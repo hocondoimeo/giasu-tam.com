@@ -29,8 +29,14 @@ jQuery(function(){
   
     $(".menu-small-viewport").click(function(){
         if($(".sf-menu").hasClass("display-menu")){
-            $(".sf-menu").removeClass("display-menu");            
+            $(".sf-menu").removeClass("display-menu");
+        	$(".menu").each(function(){
+                $(this).show();
+            });            
         }else{
+        	$(".menu").each(function(){
+                $(this).hide();
+            });
             $(".sf-menu").addClass("display-menu");
         }
         

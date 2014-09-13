@@ -703,7 +703,7 @@
     }  
 
     #home-page .content-block, #about-page .about-left-block {
-        background: none;        
+        /* background: none;   */      
         width: 100%;    
         margin-left: 0%;
         margin-left: 0%\9;
@@ -804,11 +804,23 @@
     #social-link-footer address{
         margin-bottom: 0px !important;
         background: none repeat scroll 0 0 #333333;
-        padding-bottom: 50px;
+        /* padding-bottom: 50px; */
     }
+    
+	#content-top-center, #menus{
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		width: 97% !important;
+	}
+	.top-banner, #menu{ margin: 10px; margin-top: 0px;}
+	#content-top-center {min-height: 270px !important;}
 }
-
+	
 @media (max-width: 480px) {
+#content-top-center, #menus{
+		margin-right: 10px !important;
+		width: 94% !important;
+	}
     .crazyegg-legend{
         left: 12px;
         width: 93%;
@@ -1024,7 +1036,7 @@
     }  
 
     #home-page .content-block, #about-page .about-left-block{
-        background: none;        
+        /* background: none */;        
         width: 100%;    
         margin-left: 0%;
         margin-left: 0%\9;

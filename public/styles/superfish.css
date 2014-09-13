@@ -296,18 +296,21 @@ li.sfHover.active > a > .sf-sub-indicator {
         text-transform: uppercase;
         cursor: pointer;
         font-size: 12px;
-        position: absolute;
+    	text-align: center;
+    	margin-top: 20px;
+    	margin-bottom: 0px;
+        /* position: absolute;
         top: 15px;
         right: 20px;
-        display: inherit;
-        background-color: #000000;
-        -moz-opacity: 0.60;
+        display: inherit; */
+        background-color: #015A82;
+        /*-moz-opacity: 0.60;
         opacity:.60;
         filter: alpha(opacity=60);
         height: 45px;        
         float: left;
-        padding: 0 5px;
-        border-radius: 5px 5px 0px 0px;
+        padding: 0 5px;*/
+        border-radius: 5px;
         -moz-border-radius-topleft: 5px;
         -moz-border-radius-topright: 5px;
         -webkit-border-top-right-radius: 5px;
@@ -315,7 +318,8 @@ li.sfHover.active > a > .sf-sub-indicator {
     }
 
     .menu-small-viewport span {
-        float: left;
+        text-align: center;
+    	vertical-align: middle;
         color: #FFFFFF;
         margin-top: 1px;
     }
