@@ -9,19 +9,19 @@ defined('APPLICATION_ENV')
 
 require_once APPLICATION_PATH . '/configs/constants.php';
 
-$username = 'admin';
-$password = 'admin';
-if(APPLICATION_ENV != 'development') {
-    $auth = isset($_GET[$username])?$_GET[$username]:'';
-    if ($_SERVER['REMOTE_ADDR'] != '192.168.11.1' && $auth != $password){
-        if(!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != $username 
-           || $_SERVER['PHP_AUTH_PW'] != $password) {
-            header('WWW-Authenticate: Basic realm="My Realm"');
-            header('HTTP/1.0 401 Unauthorized');
-            die;
-        }
-    }
-}
+// $username = 'admin';
+// $password = 'admin';
+// if(APPLICATION_ENV != 'development') {
+//     $auth = isset($_GET[$username])?$_GET[$username]:'';
+//     if ($_SERVER['REMOTE_ADDR'] != '192.168.11.1' && $auth != $password){
+//         if(!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != $username 
+//            || $_SERVER['PHP_AUTH_PW'] != $password) {
+//             header('WWW-Authenticate: Basic realm="My Realm"');
+//             header('HTTP/1.0 401 Unauthorized');
+//             die;
+//         }
+//     }
+// }
 
 //config for layout
 require_once APPLICATION_PATH . '/../library/Function/layout.php';

@@ -59,8 +59,8 @@ a.active {
 	width: 15.52991452991453%;
 }
 
-.content-top-left  .content-top-left-title, .content-top-right  .content-top-right-title{
-	
+.content-top-left-title, .content-top-right-title{
+	font-weight: bold;
 }
 
 #content-top-left  ul, #content-top-right  ul, #content-middle-left  ul{
@@ -73,7 +73,7 @@ a.active {
 #content-top-left  li	, #content-top-right  li, #content-middle-left  li{
 	padding: 6px 5px 5px 15px;
 	border-bottom: 1px solid #cecece;
-	display: list-item;
+	display: list-item	;
 	text-align: -webkit-match-parent;
 }
 
@@ -89,6 +89,15 @@ ul.content-top-menu,  ul.content-top-rmenu{
 	background-color: #015A82;	
 }
 
+#home-page .content-block {
+	text-align: left;
+}
+
+.footer{
+       margin-top: 20px;
+    }
+
+/* border blocks */
 .content-top-center, .content-top-left, .content-top-right , .content-block, .news-block{
 	/* position: relative; */
 	margin: 0;
