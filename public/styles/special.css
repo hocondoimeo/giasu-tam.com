@@ -814,6 +814,7 @@
 	}
 	.top-banner, #menu{ margin: 10px; margin-top: 0px;}
 	#content-top-center {min-height: 270px !important;}
+	#content-top-center  a{font-size: 60px;}
 }
 	
 @media (max-width: 480px) {

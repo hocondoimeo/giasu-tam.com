@@ -231,6 +231,10 @@ function showNewsInSmallViewPort(){
     	$(".menu-small-viewport").each(function(){
             $(this).show();
         });
+      //show carousel control small viewport
+    	$(".carousel-control").each(function(){
+            $(this).show();
+        });
         //hide all
     	$(".menu").each(function(){
             $(this).hide();
@@ -262,6 +266,10 @@ function showNewsInSmallViewPort(){
     else{
     	//hide small menu viewport
     	$(".menu-small-viewport").each(function(){
+            $(this).hide();
+        });
+    	//hide carousel control small viewport
+    	$(".carousel-control").each(function(){
             $(this).hide();
         });
         //show all
