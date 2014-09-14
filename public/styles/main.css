@@ -59,8 +59,15 @@ a.active {
 	width: 15.52991452991453%;
 }
 
+#content-top-left , #content-top-right , #home-page .news-block{
+	/* background-color: #e6e6e6;  */
+}
+
 .content-top-left-title, .content-top-right-title{
+	 color: #000;
 	font-weight: bold;
+	min-height: 30px;
+	background: url(../images/tbl-bg.jpg) repeat-x top;
 }
 
 #content-top-left  ul, #content-top-right  ul, #content-middle-left  ul{
@@ -117,6 +124,8 @@ ul.content-top-menu,  ul.content-top-rmenu{
     line-height: 20px;
     margin-bottom: 0;
 	margin: 0;	
+	 color: #000;
+	font-style: normal;
 }
 .the-fieldset {
 	padding: 0;
