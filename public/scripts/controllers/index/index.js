@@ -232,9 +232,17 @@ function showNewsInSmallViewPort(){
             $(this).show();
         });
       //show carousel control small viewport
-    	$(".carousel-control").each(function(){
+    	/*$(".carousel-control").each(function(){
             $(this).show();
-        });
+        });*/
+    	
+    	$("#myCarousel").swiperight(function() {  
+    	      $("#myCarousel").carousel('prev');  
+    	    });  
+	   $("#myCarousel").swipeleft(function() {  
+	      $("#myCarousel").carousel('next');  
+	   }); 
+    	   
         //hide all
     	$(".menu").each(function(){
             $(this).hide();
@@ -269,9 +277,9 @@ function showNewsInSmallViewPort(){
             $(this).hide();
         });
     	//hide carousel control small viewport
-    	$(".carousel-control").each(function(){
+    	/*$(".carousel-control").each(function(){
             $(this).hide();
-        });
+        });*/
         //show all
     	$(".menu").each(function(){
             $(this).show();

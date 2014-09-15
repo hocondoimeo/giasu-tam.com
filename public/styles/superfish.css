@@ -297,6 +297,7 @@ li.sfHover.active > a > .sf-sub-indicator {
         cursor: pointer;
         font-size: 12px;
     	text-align: center;
+    	padding: 6px;
     	margin-top: 20px;
     	margin-bottom: 0px;
         /* position: absolute;
@@ -322,6 +323,18 @@ li.sfHover.active > a > .sf-sub-indicator {
     	vertical-align: middle;
         color: #FFFFFF;
         margin-top: 1px;
+    }
+    
+    .menu-small-viewport  .expanded  {
+    	width: 14px;
+    	height: 14px;
+		background: url("/images/icons/up_triangle.png");    	
+    }
+    
+   .menu-small-viewport  .collapsed {
+   		width: 14px;
+    	height: 14px;
+		background: url("/images/icons/down_triangle.png");
     }
 
     .container .row-fluid .span4 .row-fluid .span2 {

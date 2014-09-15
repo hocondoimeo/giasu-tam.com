@@ -34,10 +34,22 @@ jQuery(function(){
                 $(this).show();
             });            
         }else{
+            $(".sf-menu").addClass("display-menu");
         	$(".menu").each(function(){
                 $(this).hide();
             });
-            $(".sf-menu").addClass("display-menu");
+        }
+        
+        if(!$(".left-nav-triangle").hasClass("collapsed")){
+            $(".left-nav-triangle").removeClass("expanded");
+            $(".right-nav-triangle").removeClass("expanded");
+            $(".left-nav-triangle").addClass("collapsed");
+            $(".right-nav-triangle").addClass("collapsed");
+        }else{
+            $(".left-nav-triangle").removeClass("collapsed");
+            $(".right-nav-triangle").removeClass("collapsed");
+            $(".left-nav-triangle").addClass("expanded");
+            $(".right-nav-triangle").addClass("expanded");
         }
         
     });    
