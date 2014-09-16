@@ -1,0 +1,33 @@
+<?php
+    $categories = $this->categories;
+    $cates = count($categories);
+    $items = '';
+    if($cates):
+    foreach ($categories as $cate){
+        if($cate->term_id == $this->cate)
+            $items .= '<option selected="true" value="/news/index/cate/'.$cate->term_id.'">'.$cate->name.'</option>';
+        else
+            $items .= '<option value="/news/index/cate/'.$cate->term_id.'">'.$cate->name.'</option>';
+    }
+?>
+<div class="span12 row-fluid small-list-category-news">
+    <div class="container">
+        <select id="news-categories-dropdown">
+            <!-- dropdown menu links -->
+            <?php if($cates):?>
+            <option value="/news"> All</option>
+            <?php echo $items; ?>
+            <option value="Popular News"> Popular News</option>
+            <?php else:?>
+            <option value=""> All</option>
+            <option value=""> News</option>
+            <option value=""> Blogs</option>
+            <option value=""> Articles</option>
+            <option value=""> Reviews</option>
+            <option value=""> Case Studies</option>
+            <option value="Popular News"> Popular News</option>
+            <?php endif;?>
+          </select>
+    </div>
+</div>
+<?php endif;?>

@@ -21,7 +21,7 @@ class Admin_Bootstrap extends Zend_Application_Module_Bootstrap
 
         $this->_setNavigation($view);
     }
-//
+
     public function _setNavigation($view){
 
          $config = new Zend_Config_Ini(APPLICATION_PATH.'/layouts/navigation.ini', 'run');

@@ -6,30 +6,17 @@ defined('APPLICATION_PATH')
 // Define application environment
 defined('APPLICATION_ENV')
     || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
-
-require_once APPLICATION_PATH . '/configs/constants.php';
-
-// $username = 'admin';
-// $password = 'admin';
-// if(APPLICATION_ENV != 'development') {
-//     $auth = isset($_GET[$username])?$_GET[$username]:'';
-//     if ($_SERVER['REMOTE_ADDR'] != '192.168.11.1' && $auth != $password){
-//         if(!isset($_SERVER['PHP_AUTH_USER']) || $_SERVER['PHP_AUTH_USER'] != $username 
-//            || $_SERVER['PHP_AUTH_PW'] != $password) {
-//             header('WWW-Authenticate: Basic realm="My Realm"');
-//             header('HTTP/1.0 401 Unauthorized');
-//             die;
-//         }
-//     }
-// }
+    
 
 //config for layout
 require_once APPLICATION_PATH . '/../library/Function/layout.php';
+require_once APPLICATION_PATH . '/configs/constants.php';
+
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-//     '/../library/',
-//     '/home/web/library/Zend/1.11.7',
+     '/../library',
+     '../library',
     get_include_path(),
 )));
 

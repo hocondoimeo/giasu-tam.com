@@ -1,4 +1,11 @@
-
+//ready for loading js 
+$(document).ready(function() {
+	showNewsInSmallViewPort();
+});
+//when window is resized by customer
+$(window).resize(function () {
+    showNewsInSmallViewPort();
+});
 jQuery(function(){    
     jQuery('ul.sf-menu').superfish({
         delay:0
@@ -122,4 +129,84 @@ function hideDeviceTablet(){
 	 if (isMobile.any() || isInFrame){
 		 $(".menu-device .tablet").remove();
 	 }
+}
+
+function showNewsInSmallViewPort(){
+    var bodyWidth = $(window).width();
+    if(bodyWidth < 768){
+    	//show small menu viewport
+    	$(".menu-small-viewport").each(function(){
+            $(this).show();
+        });
+      //show carousel control small viewport
+    	/*$(".carousel-control").each(function(){
+            $(this).show();
+        });*/
+    	
+    	$("#myCarousel").swiperight(function() {  
+    	      $("#myCarousel").carousel('prev');  
+    	    });  
+	   $("#myCarousel").swipeleft(function() {  
+	      $("#myCarousel").carousel('next');  
+	   }); 
+    	   
+        //hide all
+    	$(".menu").each(function(){
+            $(this).hide();
+        });
+    	$(".content-top-left").each(function(){
+            $(this).hide();
+        });
+    	$(".content-top-right").each(function(){
+            $(this).hide();
+        });
+    	$(".news-block").each(function(){
+            $(this).hide();
+        });
+        $(".news-block .featurette").each(function(){
+            $(this).hide();
+        });
+        $(".news-block .featurette-divider-social").each(function(){
+            $(this).hide();
+        });
+        //just show 3 news
+        $(".news-block .featurette").eq(0).show();
+        $(".news-block .featurette").eq(1).show();
+        $(".news-block .featurette").eq(2).show();
+        $(".news-block .featurette-divider-social").eq(0).show();
+        $(".news-block .featurette-divider-social").eq(1).show();
+        //add number attribute for new-block div tag
+        $(".news-block").attr('news-number', 3);
+    }
+    else{
+    	//hide small menu viewport
+    	$(".menu-small-viewport").each(function(){
+            $(this).hide();
+        });
+    	//hide carousel control small viewport
+    	/*$(".carousel-control").each(function(){
+            $(this).hide();
+        });*/
+        //show all
+    	$(".menu").each(function(){
+            $(this).show();
+        });
+    	$(".content-top-left").each(function(){
+            $(this).show();
+        });
+    	$(".content-top-right").each(function(){
+            $(this).show();
+        });
+    	$(".news-block").each(function(){
+            $(this).show();
+        });
+        $(".news-block .featurette").each(function(){
+            $(this).show();
+        });
+        $(".news-block .featurette-divider-social").each(function(){
+            $(this).show();
+        });
+        //add number attribute for new-block div tag
+        $(".news-block").attr('news-number', 5);
+    }
 }

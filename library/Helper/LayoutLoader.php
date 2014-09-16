@@ -12,7 +12,7 @@ class Helper_LayoutLoader extends Zend_Layout_Controller_Plugin_Layout {
      * @desc set layout
      */
     public function preDispatch(Zend_Controller_Request_Abstract $request) {
-        $this->getLayout()->setLayoutPath(
+        /* $this->getLayout()->setLayoutPath(
                 Zend_Controller_Front::getInstance()
                         ->getModuleDirectory($request->getModuleName()) . '/layouts/scripts/'
         );                
@@ -20,7 +20,7 @@ class Helper_LayoutLoader extends Zend_Layout_Controller_Plugin_Layout {
         if (isset($module) && $module == "admin") {             
             $this->getLayout()->setLayout($module);
         } else {
-            $this->getLayout()->setLayout('layout');
-        }
+            //$this->getLayout()->setLayout('layout');
+        } */
     }   
 }

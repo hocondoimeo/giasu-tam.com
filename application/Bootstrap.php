@@ -4,13 +4,14 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 {
     
     public function _initLoadViewResource() {
-        
-        $this->bootstrap('view');
-        $view = $this->getResource('view');
+    	$layout = $this->bootstrap('layout')->getResource('layout');
+    	$layout->setLayout('layout');        
+        //$this->bootstrap('view');
+        //$view = $this->getResource('view');
 
-        $this->_setNavigation($view);
+        //$this->_setNavigation($view);
     }
-//
+
     public function _setNavigation($view){
 
          $config = new Zend_Config_Ini(APPLICATION_PATH.'/layouts/navigation.ini', 'run');

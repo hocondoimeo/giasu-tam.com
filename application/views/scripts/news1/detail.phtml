@@ -1,0 +1,18 @@
+<?php var_dump($this->news);die;?>					<!--People Sections-->
+                    <div id="people-block">
+                        <!-- <h3> --><?php //echo (!empty($headingText['home_people'])) ? $headingText['home_people'] : ""; ?><!-- </h3> -->
+
+                        <div class="row-fluid">
+                            <div class="span12 people-right-block">
+                                <div class="row-fluid">
+                                    <div class="span12">
+                                        <p><?php $peopleRight = $modelStatic->getContentValueByCode("PEOPLE_HOME_LEFT");
+                                            if (!empty($peopleRight->StaticContent)) {
+                                                echo $peopleRight->StaticContent;
+                                            }?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

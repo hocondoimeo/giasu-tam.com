@@ -1,0 +1,31 @@
+<?php $c=0; ?>
+<!--Popular Section-->
+<div class="row-fluid all-popular-block">
+    <h3 class="bottom-news">Popular News</h3>
+    <?php if(count($this->allNewsData['PopularNews'])):?>
+    <?php foreach ($this->allNewsData['PopularNews'] as $popularNews):?>
+    <div class="row-fluid popular-block">
+        <div class="featurette">
+            <?php if($c):?>
+                <div class="small-vertical-seperator">&nbsp;</div>
+            <?php endif;?>
+            <a href="/news/detail/id/<?php echo $popularNews['id'].(empty($this->cate)?'':'/cate/'.$this->cate); ?>">
+            <div class="pull-left">
+                <?php if(isset($popularNews['image']) &&  count($popularNews['image'])):?>
+                <img class="desc-news" src="<?php echo $popularNews['image']['thumbnail']?>" alt="<?php echo $popularNews['title']?>"/>
+                <img class="small-news" src="<?php echo $popularNews['image']['large']?>" alt="<?php echo $popularNews['title']?>"/>
+                <?php else:?>
+                <img class="desc-news" src="http://placehold.it/120x60"/>
+                <img class="small-news" src="http://placehold.it/770x385"/>
+                <?php endif;?>
+            </div>
+            <div class="news-desc"><?php echo $popularNews['title']?></div></a>
+            <div class="popular-date news-date"><?php echo $popularNews['date']?></div>
+        </div>
+    </div>
+    <?php $c++;endforeach;?>
+    <?php endif;?>
+</div>
+<div id="btn-back" style="display: none;">
+    <a href="#"><img src="/images/icon_back.png" width="52" height="52"/></a>
+</div>
