@@ -9,19 +9,19 @@
  */
 class IndexController extends Zend_Controller_Action
 {
-    /**
-     * (non-PHPdoc)
-     * @see Zend_Controller_Action::init()
-     */
-    public function init () {}
+	protected $_model;
+
+    public function init()
+    {
+        //$this->_model = new Application_Model_News();
+    }
+	
     /**
      * Home page - Main Panel
      *
      */
     public function indexAction() {
     }
-    
-    
 
 
 

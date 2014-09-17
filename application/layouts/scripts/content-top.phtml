@@ -1,33 +1,24 @@
 <div class="content-top">
 	    <div class="container">
 	        <div class="row-fluid">
+	        	<?php //if(count($this->LeftContentTop)):?>
 	        	<div id="content-top-left" class="span2 content-top-left"> 
 	        			<div class="content-top-left-title">
 	        					<img src="/images/icons/16x16/graduation-hat.png" />
 	        					PHỤ HUYNH 
 	        			</div>
 	        			<ul class="content-top-menu">
+	        				<?php foreach ($this->LeftContentTop as $item):?>
 	        				<li>
 	        					<img src="/images/icons/8x8/graduation-hat.png" />
-	        					 <a href="/">
-	        					 	Đăng ký tìm gia sư
+	        					 <a href="<?php echo $item['MenuUrl']; ?>">
+	        					 	<?php echo $item['MenuName']; ?>
 	        					 </a>
 	        				</li>
-	        				<li>
-	        					<img src="/images/icons/8x8/graduation-hat.png" />
-	        					 <a href="/">
-	        					 	Học phí tham khảo
-	        					 </a>
-	        				</li>
-	        				<li>
-	        					<img src="/images/icons/8x8/graduation-hat.png" />
-	        					 <a href="/">
-	        					 	Phụ huynh cần biết
-	        					 </a>
-	        				</li>
+	        				<?php endforeach; ?>
 	        			</ul>
 	        	</div>
-	        	
+	        	<?php //endif; ?>
 	        	<div id="content-top-center" class="span8 content-top-center">
 	        		<div id="myCarousel" class="carousel slide">
 						  <ol class="carousel-indicators">
@@ -69,33 +60,24 @@ Quý Phụ Huynh!
 						</div>
 	        	</div>
 	        	<script>$('.carousel').carousel();</script>
-	        	
+	        	<?php //if(count($this->RightContentTop)):?>
 	        	<div id="content-top-right" class="span2 content-top-right">
 	        		  <div class="content-top-right-title">
 	        					<img src="/images/icons/16x16/leather-bag.png" style="vertical-align: top;"/>
 	        					GIA SƯ
 	        			</div>
 	        			<ul class="content-top-menu">
-	        				<li>
-	        					<img src="/images/icons/8x8/leather-bag.png" />
-	        					 <a href="/">
-	        					 	Đăng ký làm gia sư
-	        					 </a>
-	        				</li>
-	        				<li>
-	        					<img src="/images/icons/8x8/leather-bag.png" />
-	        					 <a href="/">
-	        					 	Lớp dạy hiện có
-	        					 </a>
-	        				</li>
-	        				<li>
-	        					<img src="/images/icons/8x8/leather-bag.png" />
-	        					 <a href="/">
-	        					 	Nội quy nhận lớp
-	        					 </a>
-	        				</li>
-	        			</ul>
-	        	</div>
+	        				<?php foreach ($this->RightContentTop as $item):?>
+		        				<li>
+		        					<img src="/images/icons/8x8/abc.png" />
+		        					 <a href="<?php echo $item['MenuUrl']; ?>">
+		        					 	<?php echo $item['MenuName']; ?>
+		        					 </a>
+		        				</li>
+		        				<?php endforeach; ?>
+		        			</ul>
+		        	</div>
+	        	<?php //endif; ?>
 	        </div>
 	    </div>
 	</div>

@@ -3,6 +3,15 @@ echo $this->doctype();
 $controller = Zend_Controller_Front::getInstance()->getRequest()->getControllerName();
 $action = Zend_Controller_Front::getInstance()->getRequest()->getActionName();
 getHeaders($this, $controller, $action);
+
+$menusModel = new Application_Model_Menus();
+$menus = $menusModel->groupMenuByParent($menusModel->fetchAll($menusModel->getAllAvaiabled()));
+$configsModel = new Application_Model_Configs();
+$menuTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('TopMenu')); 
+$leftContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('LeftContentTop'));
+$rightContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('RightContentTop'));
+$leftContentMiddle = $menusModel->getMenu($menus, $configsModel->getConfigValue('LeftContentMiddle'));
+$contentTop = array('LeftContentTop' => $leftContentTop, 'RightContentTop' => $rightContentTop);
 ?>
 <html>
     <head>
@@ -27,15 +36,15 @@ getHeaders($this, $controller, $action);
     <body data-spy="scroll">
         <div id="contentall">
             <?php echo $this->render('header.phtml'); ?>
-            <?php echo $this->render('menu-top.phtml'); ?>            
+            <?php echo $this->renderLayoutBlock('menu-top.phtml', $this, array('TopMenu' => $menuTop)); ?>            
             <div class="content">
-				<?php echo $this->render('content-top.phtml'); ?>
+				<?php echo $this->renderLayoutBlock('content-top.phtml', $this, $contentTop); ?>
 				<div class="content-main">
 					<div id="home-page">
 						<div class="container">
 				            <div class="row-fluid">
 									<!--News Sections-->
-				                	<?php echo $this->render('content-left.phtml'); ?>
+				                	<?php echo $this->renderLayoutBlock('content-left.phtml', $this, array('LeftContentMiddle' => $leftContentMiddle)); ?>
 				             		<!--Main Sections-->
 					                <div class="span10 content-block">            
 	            						<?php echo $this->layout()->content; ?>            

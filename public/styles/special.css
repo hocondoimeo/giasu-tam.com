@@ -365,7 +365,10 @@
 #home-page .news-block {
     position: relative;
     margin-top: 20px;
-	width: 15.52991452991453%;	
+	width: 15.52991452991453%;
+}
+
+#home-page .news-block , #home-page .content-block {
 	min-height: 1090px;	
 }
 
@@ -570,7 +573,9 @@
     #home-page .news-block {
         width: 47.8%;    
         margin-top: 0px;
-    	min-height: 1160px;
+    }
+    #home-page .news-block , #home-page .content-block{
+    	min-height: 1160px;    	
     }    
 
     #home-page .people-left-block, #home-page .people-right-block {
@@ -635,8 +640,8 @@
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
-    #let-talk-footer{width: 30%;margin: 0px;}
-    #logo-footer{width: 27%;}
+    /* #let-talk-footer{width: 30%;margin: 0px;} */
+    /* #logo-footer{width: 27%;} */
 }
 
 @media (max-width: 767px) {
@@ -865,7 +870,7 @@
 	#content-top-left, #content-top-right, #content-top-center {
 		min-height: 370px !important;
 	}
-	#home-page .news-block {
+	#home-page .news-block, #home-page .content-block {
 		min-height: 1110px;
 	}
 	#content-top-center{

@@ -1,15 +1,9 @@
-<?php $menusModel = new Application_Model_Menus(); ?>
-<?php
-$menus = $menusModel->groupMenuByParent($menusModel->fetchAll($menusModel->getAllAvaiabled()));
-$url = base64_encode($this->common()->curPageURL());
-?>
-
 <div class="menu">
     <div class="container">
         <div class="row-fluid">
             <div id="menus" class="span">
                 <ul class="navigation sf-menu display-menu">
-                    <?php foreach ($menus as $menu) : ?>
+                    <?php foreach ($this->TopMenu as $menu) : ?>
                         <?php if (isset($menu['ClassName']) && $menu['ClassName'] != '') : ?>
                             <li class="<?php echo $menu['ClassName']; ?> <?php echo $menu['MenuCode']; ?>">
                                 <a href="<?php echo $menu['MenuUrl']; ?>">

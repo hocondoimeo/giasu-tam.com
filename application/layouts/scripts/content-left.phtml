@@ -1,36 +1,23 @@
-<!--News Sections-->
+					<!--News Sections-->
 	                <div class="span2 news-block">
-	<!--                    <h3>News</h3>-->
-	<!--                     <div class="content-top">	 -->
-<!-- 						    <div class="container"> -->
-	<!-- 					        <div class="row-fluid"> -->
+	                		<?php if(count($this->LeftContentMiddle)):?>
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
 						        					<img src="/images/icons/16x16/abc.png" />
 						        					TIN TỨC
 						        			</div>
 						        			<ul class="content-top-menu">
+						        				<?php foreach ($this->LeftContentMiddle as $item):?>
 						        				<li>
 						        					<img src="/images/icons/8x8/abc.png" />
-						        					 <a href="/">
-						        					 	Giáo dục
+						        					 <a href="<?php echo $item['MenuUrl']; ?>">
+						        					 	<?php echo $item['MenuName']; ?>
 						        					 </a>
 						        				</li>
-						        				<li>
-						        					<img src="/images/icons/8x8/abc.png" />
-						        					 <a href="/">
-						        					 	Gia sư Tâm
-						        					 </a>
-						        				</li>
-						        				<li>
-						        					<img src="/images/icons/8x8/abc.png" />
-						        					 <a href="/">
-						        					 	Gia sư dạy kèm
-						        					 </a>
-						        				</li>
+						        				<?php endforeach; ?>
 						        			</ul>
 						        	</div>
-						        	
+						     <?php endif; ?>
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
 						        					<img src="/images/icons/16x16/laptop.png" />
@@ -41,7 +28,7 @@
 												    <fieldset class="well the-fieldset">
 												        <legend class="the-legend">Tư Vấn</legend>
 												        <a>
-												        	<img style="border:0" align="middle" src="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
+												        	<img style="border:0" align="middle" src1="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
 												        </a><br>Tel: 0919176446
 												    </fieldset>
 												<!-- </form> -->
@@ -49,7 +36,7 @@
 												    <fieldset class="well the-fieldset">
 												        <legend class="the-legend">Tư Vấn</legend>
 												        <a>
-												        	<img style="border:0" align="middle" src="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
+												        	<img style="border:0" align="middle" src1="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
 												        </a><br>Tel: 0909361963
 												    </fieldset>
 												</form>	                   

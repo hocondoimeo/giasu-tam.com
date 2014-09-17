@@ -1,0 +1,39 @@
+<?php if(count($this->paginator)):?>
+      <div class="row-fluid lastest-news-content">
+               <?php $c = 0; foreach ($this->paginator as $key => $lastestNews):?>
+			    <?php if (is_numeric($key)) : ?>
+			    <div class="row-fluid lastest-block">
+			        <div class="featurette">
+			            <?php if(!$c):?>
+			            <h6 class="small-vertical-seperator first-lastest-news">&nbsp;</h6>
+			            <?php else:?>
+			            <div class="small-vertical-seperator">&nbsp;</div>
+			            <?php endif;?>
+			            <a href="/news/detail/id/<?php echo $lastestNews->NewsId.(empty($this->cate)?'':'/cate/'.$this->cate); ?>">
+			            <div class="pull-left">
+			                <?php  if(isset($lastestNews->Url) &&  count($lastestNews->Url)):?>
+			                <img class="desc-news" src="<?php echo $lastestNews->Url?>" alt="<?php echo $lastestNews->Url?>"/>
+			                <img class="small-news" src="<?php //echo $lastestNews['image']['large']?>" alt="<?php //echo $lastestNews['image']['large']?>"/>
+			                <?php else:?>
+			                <img class="desc-news" src="/images/footer/logo_footer.png"/>
+			                <img class="small-news" src="/images/footer/logo_footer.png"/>
+			                <?php endif; ?>
+			            </div>
+			            <span><?php echo $lastestNews->Title?>111</span></a>
+			            <div class="lastest-date desc-news"><?php echo $lastestNews->Summary?></div>
+			            <div class="lastest-date news-date"><?php echo $lastestNews->CreatedDate?></div>
+			        </div>
+			    </div>
+			    <?php endif; ?>
+			<?php $c++;endforeach;?>
+			<?php if(count($this->paginator) > 1):?>
+			<div class="row-fluid">
+			    <?php echo $this->paginationControl($this->paginator,'Sliding','/news/block/lastest-news-pagination.phtml'); ?>
+			</div>
+			<?php endif;?>
+			
+			<?php if($this->paginator->getCurrentItemCount() == LASTEST_NEWS_ITEMS):?>
+			<div class="loadmorenews"><div class="read-more-news">Read More News</div></div>
+			<?php endif;?>
+      </div>
+<?php endif;?>                        

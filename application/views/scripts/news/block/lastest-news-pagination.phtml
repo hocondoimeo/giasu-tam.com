@@ -1,0 +1,66 @@
+<?php $allParams = Zend_Controller_Front::getInstance()->getRequest()->getParams(); $cate = '';
+    if(isset($allParams['cate']) && $allParams['cate']) $cate = '/cate/'.$allParams['cate'];
+?>
+<?php if ($this->pageCount): ?>
+<div class="pagination pagination-centered paginationControl bottom-news" total-page="<?php echo $this->pageCount;?>" current-page="1"
+cate-id="<?php echo $cate ?>" page="<?php //echo $allParams['page']?>">
+<ul>
+<!-- Previous page link -->
+<?php if (isset($this->previous)): ?>
+  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/news/ajax-get-lastest-news/page/'.$this->previous.$cate; ?>','<?php echo $this->previous.$cate;?>')">
+    «
+  </a> </li>
+<?php else: ?>
+  <li><span>«</span></li>
+<?php endif; ?>
+
+<!-- Numbered page links -->
+<?php foreach ($this->pagesInRange as $page): ?>
+  <?php if ($page != $this->current): ?>
+    <li><a href='#lastest-news-content' onclick="loadPage('<?php echo '/news/ajax-get-lastest-news/page/'.$page.$cate; ?>','<?php echo $page.$cate;?>')">
+        <?php echo $page; ?>
+    </a></li>
+  <?php else: ?>
+    <li><span class="active"><?php echo $page; ?></span></li>
+  <?php endif; ?>
+<?php endforeach; ?>
+
+<!-- Next page link -->
+<?php if (isset($this->next)): ?>
+  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/news/ajax-get-lastest-news/page/'.$this->next.$cate; ?>','<?php echo $this->next.$cate;?>')">
+    »
+  </a></li>
+<?php else: ?>
+  <li><span>»</span></li>
+<?php endif; ?>
+</ul>
+</div>
+<?php endif; ?>
+
+<?php
+/*
+ * Drop down paginaton example
+ */
+/*
+?>
+<?php if ($this->pageCount): ?>
+<select id="paginationControl" size="1">
+<?php foreach ($this->pagesInRange as $page): ?>
+  <?php $selected = ($page == $this->current) ? ' selected="selected"' : ''; ?>
+  <option value="<?php
+        echo $this->url(array('page' => $page));?>"<?php echo $selected ?>>
+    <?php echo $page; ?>
+  </option>
+<?php endforeach; ?>
+</select>
+<?php endif; ?>
+
+<script type="text/javascript"
+     src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js">
+</script>
+<script type="text/javascript">
+$('paginationControl').observe('change', function() {
+    window.location = this.options[this.selectedIndex].value;
+})
+</script>
+*/?>

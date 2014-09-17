@@ -15,8 +15,8 @@ require_once APPLICATION_PATH . '/configs/constants.php';
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-     '/../library',
-     '../library',
+     //'/../library',
+     //'../library',
     get_include_path(),
 )));
 

@@ -60,3 +60,9 @@ define('IMAGE_UPLOAD_URL_TMP', IMAGE_UPLOAD_URL .'tmp/');
 define('IMAGE_SIZE_LIMIT', 500);
 $allowedExt = array('jpeg', 'jpg', 'png', 'gif');
 define('IMAGE_ALLOWED_EXT', serialize($allowedExt));
+
+/************************* News *******************************/
+define('FEATURE_NEWS_DESC_COUNT', 40);
+define('LASTEST_NEWS_DESC_COUNT', 20);
+define('LASTEST_NEWS_COUNT', 10);
+define('LASTEST_NEWS_ITEMS', 5);
