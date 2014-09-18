@@ -1,9 +1,10 @@
-<?php $allParams = Zend_Controller_Front::getInstance()->getRequest()->getParams(); $cate = '';
-    if(isset($allParams['cate']) && $allParams['cate']) $cate = '/cate/'.$allParams['cate'];
+<?php $allParams = Zend_Controller_Front::getInstance()->getRequest()->getParams();
+    $cate = (isset($allParams['cate']) && $allParams['cate'])? '/cate/'.$allParams['cate']: '';
+    $cpage = (isset($allParams['page']) && $allParams['page'])? '/cate/'.$allParams['page']: '1';
 ?>
 <?php if ($this->pageCount): ?>
 <div class="pagination pagination-centered paginationControl bottom-news" total-page="<?php echo $this->pageCount;?>" current-page="1"
-cate-id="<?php echo $cate ?>" page="<?php //echo $allParams['page']?>">
+cate-id="<?php echo $cate ?>" page="<?php echo $cpage?>">
 <ul>
 <!-- Previous page link -->
 <?php if (isset($this->previous)): ?>

@@ -39,4 +39,10 @@ class Application_Model_News extends Application_Model_Abstract{
     	$select = $this->getItemsBySelectQuery($cols, array('NewsCategoryId = '.$cateId));
     	 return $select;
     }
+    
+    public function getNewsByPrivate(){
+    	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');
+    	$select = $this->getItemsBySelectQuery($cols, array('IsPrivate = 1 '), array('LastUpdated DESC'));
+    	return $select;
+    }
 }

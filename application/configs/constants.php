@@ -8,25 +8,26 @@ if(APPLICATION_ENV == 'production'){
 define('NUMBER_OF_ITEM_PER_PAGE', 20);
 
 /************************* Domain *******************************/
+
 if (APPLICATION_ENV == 'local') {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu.com');
-	define('BACKEND_DOMAIN_NAME', 'http://giasu.com/admin');
+	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu.com');
 
 } elseif (APPLICATION_ENV == 'dev') {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
-	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
+	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu-tam.com');
 
 }elseif (APPLICATION_ENV == 'test') {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
-	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
+	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu-tam.com');
 
 } elseif (APPLICATION_ENV == 'showcase') {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
-	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
+	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu-tam.com');
 
 } else {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu-tam.com');
-	define('BACKEND_DOMAIN_NAME', 'http://giasu-tam.com/admin');
+	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu-tam.com');
 }
 
 /************************* Date Format *******************************/

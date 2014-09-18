@@ -81,12 +81,12 @@ h3.bottom-news { line-height: 20px !important}
     }
     
     #content-page{
-        margin-top: 0px !important;
+        /* margin-top: 0px !important;
         margin-top: 0px\9 !important;
         *margin-top: 10px !important;
         padding-top: 10px !important;
         padding-top: -10px\9 !important;
-       *padding-top: 10px !important;
+       *padding-top: 10px !important; */
     }
     .content-news{
 	    border-radius: 10px 10px 0px 0px;

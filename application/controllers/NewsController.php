@@ -21,7 +21,7 @@ class NewsController extends Zend_Controller_Action
     }
     
     public function showNewsAction(){
-    	if(null == $id = $this->_request->getParam('id',null)){
+    	if(null == $id = $this->_request->getParam('cate',null)){
     		$this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
     		$this->_helper->redirector('show-news');
     	}
@@ -39,7 +39,7 @@ class NewsController extends Zend_Controller_Action
     	$this->_helper->layout->disableLayout();
     	$page = $this->_getParam('page',1);
     
-    	if(null == $id = $this->_request->getParam('id',null)){
+    	if(null == $id = $this->_request->getParam('cate',null)){
     		$this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
     		$this->_helper->redirector('show-news');
     	}

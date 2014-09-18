@@ -1,9 +1,7 @@
 <?php
-/* $modelStatic = new Admin_Model_StaticContents();
-$modelImage  = new Admin_Model_Images();
-
-$heading     = $modelStatic->getContentValueByCode("ALL_HEADING");
-$headingText = (!empty($heading->StaticContent)) ? unserialize($heading->StaticContent) : null; */
+ $modelNews = new Application_Model_News();
+ $news =  $modelNews->fetchRow($modelNews->getNewsByPrivate());
+ $content = (count($news)? $news->toArray() : '');
 ?>                 <!--People Sections-->
                     <div id="people-block">
                         <!-- <h3> --><?php //echo (!empty($headingText['home_people'])) ? $headingText['home_people'] : ""; ?><!-- </h3> -->
@@ -12,20 +10,12 @@ $headingText = (!empty($heading->StaticContent)) ? unserialize($heading->StaticC
                             <div class="span12 people-right-block">
                                 <div class="row-fluid">
                                     <div class="span12">
-                                        <p><?php /*$peopleRight = $modelStatic->getContentValueByCode("PEOPLE_HOME_LEFT");
-                                            if (!empty($peopleRight->StaticContent)) {
-                                                echo $peopleRight->StaticContent;
-                                            }*/?> index
+                                        <p><?php 
+                                        		if (is_array($content) && count($content)) 
+                                                	echo  !empty($content['Content']) ? $content['Content'] :  ' '; 
+                                        		?>
                                         </p>
                                     </div>
-                                    <!-- <div class="span5"> -->
-                                        <?php /*$imageAbout = $modelImage->fetchRow("ImageCode = 'HOME_RIGHT_PEOPLE'");
-                                        if (!empty($imageAbout) && file_exists(IMAGE_UPLOAD_PATH.$imageAbout->ImageName)): ?>
-                                            <img alt="<?php echo $imageAbout->ImageName?>" src="<?php echo IMAGE_UPLOAD_URI.$imageAbout->ImageName?>"/>
-                                        <?php else: ?>
-                                            <img src="http://placehold.it/320x320">
-                                        <?php endif; */?>
-                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
