@@ -5,23 +5,24 @@
 			    <div class="row-fluid lastest-block">
 			        <div class="featurette">
 			            <?php if(!$c):?>
-			            <h6 class="small-vertical-seperator first-lastest-news">&nbsp;</h6>
+			            <!-- <h6 class="small-vertical-seperator first-lastest-news">&nbsp;</h6> -->
 			            <?php else:?>
 			            <div class="small-vertical-seperator">&nbsp;</div>
 			            <?php endif;?>
 			            <a href="/news/detail/id/<?php echo $lastestNews->NewsId.(empty($this->cate)?'':'/cate/'.$this->cate); ?>">
 			            <div class="pull-left">
-			                <?php  if(isset($lastestNews->Url) &&  count($lastestNews->Url)):?>
-			                <img class="desc-news" src="<?php echo $lastestNews->Url?>" alt="<?php echo $lastestNews->Url?>"/>
-			                <img class="small-news" src="<?php //echo $lastestNews['image']['large']?>" alt="<?php //echo $lastestNews['image']['large']?>"/>
+			                <?php  if(isset($lastestNews->ImageUrl) &&  !empty($lastestNews->ImageUrl)):?>
+			                <img class="desc-news" src="<?php echo IMAGE_UPLOAD_URI.$lastestNews->ImageUrl?>" alt="<?php echo $lastestNews->ImageUrl?>"/>
+			                <img class="small-news" src="<?php echo IMAGE_UPLOAD_URI.$lastestNews->ImageUrl?>" alt="<?php echo $lastestNews->ImageUrl?>"/>
 			                <?php else:?>
 			                <img class="desc-news" src="/images/footer/logo_footer.png"/>
 			                <img class="small-news" src="/images/footer/logo_footer.png"/>
 			                <?php endif; ?>
 			            </div>
-			            <span><?php echo $lastestNews->Title?>111</span></a>
+			            <span><?php echo $lastestNews->Title?></span></a>
 			            <div class="lastest-date desc-news"><?php echo $lastestNews->Summary?></div>
-			            <div class="lastest-date news-date"><?php echo $lastestNews->CreatedDate?></div>
+			            <?php $date = new Zend_Date($lastestNews->CreatedDate, DATE_FORMAT_DATABASE);?>
+			            <div class="lastest-date news-date"><?php echo $date->toString(DATE_FORMAT_NORMAL);?></div>
 			        </div>
 			    </div>
 			    <?php endif; ?>

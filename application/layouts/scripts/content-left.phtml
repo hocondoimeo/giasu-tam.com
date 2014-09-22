@@ -1,4 +1,5 @@
-					<!--News Sections-->
+<?php $info = ''; require_once APPLICATION_PATH . '/../library/Function/counter.php';?>
+<!--News Sections-->
 	                <div class="span2 news-block">
 	                		<?php if(count($this->LeftContentMiddle)):?>
 						        	<div id="content-middle-left" class="span2">
@@ -24,27 +25,41 @@
 						        					HỖ TRỢ
 						        			</div>
 						        			<div class="content-left">
-								             	<!-- <form> -->
+								             	<form>
 												    <fieldset class="well the-fieldset">
 												        <legend class="the-legend">Tư Vấn</legend>
-												        <a>
-												        	<img style="border:0" align="middle" src1="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
-												        </a><br>Tel: 0919176446
+												        <a href="ymsgr:sendim?giasutam">
+												        	<img style="border:0" align="middle" src="http://opi.yahoo.com/online?u=giasutam&amp;m=g&amp;t=1" title="Tư Vấn">
+												        </a><br><strong>Tel: 0919176446</strong>
 												    </fieldset>
-												<!-- </form> -->
+												</form>
 												<form>
 												    <fieldset class="well the-fieldset">
 												        <legend class="the-legend">Tư Vấn</legend>
-												        <a>
-												        	<img style="border:0" align="middle" src1="http://opi.yahoo.com/online?u=giasu42a&amp;m=g&amp;t=1" title="Tư Vấn">
-												        </a><br>Tel: 0909361963
+												        <a href="ymsgr:sendim?tamlehung1983">
+												        	<img style="border:0" align="middle" src="http://opi.yahoo.com/online?u=tamlehung1983&amp;m=g&amp;t=1" title="Tư Vấn">
+												        </a><br><strong>Tel: 0909361963</strong>
 												    </fieldset>
 												</form>	                   
 								             </div>
-								             
-								             
 						        	</div>
-	<!-- 					        </div> -->
-	<!-- 					    </div> -->
-<!-- 						</div> -->
+						        	
+						        	<div id="content-middle-left" class="span2">
+						        			<div class="content-top-left-title">
+						        					<img src="/images/icons/16x16/globe.png" />
+						        					THỐNG KÊ
+						        			</div>
+						        			<ul class="content-top-menu">
+						        				<?php if(!empty($info)): $info = explode(':', $info);?>
+						        				<li>
+						        					<img src="/images/icons/8x8/globe.png" />
+						        					 <strong>Tổng truy cập: <?php echo $info[0];?></strong>
+						        				</li>
+						        				<li>
+						        					<img src="/images/icons/8x8/globe.png" />
+						        					 <strong>Đang truy cập:  <?php echo $info[1];?></strong>
+						        				</li>
+						        				<?php endif; ?>
+						        			</ul>
+						        	</div>
 	                </div>

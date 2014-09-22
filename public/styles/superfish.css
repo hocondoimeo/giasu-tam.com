@@ -254,9 +254,7 @@ li.sfHover.active > a > .sf-sub-indicator {
         margin: 0 10px;    
     }    
 }
-.menu-small-viewport {
-    display: none;
-}
+
 .display-menu{
     display: inherit;
 }
@@ -449,6 +447,8 @@ li.sfHover.active > a > .sf-sub-indicator {
     .sf-menu li.dark-blue-menu.active > a span:first-child { border-bottom: none; color: #FFF; }
     .sf-menu li.dark-blue-menu ul li:hover > a span:first-child { border-bottom: none; color: #FFF; }
     .sf-menu li.dark-blue-menu ul li.active > a span:first-child { border-bottom: none; color: #FFF; }
+    
+    .content-top, .menu {padding-top: 10px !important;}
 }
 
 

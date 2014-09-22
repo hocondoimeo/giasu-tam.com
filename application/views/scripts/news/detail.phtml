@@ -1,4 +1,6 @@
-<?php foreach ($this->news as $value) :?>					
+<?php
+		if(isset($this->news) && count($this->news)):	
+			 foreach ($this->news as $value) :?>					
 					<!--People Sections-->
                     <div id="people-block">
                          <h3><?php echo (!empty($value->Title)) ? $value->Title : ""; ?></h3>
@@ -15,4 +17,4 @@
                             </div>
                         </div>
                     </div>
-<?php endforeach;?>                    
+<?php endforeach; endif;?>                    

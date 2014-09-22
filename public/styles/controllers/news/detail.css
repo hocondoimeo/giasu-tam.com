@@ -75,7 +75,7 @@ h3.bottom-news { line-height: 20px !important}
         font-weight: bold;
     }
     .content{
-        margin-bottom: -30px;
+        /* margin-bottom: -30px; */
         padding-left: 10px;
         padding-right: 10px;
     }

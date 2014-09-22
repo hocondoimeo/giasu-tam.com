@@ -28,7 +28,7 @@ class Application_Model_News extends Application_Model_Abstract{
    
     public function getNewsDetail($newsId){
     	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');
-    	$select = $this->getItemsBySelectQuery($cols, array('NewsId = '.$newsId));
+    	$select = $this->getItemsBySelectQuery($cols, array('NewsId = '.$newsId, 'IsDisabled = 0'));
         $result = $this->fetchAll($select);
     	if(count($result)) return $result;
     	else return null; 
@@ -36,13 +36,13 @@ class Application_Model_News extends Application_Model_Abstract{
     
     public function getNewsByCate($cateId){
     	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');
-    	$select = $this->getItemsBySelectQuery($cols, array('NewsCategoryId = '.$cateId));
+    	$select = $this->getItemsBySelectQuery($cols, array('NewsCategoryId = '.$cateId, 'IsDisabled = 0'));
     	 return $select;
     }
     
     public function getNewsByPrivate(){
     	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');
-    	$select = $this->getItemsBySelectQuery($cols, array('IsPrivate = 1 '), array('LastUpdated DESC'));
+    	$select = $this->getItemsBySelectQuery($cols, array('IsPrivate = 1', 'IsDisabled = 0'), array('LastUpdated DESC'));
     	return $select;
     }
 }

@@ -74,12 +74,12 @@ function activeMenuFunction(activeMenu) {
 var heightDocument = 0;
 
 $(document).ready(function(){      
-    heightDocument = $(document).height();
-    resizeHeight(0);
-    $(window).resize(function () {       
+    //heightDocument = $(document).height();
+    //resizeHeight(0);
+    /*$(window).resize(function () {       
         resizeHeight(1);
-    });
-    hideDeviceTablet();
+    });*/
+    //hideDeviceTablet();
 });
 
 function resizeHeight(resize){
@@ -180,9 +180,12 @@ function showNewsInSmallViewPort(){
     }
     else{
     	//hide small menu viewport
-    	$(".menu-small-viewport").each(function(){
-            $(this).hide();
-        });
+    	if($('#menu-small-viewport').css('display') == 'block'){
+    		$("#menu-small-viewport").each(function(){
+                $(this).hide();
+            });  
+    	}
+    	
     	//hide carousel control small viewport
     	/*$(".carousel-control").each(function(){
             $(this).hide();

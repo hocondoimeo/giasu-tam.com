@@ -5,10 +5,11 @@ defined('APPLICATION_PATH')
 
 // Define application environment
 defined('APPLICATION_ENV')
-    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'production'));
+    || define('APPLICATION_ENV', (getenv('APPLICATION_ENV') ? getenv('APPLICATION_ENV') : 'development'));
     
 
 //config for layout
+//require_once APPLICATION_PATH . '/../library/Function/counter.php';
 require_once APPLICATION_PATH . '/../library/Function/layout.php';
 require_once APPLICATION_PATH . '/configs/constants.php';
 
