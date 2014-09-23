@@ -29,7 +29,7 @@ class Application_Model_News extends Application_Model_Abstract{
     public function getNewsDetail($newsId){
     	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');
     	$select = $this->getItemsBySelectQuery($cols, array('NewsId = '.$newsId, 'IsDisabled = 0'));
-        $result = $this->fetchAll($select);
+    	$result = $this->fetchRow($select);
     	if(count($result)) return $result;
     	else return null; 
     }

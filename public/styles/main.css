@@ -151,3 +151,21 @@ ul.content-top-menu,  ul.content-top-rmenu{
     -webkit-box-shadow:  0px 0px 0px 0px #000;
             box-shadow:  0px 0px 0px 0px #000;
 }
+
+/********************************* FORM **************************************/
+.form-group  input, .form-group  select, .form-group  textarea{
+	margin-bottom: 10px;
+	margin-left: 0px;
+	float: left;
+}
+.element-control  input, .element-control  select, .element-control  textarea, .element-control  radio, .element-control-radio  input{
+	float: left;
+	margin-left: 10px;
+}
+.element-control-radio {
+	display: inline-flex;	
+}
+#fieldset-contact, #fieldset-level, #fieldset-extra{
+	width: 500px;
+}
+

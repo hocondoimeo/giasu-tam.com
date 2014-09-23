@@ -67,3 +67,10 @@ define('FEATURE_NEWS_DESC_COUNT', 40);
 define('LASTEST_NEWS_DESC_COUNT', 20);
 define('LASTEST_NEWS_COUNT', 10);
 define('LASTEST_NEWS_ITEMS', 5);
+
+/************************* Tutors *******************************/
+$levels = array('- Chọn trình độ -', 'Cao Đẳng', 'Đại Học', 'Thạc Sỹ', 'Bằng cấp khác');
+define('TUTOR_LEVELS', serialize($levels));
+
+$careers = array('Sinh Viên', 'Giáo Viên', 'Đã Tốt Nghiệp');
+define('TUTOR_CAREERS' , serialize($careers));

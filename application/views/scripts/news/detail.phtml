@@ -1,20 +1,21 @@
-<?php
-		if(isset($this->news) && count($this->news)):	
-			 foreach ($this->news as $value) :?>					
+<?php $configsModel = new Application_Model_Configs();
+		$showTitle = $configsModel->getConfigValue('ShowNewsTitle');
+		if(isset($this->news) && count($this->news)):?>					
 					<!--People Sections-->
                     <div id="people-block">
-                         <h3><?php echo (!empty($value->Title)) ? $value->Title : ""; ?></h3>
-
+                    <?php if(isset($showTitle) && $showTitle):?>	
+                         <h3><?php echo (!empty($this->news['Title'])) ? $this->news['Title'] : ""; ?></h3>
+					<?php endif;?>
                         <div class="row-fluid">
                             <div class="span12 people-right-block">
                                 <div class="row-fluid">
                                     <div class="span12">
                                         <p>
-                                        	<?php echo $value->Content;?>
+                                        	<?php echo $this->news['Content'];?>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-<?php endforeach; endif;?>                    
+<?php endif;?>                    
