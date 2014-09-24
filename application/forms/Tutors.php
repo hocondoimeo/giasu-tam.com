@@ -176,6 +176,34 @@ class Application_Form_Tutors extends Zend_Form
         $career->setMultiOptions(unserialize(TUTOR_CAREERS));
         $this->addElement($career);
         
+        $avatar  = new Zend_Form_Element_Hidden('Upload');
+        $avatar->setLabel('Hình đại diện');
+        $avatar->setRequired(false);
+        $avatar->setDescription('fieldlabel');
+        $avatar->setDecorators(array(
+        		'ViewHelper',
+        		array(array('Description' => 'HtmlTag'), array('tag' => 'div', 'id' =>"file-uploader")),
+        		array(array('Errors' => 'HtmlTag'), array('placement' => 'append','tag' => 'img', 'id' => 'progress-img', 'src' => "/scripts/upload/loading.gif")),
+        		//array(array('Errors' => 'HtmlTag'), array('placement' => 'prepend')),
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control', 'style' => "position: relative;float: left;margin-left: 20px;")),
+        		array('Label', array('class' => 'control-label')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group')),
+        ));
+        $this->addElement($avatar);
+        
+        $avatarNote  = new Zend_Form_Element_Hidden('Avatar');
+        $avatarNote->setLabel('Chú ý');
+        $avatarNote->setRequired(false);
+        $avatarNote->setDescription("Kích thước khoảng: 240 x 120 (px)<br>Kích cỡ cho phép: ".IMAGE_SIZE_LIMIT." kB");
+        $avatarNote->setDecorators(array(
+        		'ViewHelper',
+        		array('Description', array('escape' => false, 'tag' => 'div')),
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
+        		array('Label', array('class' => 'control-label')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group', 'style' => "float: left;")),
+        ));
+        $this->addElement($avatarNote);
+        
         $introduction  = new Zend_Form_Element_Textarea('Introduction');
         $introduction->setLabel('Giới thiệu bản thân');
         $introduction->addFilter('StringTrim');
@@ -243,7 +271,6 @@ class Application_Form_Tutors extends Zend_Form
         $contact->setDecorators(array(        
         		'FormElements',
         		'Fieldset',
-        		//array('HtmlTag', array('tag'=>'div', 'style'=>'width:50%;float:left;')),
         		array('HtmlTag', array('tag'=>'fieldset', 'class'=>'well the-fieldset')),
         ));
         
@@ -259,11 +286,12 @@ class Application_Form_Tutors extends Zend_Form
         $level->setDecorators(array(
         		'FormElements',
         		'Fieldset',
-        		//array('HtmlTag',array('tag'=>'div','style'=>'width:100%;float:left;')),
         		array('HtmlTag', array('tag'=>'fieldset', 'class'=>'well the-fieldset')),
         ));
         
         $this->addDisplayGroup(array(
+        		'Upload',
+        		'Avatar',
         		'Introduction',
         ),'extra',array('disableLoadDefaultDecorators' => false, 'legend' => 'Thông tin thêm'));
         
@@ -271,7 +299,6 @@ class Application_Form_Tutors extends Zend_Form
         $extra->setDecorators(array(
         		'FormElements',
         		'Fieldset',
-        		//array('HtmlTag',array('tag'=>'div','style'=>'width:100%;float:left;')),
         		array('HtmlTag', array('tag'=>'fieldset', 'class'=>'well the-fieldset')),
         ));
         
@@ -284,7 +311,6 @@ class Application_Form_Tutors extends Zend_Form
         $submit->setDecorators(array(
         		'FormElements',
         		'Fieldset',
-        		//array('HtmlTag',array('tag'=>'div','style'=>'width:100%;float:left;')),
         		array('HtmlTag', array('tag'=>'fieldset', 'class'=>'well the-fieldset')),
         ));
     }

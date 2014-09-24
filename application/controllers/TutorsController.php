@@ -20,7 +20,15 @@ class TutorsController extends Zend_Controller_Action
     * Function show all Sites
     */
     public function indexAction() {
-        $this->_helper->redirector('register');
+        $this->_helper->redirector('show-tutors');
+    }
+    
+    public function detailAction(){
+    	if(null == $id = $this->_request->getParam('id',null)){
+    		$this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
+    		$this->_helper->redirector('show-tutors');
+    	}
+    	$this->view->tutor = $this->_model->getTutorDetail($id);
     }
     
    /**
@@ -28,23 +36,30 @@ class TutorsController extends Zend_Controller_Action
     * @return list Users
     * @author 
     */
-    public function showUsersAction() {
-        /*Get parameters filter*/
-        $params            = $this->_getAllParams();
-        $params['page']    = $this->_getParam('page',1);
-        $params['perpage'] = $this->_getParam('perpage',NUMBER_OF_ITEM_PER_PAGE);
-        $params['where'] = array('UserId != 1');
-        
+    public function showTutorsAction() {        
         /*Get all data*/
-        /* $paginator = Zend_Paginator::factory($this->_model->getQuerySelectAll($params)); */
-        $paginator = Zend_Paginator::factory();
-        $paginator->setCurrentPageNumber($params['page']);
-        $paginator->setItemCountPerPage($params['perpage']);
+        $paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled());
+        $paginator->setItemCountPerPage(TUTORS_ITEMS);
+    	$page = $this->_getParam('page',1);
+    	$this->view->page = $page;
 
         /*Assign varible to view*/
         $this->view->paginator = $paginator;
-        $this->view->assign($params);
-        $this->view->message = $this->_helper->flashMessenger->getMessages();
+        $this->view->paginator = $paginator->setCurrentPageNumber($page);
+        //$this->view->message = $this->_helper->flashMessenger->getMessages();
+    }
+    
+    public function ajaxGetTutorsAction(){
+    	$this->_helper->layout->disableLayout();
+    	$page = $this->_getParam('page',1);
+    
+    	//set Lastest News pagination
+    	$this->view->page = $page;
+    	$paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled());
+    	$paginator->setItemCountPerPage(TUTORS_ITEMS);
+    	$paginator->setCurrentPageNumber($page);
+    
+    	$this->view->paginator   = $paginator;
     }
     
     /**
@@ -61,7 +76,14 @@ class TutorsController extends Zend_Controller_Action
         if($this->_request->isPost()) {
             $formData = $this->_request->getPost();
             if($form->isValid($formData)) {
-                if($id = $this->_model->add($formData)){
+            	$data = $_POST;
+            	
+            	//copy new image from 'tmp' to 'images' folder then remove it
+            	$fileName = Common_FileUploader_qqUploadedFileXhr::copyImage($data['Avatar'], IMAGE_UPLOAD_PATH_TMP, IMAGE_UPLOAD_PATH);
+            	//copy exist image from 'images' to 'backup' folder then remove it
+            	//$fileNameBackup = Common_FileUploader_qqUploadedFileXhr::copyImage($data['OldImageName'], IMAGE_UPLOAD_PATH, IMAGE_UPLOAD_PATH_BACKUP);
+                
+                if($id = $this->_model->add($data)){
                 	// check isset in DB
                 	//send mail to user
                 	
@@ -104,6 +126,7 @@ class TutorsController extends Zend_Controller_Action
                 	}                 	
                 }                
             }else{
+            	$this->view->avatar = (isset($_POST['Avatar'])  && !empty($_POST['Avatar']))?$_POST['Avatar']:'';
                  $messageStatus ='danger/Có lỗi xảy ra. Chú ý thông tin những ô sau đây:';
                  $messages      = array();
                  foreach ($form->getMessages() as $fieldName => $message) {
@@ -115,6 +138,30 @@ class TutorsController extends Zend_Controller_Action
         }
         $this->view->form = $form;
         $this->view->showAllUrl = 'show-users';
+    }
+    
+    /**
+     * Function upload image
+     * @return json string
+     * @author
+     */
+    
+    public function ajaxUploadAction(){
+    	$this->_helper->layout->disableLayout();
+    	$this->_helper->viewRenderer->setNoRender(true);
+    
+    	if ($this->_request->isPost()) {
+    		// list of valid extensions, ex. array("jpeg", "xml", "bmp")
+    		$allowedExtensions = unserialize(IMAGE_ALLOWED_EXT);
+    		// max file size in bytes
+    		$sizeLimit = IMAGE_SIZE_LIMIT * 1024;
+    	  
+    		$uploader = new Common_FileUploader_qqFileUploader($allowedExtensions, $sizeLimit);
+    		$result = $uploader->handleUpload(IMAGE_UPLOAD_PATH_TMP, true);
+    		// to pass data through iframe you will need to encode all html tags
+    		echo htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+    	}else
+    		echo '{success:true}';
     }
     
     /**
@@ -177,7 +224,7 @@ class TutorsController extends Zend_Controller_Action
     		
     		$mail->setFrom($mailUserName, $mailFrom);
     		//add reply to avoid the mail direction to 'spam'/ 'junk' folder
-    		$mail->setReplyTo($email, $subject);
+    		$mail->setReplyTo($mailFrom, $subject);
     		
     		$mail->addTo($email);
     		$mail->setSubject($subject);
@@ -190,256 +237,6 @@ class TutorsController extends Zend_Controller_Action
     		$sent = $e->getMessage();
     		return array(false,$sent);
     	}
-    }
-    	
-    /**
-    * Update record Users.
-    * @param array $formData
-    * @return
-    * @author 
-    */
-    public function updateUsersAction() {
-        
-        /* Check valid data */
-        if(null == $id = $this->_request->getParam('id',null)){
-            $this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
-            $this->_helper->redirector('show-users');
-        }
-
-        $row = $this->_model->find($id)->current();
-        if(!$row) {
-            $this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
-            $this->_helper->redirector('show-users');
-        }
-    
-        $form = new Application_Form_Core_Users();
-
-        /* Proccess data post*/
-        if($this->_request->isPost()) {
-            $formData = $this->_request->getPost();
-            if($form->isValid($formData)) {
-                if($this->_model->edit($form->getValues())){
-                    $msg = str_replace(array("{subject}"),array("Users"),'success/The {subject} has been updated successfully.');
-                 	$this->_helper->flashMessenger->addMessage($msg);
-                }
-                 	$this->_helper->redirector('show-users');
-            }else{
-                 $msg ='danger/There are validation error(s) on the form. Please review the following field(s):';
-                 foreach ($form->getMessages() as $key=>$messageFormError){
-                      $msg .= '/'.$key;
-                 }
-                 $this->view->message = array($msg);
-           }
-        }
-            
-        $form->populate($row->toArray());
-        $this->view->form = $form;
-        $this->view->showAllUrl = 'show-users';
-    }
-    
-    /**
-    * Delete record Users.
-    * @param $id
-    * @return
-    * @author 
-    */
-    public function deleteUsersAction(){
-        /* Check valid data */
-        if(null == $id = $this->_request->getParam('id',null)){
-            $this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
-            $this->_helper->redirector('show-users');
-        }
-
-        $row = $this->_model->find($id)->current();
-        if(!$row) {
-            $this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
-            $this->_helper->redirector('show-users');
-        }
-       
-        $form = new Application_Form_Core_Users();
-
-        /* Proccess data post*/
-        if($this->_request->isPost()) {
-            $formData = $this->_request->getPost();
-           	if($row && $this->_model->deleteRow($id)) {
-                    $msg = str_replace(array("{subject}"),array("Users"),'success/The {subject} has been deleted successfully.');
-                 	$this->_helper->flashMessenger->addMessage($msg);
-            }
-                 	 $this->_helper->redirector('show-users');
-        }
-         
-        $this->view->id = $id;
-        $this->view->showAllUrl = 'show-users';
-    }
-    
-    /**
-    * Function show all Users
-    * @return list Users
-    * @author 
-    */
-    public function ajaxShowUsersAction() {
-        $this->_helper->layout->disableLayout();
-        
-        /*Get parameters filter*/
-        $params            = $this->_getAllParams();
-        $params['page']    = $this->_getParam('page',1);
-        $params['perpage'] = $this->_getParam('perpage',20);
-        
-        /*Get all data*/
-        $paginator = Zend_Paginator::factory($this->_model->getQuerySelectAll($params));
-        $paginator->setCurrentPageNumber($params['page']);
-        $paginator->setItemCountPerPage($params['perpage']);
-
-        /*Assign varible to view*/
-        $this->view->paginator = $paginator;
-        $this->view->assign($params);
-    }
-    
-   /**
-    * Add record Users
-    * @param array $formData
-    * @author 
-    */
-    public function ajaxAddUsersAction() {
-    
-        $this->_helper->layout->disableLayout();
-        
-        $form = new Application_Form_Core_Users();
-
-        /* Proccess data post*/
-        if($this->_request->isPost()) {
-            $formData = $this->_request->getPost();
-            if($form->isValid($formData)) {
-                if($this->_model->add($formData)){
-                    die('1');
-                }
-            }
-        }
-        $form->populate($form->getValues());
-        $this->view->form = $form;
-    }
-    
-   /**
-    * Update record Users
-    * @param array $formData
-    * @author 
-    */
-    public function ajaxUpdateUsersAction() {
-    
-        $this->_helper->layout->disableLayout();
-        
-        /* Check valid data */
-        if(null == $id = $this->_request->getParam('id',null)){
-            die('0');
-        }
-
-        $row = $this->_model->find($id)->current();
-        if(!$row) {
-            die('0');
-        }
-    
-        $form = new Application_Form_Core_Users();
-
-        /* Proccess data post*/
-        if($this->_request->isPost()) {
-            $formData = $this->_request->getPost();
-            $formData['UserId'] = $id;
-            if($form->isValid($formData)) {
-                if($this->_model->edit($form->getValues())){
-                    die('1');
-                }
-            }
-        }
-        $form->populate($form->getValues());
-        $this->view->form = $form;
-    }
-    
-    /**
-    * Delete record Users.
-    * @param $id
-    * @author 
-    */
-    public function ajaxDeleteUsersAction(){
-        
-        /* Check valid data */
-        if(null == $id = $this->_request->getParam('id',null)){
-            die('0');
-        }
-
-        $row = $this->_model->find($id)->current();
-        if($row) {
-            if($row->delete()){
-                die('1');
-            }
-        }
-        die('0');
-    }
-    
-    /**
-     * login action
-     * @author tri.van
-     * @since Tue Now 3, 9:48 AM
-     */
-    public function loginAction(){
-    	$this->_helper->layout()->setLayout('admin-login');
-    
-    	//save backlink
-    	$backLink = null;
-    	if (isset($_SERVER['HTTP_REFERER'])) {
-    		if (strstr($backLink, "/login") != "/login"){
-    			$backLink = $_SERVER['HTTP_REFERER'];
-    			$this->view->backLink = $backLink;
-    		}
-    	}
-    
-    	//check authentication first
-    	$zendAuth = Zend_Auth::getInstance();
-    	if ($zendAuth->hasIdentity()) {
-    		$this->_redirect("/");
-    	}
-    
-    	if($this->_request->isPost()){
-    
-    		if(!empty($_POST["backLink"])) $backLink = $_POST["backLink"];
-    
-    		$auth = new Application_Plugin_Initializer();
-    		if(empty($_POST['username']) || empty($_POST['password']))
-    			$this->view->rs = false;
-    		else{
-    			$data = array();
-    			$data['Email'] = $_POST['username'];
-    			$data['Password'] = sha1($_POST['password']);
-    			$rs = $auth->login($data);
-    			if(!$rs) $this->view->rs = false;
-    			else {
-    				//save LastLogin to database
-    				$this->_model->update(array("LastLogin"=>Zend_Date::now()->toString(DATE_FORMAT_DATABASE)
-    				),"UserId = ".USER_ID);
-    
-    				//if choice remember password
-    				if(isset($_POST["remember"])) {
-    					$saveHandler = Zend_Session::getSaveHandler();
-    					$saveHandler->setOverrideLifetime(true);
-    					$saveHandler->setLifetime(SESSION_LIFE_TIME_REMEMBER);
-    				}
-    
-    				//redirect
-    				if(empty($backLink)) $this->_redirect("/	");
-    				else {
-    					if(isset($_SESSION['sessionBackLink']['link'])){
-    						$link = $_SESSION['sessionBackLink']['link'];
-    						Zend_Session::namespaceUnset('sessionBackLink');
-    						$this->_redirect($link);
-    					}
-    					else $this->_redirect($backLink);
-    				}
-    			}
-    		}
-    	}
-    }
-    
-    public function logoutAction(){
-    	$auth = new Application_Plugin_Initializer();
-    	$auth->logout();
-    }
+    }   	
+   
 }

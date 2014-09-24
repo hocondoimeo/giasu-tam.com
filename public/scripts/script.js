@@ -213,3 +213,41 @@ function showNewsInSmallViewPort(){
         $(".news-block").attr('news-number', 5);
     }
 }
+
+/**
+ * @desc load javascript or css file
+ * @param string filename: file name, string filetype: 'js' or 'css'
+ * eg: loadJsOrCssFile("myscript.js", "js") //dynamically load and add this .js file
+ * eg: loadJsOrCssFile("javascript.php", "js") //dynamically load "javascript.php" as a JavaScript file
+ * eg: loadJsOrCssFile("mystyle.css", "css") ////dynamically load and add this .css file
+ * @author duy.ngo
+ */
+function loadJsOrCssFile(filename, filetype){
+    if (filetype=="js"){ //if filename is a external JavaScript file
+        var fileref=document.createElement('script')
+        fileref.setAttribute("type","text/javascript")
+        fileref.setAttribute("src", filename)
+    }
+    else if (filetype=="css"){ //if filename is an external CSS file
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", filename)
+    }
+    if (typeof fileref!="undefined")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+}
+
+/**
+ * @desc load modal 
+ * @param string content
+ * @author duy.ngo
+ */
+function loadModal(content){
+	var html = '<div id="loadModal" class="modal fade" role="dialog">';
+	html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="close">x</button>';
+	html += '<center style="padding: 10px;">'+content+'</center></div>'; 
+	$('#loadModal').remove();
+	$('body').append(html);
+	$('#loadModal').modal();
+}

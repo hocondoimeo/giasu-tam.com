@@ -1,0 +1,54 @@
+<?php if(count($this->paginator)):?>
+      <div class="row-fluid lastest-news-content">
+               <?php $c = 0; foreach ($this->paginator as $key => $tutors):?>
+			    <?php if (is_numeric($key)) : ?>
+			    <div class="row-fluid lastest-block">
+			        <div class="featurette">
+			            <?php if(!$c):?>
+			            <!-- <h6 class="small-vertical-seperator first-lastest-news">&nbsp;</h6> -->
+			            <?php else:?>
+			            <div class="small-vertical-seperator">&nbsp;</div>
+			            <?php endif;?>
+			            <div class="pull-left">
+				            <a href="/tutors/detail/id/<?php echo $tutors->TutorId;?>">
+				                <?php  if(isset($tutors->Avatar) &&  !empty($tutors->Avatar)):?>
+				                <img class="desc-news" src="<?php echo IMAGE_UPLOAD_URL.$tutors->Avatar?>" alt="<?php echo $tutors->Avatar?>"/>
+				                <img class="small-news" src="<?php echo IMAGE_UPLOAD_URL.$tutors->Avatar?>" alt="<?php echo $tutors->Avatar?>"/>
+				                <?php else:?>
+				                <img class="desc-news" src="/images/footer/logo_footer.png"/>
+				                <img class="small-news" src="/images/footer/logo_footer.png"/>
+				                <?php endif; ?>
+				            </a>
+			            </div>
+			            <div class="lastest-date desc-news"><span>Họ tên: </span>
+			            	<a href="/tutors/detail/id/<?php echo $tutors->TutorId;?>">
+			            		<span><?php echo $tutors->UserName?></span></a>
+			            </div>
+			            <div class="lastest-date desc-news"><span>Mã số: </span>
+			            		<?php echo $tutors->TutorId?>
+			            </div>
+			            <div class="lastest-date desc-news"><span>Hiện tại: </span>
+			            		<?php $careers = unserialize(TUTOR_CAREERS); echo $careers[$tutors->Career]?>
+			            </div>
+			            <div class="lastest-date desc-news"><span>Tốt nghiệp trường: </span>
+			            		<?php echo $tutors->University?>
+			            </div>
+			            <?php $date = new Zend_Date($tutors->CreatedDate, DATE_FORMAT_DATABASE);?>
+			            <div class="lastest-date desc-news"><span>Ngày tham gia: </span>
+			            	<?php echo $date->toString(DATE_FORMAT_ZEND);?>
+			            </div>
+			        </div>
+			    </div>
+			    <?php endif; ?>
+			<?php $c++;endforeach;?>
+			<?php if(count($this->paginator) > 1):?>
+			<div class="row-fluid">
+			    <?php echo $this->paginationControl($this->paginator,'Sliding','/tutors/block/list-tutors-pagination.phtml'); ?>
+			</div>
+			<?php endif;?>
+			
+			<?php if($this->paginator->getCurrentItemCount() == TUTORS_ITEMS):?>
+			<div class="loadmorenews"><div class="read-more-news">Xem thêm</div></div>
+			<?php endif;?>
+      </div>
+<?php endif;?>                        

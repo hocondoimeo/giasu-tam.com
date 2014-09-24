@@ -16,14 +16,14 @@ class Application_Model_Tutors extends Application_Model_Abstract {
     protected $_primary = 'TutorId';
 
     protected $_fields = array(
-        'Menus.IsDisabled'   => 'IsDisabled'
+        /* 'Menus.IsDisabled'   => 'IsDisabled' */
     );
     protected $_search = array(
-       'Menus.MenuName'      => 'config-name',
-       'Menus.MenuUrl'       => 'config-code',
+       /* 'Menus.MenuName'      => 'config-name',
+       'Menus.MenuUrl'       => 'config-code', */
     );
     protected $_sort = array(
-       'Menus.MenuName DESC' => 'Default',
+      /*  'Menus.MenuName DESC' => 'Default', */
     );
 
     /**
@@ -33,42 +33,14 @@ class Application_Model_Tutors extends Application_Model_Abstract {
      * @since Tue Now 12, 9:48 AM
      */
     public function getAllAvaiabled(){
-        return $this->select()->where('IsDisabled = 0')->order("Position ASC");
+        return $this->select()->where('IsDisabled = 0')->where('Status = 1')->order("TutorId DESC");
     }
 
-    /**
-     * Group menu by parent
-     * @author quang.nguyen
-     * @param Zend_Db_Table_Rowset_Abstract $menus
-     * @return array
-     * @since Tue Now 16, 9:48 AM
-     */
-    public function groupMenuByParent(Zend_Db_Table_Rowset_Abstract $menus) {
-        $data = array();
-
-        foreach ($menus as $menu) {
-            if ($menu->ParentMenuId) {
-                if (! isset($data[$menu->ParentMenuId])) $data[$menu->ParentMenuId] = array();
-
-                $data[$menu->ParentMenuId]['childs'][] = $menu->toArray();
-            } else {
-                if (! isset($data[$menu->MenuId])) {
-                    $data[$menu->MenuId] = array_merge($menu->toArray(), array('childs' => array()));
-                } else {
-                    $data[$menu->MenuId] = array_merge($menu->toArray(), array('childs' => $data[$menu->MenuId]['childs']));
-                }
-            }
-        }
-
-        return $data;
-    }
-    
-    public function getMenu($menus, $menuCode){
-    	$returnMenu = array();
-    	foreach ($menus as $key => $value) {
-    		if(isset($menuCode) && in_array($menuCode, $value))
-    			$returnMenu[] = $value;
-    	}
-    	return $returnMenu;
+    public function getTutorDetail($tutorId){
+    	$cols = array('TutorId', 'UserName', 'Career', 'Email', 'Avatar', 'Birthday', 'Introduction', 'CreatedDate', 'University', 'Address', 'Phone');
+    	$select = $this->getItemsBySelectQuery($cols, array('TutorId = '.$tutorId, 'IsDisabled = 0', 'Status = 1'));
+    	$result = $this->fetchRow($select);
+    	if(count($result)) return $result;
+    	else return null;
     }
 }

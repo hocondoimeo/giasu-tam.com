@@ -38,6 +38,9 @@ form input[type='checkbox']{
 
 .hint{
     padding:2px;
+	padding-left: 180px;
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 a.active { 

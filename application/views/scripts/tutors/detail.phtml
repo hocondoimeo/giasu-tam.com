@@ -1,0 +1,58 @@
+<!--People Sections-->
+          <div id="people-block">
+               <div class="row-fluid">
+                <!--Lastest News Sections-->
+                <div class="span12 only-popular load-more-news1">
+                    <div class="row-fluid">
+					<?php if(count($this->tutor)):?>
+					      <div class="row-fluid lastest-news-content">
+								    <div class="row-fluid lastest-block">
+								        <div class="featurette">
+								            <div class="pull-left">
+									                <?php  if(isset($this->tutor['Avatar']) &&  !empty($this->tutor['Avatar'])):?>
+									                <img class="desc-news" src="<?php echo IMAGE_UPLOAD_URL.$this->tutor['Avatar']?>" alt="<?php echo $this->tutor['Avatar']?>"/>
+									                <img class="small-news" src="<?php echo IMAGE_UPLOAD_URL.$this->tutor['Avatar']?>" alt="<?php echo $this->tutor['Avatar']?>"/>
+									                <?php else:?>
+									                <img class="desc-news" src="/images/footer/logo_footer.png"/>
+									                <img class="small-news" src="/images/footer/logo_footer.png"/>
+									                <?php endif;?>
+								            </div>
+								            <div class="lastest-date desc-news"><span>Họ tên: </span>
+								            		<span><?php echo $this->tutor['UserName']?></span>
+								            </div>
+								            <div class="lastest-date desc-news"><span>Mã số: </span>
+								            		<?php echo $this->tutor['TutorId']?>
+								            </div>
+								            <div class="lastest-date desc-news"><span>Hiện tại: </span>
+								            		<?php $careers = unserialize(TUTOR_CAREERS); echo $careers[$this->tutor['Career']]?>
+								            </div>
+								            <div class="lastest-date desc-news"><span>Tốt nghiệp trường: </span>
+								            		<?php echo $this->tutor['University']?>
+								            </div>
+								            <div class="lastest-date desc-news"><span>Địa chỉ: </span>
+								            		<?php echo $this->tutor['Address']?>
+								            </div>
+								            <?php $date = new Zend_Date($this->tutor['CreatedDate'], DATE_FORMAT_DATABASE);?>
+								            <div class="span"><span>Ngày tham gia: </span>
+								            	<?php echo $date->toString(DATE_FORMAT_ZEND);?>
+								            </div>
+								            <div class="span"><span>Email: </span>
+								            		<?php echo $this->tutor['Email']?>
+								            </div>
+								            <div class="span"><span>Điện thoại: </span>
+								            		<?php echo $this->tutor['Phone']?>
+								            </div>
+								            <?php if(!empty($this->tutor['Introduction'])):?>
+								            <div class="span"><span>Giới thiệu bản thân: </span>
+								            		<?php echo $this->tutor['Introduction']?>
+								            </div>
+								            <?php endif;?>
+								        </div>
+								    </div>
+					      </div>
+					<?php endif;?>                        
+					</div>
+                </div>
+            </div>
+        </div>
+       </div>
