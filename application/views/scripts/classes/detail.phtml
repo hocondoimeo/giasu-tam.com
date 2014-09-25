@@ -17,19 +17,19 @@
 									                <img class="small-news" src="/images/footer/logo_footer.png"/>
 									                <?php endif;?>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Họ tên: </span>
+								            <div class="lastest-date desc-news"><span>Họ tên: </span>
 								            		<span><?php echo $this->tutor['UserName']?></span>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Mã số: </span>
+								            <div class="lastest-date desc-news"><span>Mã số: </span>
 								            		<?php echo $this->tutor['TutorId']?>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Hiện tại: </span>
+								            <div class="lastest-date desc-news"><span>Hiện tại: </span>
 								            		<?php $careers = unserialize(TUTOR_CAREERS); echo $careers[$this->tutor['Career']]?>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Tốt nghiệp trường: </span>
+								            <div class="lastest-date desc-news"><span>Tốt nghiệp trường: </span>
 								            		<?php echo $this->tutor['University']?>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Địa chỉ: </span>
+								            <div class="lastest-date desc-news"><span>Địa chỉ: </span>
 								            		<?php echo $this->tutor['Address']?>
 								            </div>
 								            <?php $date = new Zend_Date($this->tutor['CreatedDate'], DATE_FORMAT_DATABASE);?>

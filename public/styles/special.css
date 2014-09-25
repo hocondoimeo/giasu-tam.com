@@ -1515,7 +1515,7 @@
 }
 /********************* NEWS/REVIEWS LANDING PAGE ********************/ 
 #people-block a, #people-block a:hover{  font-size: 12px; font-style: normal; }/*color: white*/
-.small-news, .small-seperator, .small-vertical-seperator { display:none;}
+.small-news, .small-seperator, .small-vertical-seperator1 { display:none;}
 #people-block h4.news-desc, .read-more-news { display:none;}
 div.paginationControl a{color:#06C !important}
 

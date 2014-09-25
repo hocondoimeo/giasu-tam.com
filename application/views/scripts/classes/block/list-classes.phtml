@@ -1,0 +1,102 @@
+<?php if(count($this->paginator)):       
+//convert object array to string for subject 
+       function array2string($haystack, $needle){
+       	$str="";
+       	foreach($haystack as $k=>$i){
+       		if(is_array($i)){ 
+       			if(in_array($i['SubjectId'], $needle))
+       				$str.= ','.$i['SubjectName'];
+       				$str.=array2string($i, $needle);
+       		}
+       	}
+       	return $str;
+       }
+	$subjectModel = new Application_Model_Subjects();
+	$districtModel = new Application_Model_Districts();
+	$districts = $districtModel->fetchAll($districtModel->getAllAvaiabled());
+	$subjects = $subjectModel->fetchAll($subjectModel->getAllAvaiabled());
+    $classes = array(1,2,3,4,5,6,7,8,9,10,11,12);
+?>
+      <div class="row-fluid lastest-news-content">
+			    <div class="row-fluid lastest-block">
+			        <div class="featurette">
+			        <div class="form-actions">
+			        	<span>Bộ lọc:</span>
+			        	<span> 
+			        		<select name="Classes" id=""Classes"">
+				        		<option>- Chọn lớp -</option>
+				        		<?php foreach ($classes as $key =>$value) :?>			        			
+				        			<option value="<?php echo $key ?>" label="<?php echo $value; ?>"><?php echo $value; ?></option>
+				        		<?php endforeach;?>
+							 </select>
+			        	</span>
+			        	<span> 
+				        	<select name="Districts" id="Districts">
+				        		<option>- Chọn quận -</option>
+				        		<?php foreach ($districts as $key =>$value) :?>			        			
+				        			<option value="<?php echo $key ?>" label="<?php echo $value->DistrictName; ?>"><?php echo $value->DistrictName; ?></option>
+				        		<?php endforeach;?>
+							 </select>
+				         </span>
+				         <span> 
+			        		<select name="Subjects" id="Subjects">
+				        		<option>- Chọn môn học -</option>
+				        		<?php foreach ($subjects as $key =>$value) :?>			        			
+				        			<option value="<?php echo $key ?>" label="<?php echo $value->SubjectName; ?>"><?php echo $value->SubjectName; ?></option>
+				        		<?php endforeach;?>
+							 </select>
+			        	</span>
+			        </div>
+               <?php $c = 0; foreach ($this->paginator as $key => $class):?>
+			    <?php if (is_numeric($key)) : ?>
+			            <div class="span4 pull-left classes <?php if($key % 3 ==0 ) echo 'third-class'?>">
+				            <fieldset class="well the-fieldset">
+				            	<legend>Mã số lớp học: <?php echo $class->ClassId?></legend>
+					            <div class="lastest-date1 desc-news"><span>Lớp học: </span>
+					            		<?php echo $class->ClassMember ?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Môn học: </span>
+					            		<?php 
+					            			echo ltrim(array2string($subjects->toArray(), explode(',', $class->ClassSubjects)), ',');
+					            		?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Số buổi: </span>
+					            		<?php echo $class->ClassDaysOfWeek?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Thời gian: </span>
+					            		<?php echo $class->ClassTime?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Yêu cầu: </span>
+					            		<?php echo $class->ClassRequire?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Số ứng viên hiện tại: </span>
+					            		<?php echo count(explode(',', $class->ClassTutors));?>
+					            </div>
+					            <div class="lastest-date1 desc-news"><span>Lương: </span>
+					            		<?php echo $class->ClassCost?>
+					            </div>
+					            <div class="lastest-date1 desc-news class-address"><span>Địa chỉ: </span>
+					            		<?php echo $class->ClassAddress?>
+					            </div>
+					            <div class="btn-apply">
+					            	<a href="/classes/apply/id/<?php echo $class->ClassId; ?>">
+					            		<button class="btn btn-primary">Ứng tuyển</button>
+					            	</a>
+					            </div>
+					        </fieldset>			            
+			            </div>
+			    <?php endif; ?>
+			<?php $c++;endforeach;?>			
+      	</div>      	
+      </div>
+			<?php if(count($this->paginator) > 1):?>
+			<div class="row-fluid">
+			    <?php echo $this->paginationControl($this->paginator,'Sliding','/classes/block/list-classes-pagination.phtml'); ?>
+			</div>
+			<?php endif;?>
+			
+			<?php if($this->paginator->getCurrentItemCount() == TUTORS_ITEMS):?>
+			<div class="loadmorenews"><div class="read-more-news">Xem thÃªm</div></div>
+			<?php endif;?>
+      </div>
+<?php endif;?>                        

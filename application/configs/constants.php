@@ -75,3 +75,7 @@ define('TUTOR_LEVELS', serialize($levels));
 $careers = array('Sinh Viên', 'Giáo Viên', 'Đã Tốt Nghiệp');
 define('TUTOR_CAREERS' , serialize($careers));
 define('TUTORS_ITEMS', 5);
+
+
+/************************* Classes *******************************/
+define('CLASSES_ITEMS', 6);

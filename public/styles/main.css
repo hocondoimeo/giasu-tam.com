@@ -47,6 +47,8 @@ a.active {
 	color: #2a6496;
 }
 
+#Reset {margin-left: 20px;}
+
 /**Content Top*/
 
 .content-top, .menu{ padding-top: 20px;}
