@@ -70,7 +70,6 @@ class TutorsController extends Zend_Controller_Action
     */
     public function registerAction() {
         $form = new Application_Form_Tutors();
-        //$form = new Application_Form_TestForm();
 
         /* Proccess data post*/
         if($this->_request->isPost()) {
@@ -88,37 +87,40 @@ class TutorsController extends Zend_Controller_Action
                 	//send mail to user
                 	
                 	$email = $_POST["Email"];
-                	$mailSubject = null;$mailMessageContent = null;
-                	$mailUserName =null;$mailFrom = null;
-                	$configMails = null;
+                	$mailUserName =null; $mailFrom = null; $configMails = null;
                 	try{
                 		$modelConfig = new Application_Model_Configs();
                 		$configMails = $modelConfig->getConfigValueByCategoryCode("GROUP_CONFIG_MAIL");
                 		foreach ($configMails as $key=>$configMail){
                 			switch ($configMail["ConfigCode"]){
-                				case "mail-subject": $mailSubject = $configMail["ConfigValue"];break;
-                				case "mail-message-content": $mailMessageContent = $configMail["ConfigValue"];break;
                 				case "mail-user-name": $mailUserName = $configMail["ConfigValue"];break;
                 				case "mail-user-name-from": $mailFrom = $configMail["ConfigValue"];break;		
                 			}
                 		}
+                		$tutorConfig = $modelConfig->getConfigDetail("dang-ky-gia-su");
                 	}catch (Zend_Exception $e){
                 		
                 	}
                 	
                 	$rsInitMail = $this->_initMail($configMails);
                 	if($rsInitMail[0]){
-                		$subject = $mailSubject;
-                	
-                		$message = str_replace(array("{id}"),array($id), $mailMessageContent);
+                		$subject = $tutorConfig['ConfigName'];
+                		
+                		// initialize template
+                		$html = new Zend_View();
+                		$html->setScriptPath(APPLICATION_PATH . '/views/scripts/email_templates/');
+                		
+                		$html->assign('name', $data['UserName']);
+                		$html->assign('tutorId', $id);
+                		
+                		$message = $html->render('register-tutor.phtml');
                 		$sendResult = $this->sendMail($email, $subject, $message,$mailUserName,$mailFrom);
                 	
                 		if($sendResult[0]){
-                			$detailNews = $modelConfig->getConfigValue('dang-ky-gia-su');
-                			$this->_redirect('/news/detail/id/'.$detailNews);
+                			$this->_redirect('/news/detail/id/'.$tutorConfig['ConfigValue']);
                 		}
                 		else{
-                			$this->view->messageStatus = 'danger/Bạn đã đăng ký thất bại.';
+                			$this->view->messageStatus = 'danger/Gửi email cho bạn thất bại.';
                 		}
                 	}
                 	else{
@@ -127,10 +129,18 @@ class TutorsController extends Zend_Controller_Action
                 }                
             }else{
             	$this->view->avatar = (isset($_POST['Avatar'])  && !empty($_POST['Avatar']))?$_POST['Avatar']:'';
+            	$msgVN = array(
+            			"is required and can't be empty" => 'Không được để trống',
+            			"does not appear to be an integer" => 'Phải là chữ số',
+            			'is no valid email address in the basic format local-part@hostname' => 'Email không hợp lệ'
+                 );
                  $messageStatus ='danger/Có lỗi xảy ra. Chú ý thông tin những ô sau đây:';
                  $messages      = array();
                  foreach ($form->getMessages() as $fieldName => $message) {
-                 	$messages[$fieldName] = end($message);
+                 		$message  = end($message);
+    					$key = substr(strstr($message," "), 1);
+    					if(in_array($key, array_keys($msgVN))) $message = $msgVN[$key];
+    					$messages[$fieldName] = $message;
                  }
                  $this->view->messages = $messages;
                  $this->view->messageStatus = $messageStatus;

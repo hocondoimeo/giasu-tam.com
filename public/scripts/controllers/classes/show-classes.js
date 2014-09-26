@@ -18,9 +18,60 @@ $(document).ready(function() {
             }
         });
     });
-    //var class = $('#Classes');
-    //var district = $('#Districts');
-    //var subject = $('#Subjects');
+    
+    $('select').bind('onChange',function(){$(this).blur()});
+    
+    $("#classes-select").change(function () {
+    	//var currentpage = $('div.paginationControl').attr('current-page');
+    	var url = '/classes/ajax-get-classes';
+    	
+        var subject = $('#subjects-select :selected').val();
+        if($.trim(subject) != '')
+        	url += '/subject/'+subject;
+        
+        var district = $('#districts-select :selected').val();
+        if($.trim(district) != '')
+        	url += '/district/'+district;
+        
+    	if($.trim($(this).val()) != '')
+    		url += '/class/'+$(this).val();
+    	
+    	loadPage(url);
+    });
+    
+    $("#districts-select").change(function () {    	
+    	var url = '/classes/ajax-get-classes';
+    	
+        var subject = $('#subjects-select :selected').val();
+        if($.trim(subject) != '')
+        	url += '/subject/'+subject;
+
+    	var classSelect = $('#classes-select :selected').val();
+    	if($.trim(classSelect) != '')
+    		url += '/class/'+classSelect;
+        
+        if($.trim($(this).val()) != '')
+        	url += '/district/'+$(this).val();
+    	
+    	loadPage(url);
+    });
+    
+    $("#subjects-select").change(function () {    	
+    	var url = '/classes/ajax-get-classes';
+    	
+    	var district = $('#districts-select :selected').val();
+        if($.trim(district) != '')
+        	url += '/district/'+district;
+
+    	var classSelect = $('#classes-select :selected').val();
+    	if($.trim(classSelect) != '')
+    		url += '/class/'+classSelect;
+        
+        if($.trim($(this).val()) != '')
+        	url += '/subject/'+$(this).val();
+        
+    	loadPage(url);
+    });
 });
 
 function loadPage(url, page){

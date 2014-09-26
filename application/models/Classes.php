@@ -32,8 +32,12 @@ class Application_Model_Classes extends Application_Model_Abstract {
      * @return Zend_Db_Table_Select
      * @since Tue Now 12, 9:48 AM
      */
-    public function getAllAvaiabled(){
-        return $this->select()->where('IsDisabled = 0')->where('ClassStatus = 0')->order("ClassId DESC");
+    public function getAllAvaiabled($params = array()){
+    	$select = $this->select()->where('IsDisabled = 0')->where('ClassStatus = 0');
+    	if(count($params))
+    		foreach ($params as $param)
+    			$select->where($param);//die($select);
+        return$select ->order("ClassId DESC");
     }
 
     public function getClassDetail($classId){

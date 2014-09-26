@@ -38,14 +38,54 @@ class ClassesController extends Zend_Controller_Action
     		if($form->isValid($formData)) {
     			$tutorModel = new Application_Model_Tutors();
     			$data = $_POST;
+    			/* check tutor is exist */
     			if($tutorModel->checkTutorIsExist($data['TutorId'])){
     				  $tutors = $this->_model->getTutorsOfClass($data['ClassId']);
+    				  /* check tutor id exist in class */
     				  if(!in_array($data['TutorId'], explode(',' ,$tutors['ClassTutors']))){
     				  		$data['ClassTutors'] = $tutors['ClassTutors'].','.$data['TutorId'];
-    				  		if($this->_model->edit($data)){    				  	
-	    				  		$modelConfig = new Application_Model_Configs();
-		    				  	$detailNews = $modelConfig->getConfigValue('ung-tuyen-gia-su');
-		    				  	$this->_redirect('/news/detail/id/'.$detailNews);
+    				  		if($this->_model->edit($data)){
+    				  			$tutor = $tutorModel->getTutorInfo($data['TutorId']);
+    				  			$email = $tutor["Email"];
+    				  			$mailUserName =null; $mailFrom = null; $configMails = null;
+    				  			try{
+    				  				$modelConfig = new Application_Model_Configs();
+    				  				$configMails = $modelConfig->getConfigValueByCategoryCode("GROUP_CONFIG_MAIL");
+    				  				foreach ($configMails as $key=>$configMail){
+    				  					switch ($configMail["ConfigCode"]){
+    				  						case "mail-user-name": $mailUserName = $configMail["ConfigValue"];break;
+    				  						case "mail-user-name-from": $mailFrom = $configMail["ConfigValue"];break;
+    				  					}
+    				  				}
+    				  				$tutorConfig = $modelConfig->getConfigDetail("ung-tuyen-gia-su");
+    				  			}catch (Zend_Exception $e){
+    				  			
+    				  			}
+    				  			 
+    				  			$rsInitMail = $this->_initMail($configMails);
+    				  			if($rsInitMail[0]){
+    				  				$subject = $tutorConfig['ConfigName'];
+    				  				 
+    				  				// initialize template
+    				  				$html = new Zend_View();
+    				  				$html->setScriptPath(APPLICATION_PATH . '/views/scripts/email_templates/');
+    				  				
+    				  				$html->assign('name', $tutor["UserName"]);
+    				  				$html->assign('tutorId', $data['TutorId']);
+    				  				$html->assign('classId', $data['ClassId']);
+    				  				
+    				  				$message = $html->render('apply-class.phtml');
+    				  				
+    				  				$sendResult = $this->sendMail($email, $subject, $message,$mailUserName,$mailFrom);
+    				  				 
+    				  				if($sendResult[0]){
+				    				  	$this->_redirect('/news/detail/id/'.$tutorConfig['ConfigValue']);
+    				  				}else{
+    				  					$this->view->messageStatus = 'danger/Bạn đã ứng tuyển nhưng gửi email cho bạn thất bại.';
+    				  				}
+    				  			}else{
+    				  				$this->view->messageStatus = 'danger/Hiện tại hệ thống không đáp ứng kịp.';
+    				  			}
     				  		}else{
     				  			$messageStatus ='danger/Hiện tại hệ thống không đáp ứng chức năng này. Mong bạn thông cảm và thử lại.';
     				  			$this->view->messageStatus = $messageStatus;
@@ -59,11 +99,17 @@ class ClassesController extends Zend_Controller_Action
     				$this->view->messageStatus = $messageStatus;
     			}    				
     		}else{
-    				//$this->view->avatar = (isset($_POST['Avatar'])  && !empty($_POST['Avatar']))?$_POST['Avatar']:'';
+    				$msgVN = array(
+    					"is required and can't be empty" => 'Không được để trống',
+    					"does not appear to be an integer" => 'Phải là chữ số',
+    				);
     				$messageStatus ='danger/Có lỗi xảy ra. Chú ý thông tin những ô sau đây:';
     				$messages      = array();
     				foreach ($form->getMessages() as $fieldName => $message) {
-    					$messages[$fieldName] = end($message);
+    					$message  = end($message);
+    					$key = substr(strstr($message," "), 1);
+    					if(in_array($key, array_keys($msgVN))) $message = $msgVN[$key];
+    					$messages[$fieldName] = $message;
     				}
     				$this->view->messages = $messages;
     				$this->view->messageStatus = $messageStatus;
@@ -81,8 +127,16 @@ class ClassesController extends Zend_Controller_Action
     * @return list Users
     * @author 
     */
-    public function showClassesAction() {        
-        /*Get all data*/
+    public function showClassesAction() {
+    	$subjectModel = new Application_Model_Subjects();
+    	$subjects = $subjectModel->fetchAll($subjectModel->getAllAvaiabled());
+    	$this->view->subjects = $subjects;
+    	
+    	$districtModel = new Application_Model_Districts();
+    	$districts = $districtModel->fetchAll($districtModel->getAllAvaiabled());
+    	$this->view->districts = $districts;
+    	
+        /*Get all data*/    	
         $paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled());
         $paginator->setItemCountPerPage(CLASSES_ITEMS);
     	$page = $this->_getParam('page',1);
@@ -96,16 +150,32 @@ class ClassesController extends Zend_Controller_Action
     
     public function ajaxGetClassesAction(){
     	$this->_helper->layout->disableLayout();
+    	$subjectModel = new Application_Model_Subjects();
+    	$subjects = $subjectModel->fetchAll($subjectModel->getAllAvaiabled());
+    	$this->view->subjects = $subjects;
+    	
     	$page = $this->_getParam('page',1);
+    	$params = array();
+    	$class = $this->_getParam('class', null);
+    	$district = $this->_getParam('district', null);
+    	$subject = $this->_getParam('subject', null);
+    	if(!is_null($class)) $params[] = 'ClassMember='.$class;
+    	if(!is_null($district)) $params[] =  'DistrictId='.$district;
+    	if (!is_null($subject)){ 
+    		$sub = "ClassSubjects like '{$subject},%' ";
+    		$sub .= "OR ClassSubjects like '%,{$subject},%' ";
+    		$sub .= "OR ClassSubjects like '%,{$subject}' ";
+    		$params[] = $sub;
+    	}
     
     	//set Lastest News pagination
     	$this->view->page = $page;
-    	$paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled());
+    	$paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled($params));
     	$paginator->setItemCountPerPage(CLASSES_ITEMS);
     	$paginator->setCurrentPageNumber($page);
     
     	$this->view->paginator   = $paginator;
-    }        
+    }
     
     /**
      * init mail

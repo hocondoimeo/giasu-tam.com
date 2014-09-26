@@ -44,10 +44,32 @@ class Application_Model_Tutors extends Application_Model_Abstract {
     	else return null;
     }
     
+    public function getTutorInfo($tutorId){
+    	$cols = array('TutorId', 'UserName', 'Email');
+    	$select = $this->getItemsBySelectQuery($cols, array('TutorId = '.$tutorId,'IsDisabled = 0'));
+    	$result = $this->fetchRow($select);
+    	if(count($result)) return $result;
+    	else return null;
+    }
+    
     public function checkTutorIsExist($tutorId){
     	$select = $this->getItemsBySelectQuery(array('TutorId'), array('TutorId = '.$tutorId,'IsDisabled = 0'));
     	$result = $this->fetchRow($select);
     	if(count($result)) return true;
     	else return false;
+    }
+    
+    /**
+     * get config value
+     * @author tri.van
+     * @param string $configcode
+     * @return string Config Value
+     * @since Tue Now 12, 9:48 AM
+     */
+    public function getTutorName($tutorId){
+    	$select = $this->select()->from($this,'UserName')->where('TutorId = ?',$tutorId)->where('IsDisabled = 0');
+    	$result = $this->fetchRow($select);
+    	if($result) return $result->UserName;
+    	else return null;
     }
 }

@@ -104,6 +104,9 @@ class Application_Form_Tutors extends Zend_Form
         $phone->addValidator('stringLength', false, array(6, 50, "messages" => "Điện thoại dài tối đa 6-50 ký tự"));
         $this->addElement($phone);
         
+        $required = new Zend_Validate_NotEmpty ();
+        $required->setType ($required->getType() | Zend_Validate_NotEmpty::INTEGER | Zend_Validate_NotEmpty::ZERO);        
+        
         $level = new Zend_Form_Element_Select('Level');
         $level->setLabel('Trình độ *');
         $level->addFilter('StringTrim');
@@ -116,6 +119,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
+       $level ->addValidators (array ($required));
         $level->setMultiOptions(unserialize(TUTOR_LEVELS));
         $this->addElement($level);
         

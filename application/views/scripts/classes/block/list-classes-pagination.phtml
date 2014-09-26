@@ -1,13 +1,20 @@
 <?php $allParams = Zend_Controller_Front::getInstance()->getRequest()->getParams();
     $cpage = (isset($allParams['page']) && $allParams['page'])? '/cate/'.$allParams['page']: '1';
+    $class = '';
+    if(isset($allParams['class']) && $allParams['class']) $class = '/class/'.$allParams['class'];
+    $district = '';
+    if(isset($allParams['district']) && $allParams['district']) $district = '/district/'.$allParams['district'];
+    $subject = '';
+    if(isset($allParams['subject']) && $allParams['subject']) $subject = '/subject/'.$allParams['subject'];
+    $param = $class.$district.$subject;
 ?>
 <?php if ($this->pageCount): ?>
 <div class="pagination pagination-centered paginationControl bottom-news" total-page="<?php echo $this->pageCount;?>" current-page="1" 
-page="<?php echo $cpage?>">
+page="<?php echo $cpage?>" class-select="<?php echo $class?>"  district-select="<?php echo $district?>"  subject-select="<?php echo $subject?>">
 <ul>
 <!-- Previous page link -->
 <?php if (isset($this->previous)): ?>
-  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$this->previous; ?>','<?php echo $this->previous;?>')">
+  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$this->previous.$param; ?>','<?php echo $this->previous;?>')">
     «
   </a> </li>
 <?php else: ?>
@@ -17,7 +24,7 @@ page="<?php echo $cpage?>">
 <!-- Numbered page links -->
 <?php foreach ($this->pagesInRange as $page): ?>
   <?php if ($page != $this->current): ?>
-    <li><a href='#lastest-news-content' onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$page; ?>','<?php echo $page;?>')">
+    <li><a href='#lastest-news-content' onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$page.$param; ?>','<?php echo $page;?>')">
         <?php echo $page; ?>
     </a></li>
   <?php else: ?>
@@ -27,7 +34,7 @@ page="<?php echo $cpage?>">
 
 <!-- Next page link -->
 <?php if (isset($this->next)): ?>
-  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$this->next; ?>','<?php echo $this->next;?>')">
+  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/classes/ajax-get-classes/page/'.$this->next.$param; ?>','<?php echo $this->next;?>')">
     »
   </a></li>
 <?php else: ?>
