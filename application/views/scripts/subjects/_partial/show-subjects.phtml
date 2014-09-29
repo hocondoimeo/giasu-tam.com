@@ -1,0 +1,33 @@
+<?php
+/**
+ * partial loop of Subjects
+ * Subjects
+ */
+ 
+    $dataRow       = $this->dataRow;
+    
+?>
+<tr>
+    
+    <td>
+        <?php echo $dataRow->SubjectId;?>
+    </td>
+
+    <td>
+        <?php echo $dataRow->SubjectName;?>
+    </td>
+
+    <td style="vertical-align: middle">
+        <?php if(!$dataRow->IsDisabled):?><span class="label label-success">Active</span><?php endif;?>
+        <?php if($dataRow->IsDisabled):?><span class="label label-default">Inactive</span><?php endif;?>
+    </td>
+    
+    <td>
+        <a href="/subjects/update-subjects/id/<?php echo $dataRow->SubjectId; ?>" class="btn btn-warning"> <i class="icon-edit"></i> 
+           Update
+        </a>
+        <a href="/subjects/delete-subjects/id/<?php echo $dataRow->SubjectId; ?>" class="btn btn-danger btn-delete"> <i class="icon-remove icon-white"></i> 
+           Delete
+        </a>
+    </td>
+</tr>

@@ -144,4 +144,9 @@ h3.bottom-news { line-height: 20px !important}
 :root .all-popular-block{
        margin-top: 0px\9;
     }
+    
+	.desc-news{
+		display: block  !important;
+		text-align: center  !important;
+	}
 }

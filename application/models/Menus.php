@@ -59,15 +59,19 @@ class Application_Model_Menus extends Application_Model_Abstract {
                 }
             }
         }
-
         return $data;
     }
     
-    public function getMenu($menus, $menuCode){
+    public function getMenu($menus, $menuCode, $childs = false){
     	$returnMenu = array();
     	foreach ($menus as $key => $value) {
-    		if(isset($menuCode) && in_array($menuCode, $value))
-    			$returnMenu[] = $value;
+    		if(isset($menuCode) && in_array($menuCode, $value)){
+    			if($childs && count($value['childs'])){
+    				foreach ($value['childs'] as $child) 
+    					$returnMenu[] = $child;
+    			}else
+    				$returnMenu[] = $value;
+    		}
     	}
     	return $returnMenu;
     }

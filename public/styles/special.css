@@ -369,7 +369,7 @@
 }
 
 #home-page .news-block , #home-page .content-block {
-	min-height: 1090px;	
+	min-height: 1960px;	
 }
 
 #home-page .news-block .img {
@@ -575,7 +575,7 @@
         margin-top: 0px;
     }
     #home-page .news-block , #home-page .content-block{
-    	min-height: 1160px;    	
+    	min-height: 2160px;    	
     }    
 
     #home-page .people-left-block, #home-page .people-right-block {
@@ -888,7 +888,7 @@
 		min-height: 370px !important;
 	}
 	#home-page .news-block, #home-page .content-block {
-		min-height: 1110px;
+		min-height: 2120px;
 	}
 	#content-top-center{
 		width: 64.95744680851064%;

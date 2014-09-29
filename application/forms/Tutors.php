@@ -151,19 +151,19 @@ class Application_Form_Tutors extends Zend_Form
         $subject->addValidator('stringLength', false, array(1, 100, "messages" => "Chuyên ngành dài tối đa 100 ký tự"));
         $this->addElement($subject);
         
-        $graduation  = new Zend_Form_Element_Text('Graduation');
-        $graduation->setLabel('Năm tốt nghiệp *');
-        $graduation->addFilter('StringTrim');
-        $graduation->setRequired(true);
-        /* $graduation->setDecorators(array('ViewHelper')); */
-        $graduation->setDecorators(array(
+        $experienceYears  = new Zend_Form_Element_Select('ExperienceYears');
+        $experienceYears->setLabel('Số Năm Kinh Nghiệm *');
+        $experienceYears->addFilter('StringTrim');
+        $experienceYears->setRequired(true);
+        $experienceYears->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $subject->addValidator('stringLength', false, array(1, 10, "messages" => "Năm tốt nghiệp dài tối đa 10 ký tự"));
-        $this->addElement($graduation);
+        $options = unserialize(EXPERIENCE_YEAR);
+        $experienceYears->addMultiOptions(array_combine($options, $options));
+        $this->addElement($experienceYears);
         
         $career = new Zend_Form_Element_Select('Career');
         $career->setLabel('Hiện tại là *');
@@ -179,6 +179,68 @@ class Application_Form_Tutors extends Zend_Form
         ));
         $career->setMultiOptions(unserialize(TUTOR_CAREERS));
         $this->addElement($career);
+        
+        $careerLocation  = new Zend_Form_Element_Text('CareerLocation');
+        $careerLocation->setLabel('Nơi Công Tác ( Giáo hoặc Giảng Viên ) *');
+        $careerLocation->addFilter('StringTrim');
+        $careerLocation->setRequired(true);
+        /* $subject->setDecorators(array('ViewHelper')); */
+        $careerLocation->setDecorators(array(
+        		'ViewHelper',
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
+        		array('Label', array('class' => 'control-label')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
+        ));
+        $careerLocation->addValidator('stringLength', false, array(1, 100, "messages" => "Nơi Công Tác dài tối đa 100 ký tự"));
+        $this->addElement($careerLocation);
+        
+        $teachableInClass = new Zend_Form_Element_Text('TeachableInClass');
+        $teachableInClass->setLabel('Lớp Có Thể Dạy');
+        $teachableInClass->addFilter('StringTrim');
+        $teachableInClass->setRequired(false);
+        $teachableInClass->setAttrib('disabled', true);
+        $teachableInClass->setDescription('<a id="subjects-modal" class="btn btn-info" title="Chọn lớp">...</a>');
+        $teachableInClass->setDecorators(array(
+        		'ViewHelper',
+        		array('Description', array('escape' => false)),
+        		//array(array('Errors' => 'HtmlTag'), array('placement' => 'append','tag' => 'a', 'id' => 'classes-modal', 'class' => "btn btn-info", 'title' => 'Chọn lớp')),
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control col-lg-6')),
+        		array('Label', array('class' => 'control-label col-lg-2')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
+        ));
+        $this->addElement($teachableInClass);
+        
+        $teachableSubjects = new Zend_Form_Element_Text('TeachableSubjects');
+        $teachableSubjects->setLabel('Môn Có Thể Dạy');
+        $teachableSubjects->addFilter('StringTrim');
+        $teachableSubjects->setRequired(true);
+        $teachableSubjects->setAttrib('disabled', true);
+        $teachableSubjects->setDescription('<a id="subjects-modal" class="btn btn-info" title="Chọn môn">...</a>');
+        $teachableSubjects->setDecorators(array(
+        		'ViewHelper',
+        		array('Description', array('escape' => false)),
+        		//array(array('Errors' => 'HtmlTag'), array('placement' => 'append','tag' => 'a', 'id' => 'subjects-modal', 'class' => "btn btn-info", 'title' => 'Chọn môn')),
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control col-lg-6')),
+        		array('Label', array('class' => 'control-label col-lg-2')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
+        ));
+        $this->addElement($teachableSubjects);
+        
+        $teachableDistricts = new Zend_Form_Element_Text('TeachableDistricts');
+        $teachableDistricts->setLabel('Khu Vực Có Thể Dạy');
+        $teachableDistricts->addFilter('StringTrim');
+        $teachableDistricts->setRequired(true);
+        $teachableDistricts->setAttrib('disabled', true);
+        $teachableDistricts->setDescription('<span id="districts-modal" class="btn btn-info" title="Chọn quận">...</span>');
+        $teachableDistricts->setDecorators(array(
+        		'ViewHelper',
+        		array('Description', array('escape' => false)),
+        		//array(array('Errors' => 'HtmlTag'), array('placement' => 'append','tag' => 'a', 'id' => 'districts-modal', 'class' => "btn btn-info", 'title' => 'Chọn quận')),
+        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control col-lg-6')),
+        		array('Label', array('class' => 'control-label col-lg-2')),
+        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
+        ));
+        $this->addElement($teachableDistricts);
         
         $avatar  = new Zend_Form_Element_Hidden('Upload');
         $avatar->setLabel('Hình đại diện');
@@ -282,8 +344,8 @@ class Application_Form_Tutors extends Zend_Form
         		'Level',
         		'University',
         		'Subject',
-        		'Graduation',
         		'Career',
+        		'ExperienceYears',
         ),'level',array('disableLoadDefaultDecorators' => false, 'legend' => 'Thông tin học vấn'));
         
         $level = $this->getDisplayGroup('level');
@@ -294,6 +356,9 @@ class Application_Form_Tutors extends Zend_Form
         ));
         
         $this->addDisplayGroup(array(
+        		'TeachableInClass',
+        		'TeachableSubjects',
+        		'TeachableDistricts',
         		'Upload',
         		'Avatar',
         		'Introduction',

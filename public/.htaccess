@@ -2,8 +2,8 @@
 RewriteEngine On
 
 #access direct images
-RewriteCond %{REQUEST_URI}  /uploads/images/.+(gif|png|jpg)$
-RewriteRule .* - [L]
+#RewriteCond %{REQUEST_URI}  /uploads/images/.+(gif|png|jpg)$
+#RewriteRule .* - [L]
 
 RewriteCond %{REQUEST_FILENAME} -s [OR]
 RewriteCond %{REQUEST_FILENAME} -l [OR]
@@ -25,11 +25,11 @@ RewriteBase /
 </Files>
 
 # Protect application and system files from being viewed
-RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
+#RewriteRule ^(?:application|modules|system)\b.* index.php/$0 [L]
 
 # Allow any files or directories that exist to be displayed directly
-RewriteCond ${REQUEST_URI} ^.+$
-RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|php|ico|txt|pdf|xml)$ [OR]
+#RewriteCond ${REQUEST_URI} ^.+$
+#RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|php|ico|txt|pdf|xml)$ [OR]
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d [OR]
 RewriteCond %{REQUEST_FILENAME} -l

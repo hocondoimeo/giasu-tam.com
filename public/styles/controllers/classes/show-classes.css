@@ -19,9 +19,17 @@ h3.bottom-news { line-height: 20px}
 }
 
 .third-class{ margin-left: 0px !important;}
-.classes .the-fieldset { min-height:400px !important;}
+.classes .the-fieldset {
+	min-height:420px !important;
+	position: relative;
+}
 .classes  legend{ margin-bottom: 0px !important;}
-.btn-apply { padding-top: 10px;}
+.btn-apply { 
+	padding-top: 10px;
+	position: absolute;
+	left: 95px;
+	bottom: 20px;
+}
 .class-address { min-height: 40px;}
 
 .round-border{
@@ -63,6 +71,8 @@ h3.bottom-news { line-height: 20px}
 .news-date{
     color: #999;
 }
+.more-news-append { display: none;}
+
 @media screen and (min-width: 1200px){
     .load-more-news{
        width: 66.61196581196582% !important;
@@ -104,6 +114,24 @@ h3.bottom-news { line-height: 20px}
 }
 .paginationControl span{
     color: #000;
+}
+
+@media (min-width: 980px) and (max-width: 1199px) {
+	.classes .the-fieldset {
+			min-height: 440px !important;
+	}
+    .btn-apply { 
+		left: 70px !important;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+	.classes .the-fieldset {
+		min-height: 480px !important;
+	}
+    .btn-apply { 
+		left: 40px !important;
+	}
 }
 
 @media screen and (max-width: 767px){
@@ -160,4 +188,17 @@ h3.bottom-news { line-height: 20px}
        margin-left: 0px\9 !important;
        *margin-left: 0px !important;
     }
+	.btn-apply { 
+		left: 42% !important;
+	}
+	.desc-news{
+		display: block  !important;
+		text-align: center  !important;
+	}
+	.more-news-append  { display: block;}
+}
+@media screen and (max-width: 380px){
+	.btn-apply { 
+		left: 35% !important;
+	}
 }

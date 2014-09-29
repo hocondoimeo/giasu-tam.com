@@ -72,8 +72,12 @@ define('LASTEST_NEWS_ITEMS', 5);
 $levels = array('- Chọn trình độ -', 'Cao Đẳng', 'Đại Học', 'Thạc Sỹ', 'Bằng cấp khác');
 define('TUTOR_LEVELS', serialize($levels));
 
-$careers = array('Sinh Viên', 'Giáo Viên', 'Đã Tốt Nghiệp');
+$exYears = array('Chưa có', 'Dưới 1 năm', '1 năm', '2 năm', '3 năm', '4 năm', '5 năm', '5-10 năm', '10-20 năm', 'trên 20');
+define('EXPERIENCE_YEAR', serialize($exYears));
+
+$careers = array('Sinh Viên Năm 1', 'Sinh Viên Năm 2', 'Sinh Viên Năm 3', 'Sinh Viên Năm 4', 'Đã Tốt Nghiệp', 'Giáo Viên', 'Giảng Viên');
 define('TUTOR_CAREERS' , serialize($careers));
+
 define('TUTORS_ITEMS', 5);
 
 

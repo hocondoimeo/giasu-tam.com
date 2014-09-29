@@ -41,7 +41,7 @@ class Application_Model_Classes extends Application_Model_Abstract {
     }
 
     public function getClassDetail($classId){
-    	$cols = array('ClassId', 'ClassMember', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 'ClassRequire', 'ClassTutors', 'ClassCost', 'ClassAddress');
+    	$cols = array('ClassId', 'ClassGrade', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 'ClassRequire', 'ClassTutors', 'ClassCost', 'ClassAddress');
     	$select = $this->getItemsBySelectQuery($cols, array('ClassId = '.$classId, 'IsDisabled = 0', 'ClassStatus = 0'));
     	$result = $this->fetchRow($select);
     	if(count($result)) return $result;

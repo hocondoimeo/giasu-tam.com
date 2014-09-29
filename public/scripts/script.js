@@ -244,10 +244,10 @@ function loadJsOrCssFile(filename, filetype){
  * @author duy.ngo
  */
 function loadModal(content){
-	var html = '<div id="loadModal" class="modal fade" role="dialog">';
-	html += '<button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="close">x</button>';
-	html += '<center style="padding: 10px;">'+content+'</center></div>'; 
+	var html = '<div id="loadModal" class="modal container hide fade" role="dialog" tabindex="-1">';
+	html += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="close">x</button></div>';
+	html += '<div class="modal-body"><div class="row-fluid"><center style="padding: 10px;" class="load-content">'+content+'</center></div></div></div>'; 
 	$('#loadModal').remove();
 	$('body').append(html);
-	$('#loadModal').modal();
+	$('#loadModal').modal('show');
 }

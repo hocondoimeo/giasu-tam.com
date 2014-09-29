@@ -1,0 +1,38 @@
+.modal-backdrop1 , .modal-white{
+	background-color: #eee; z-index: 9999; width: 50%
+}
+.modal-backdrop.fade {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.modal-backdrop.fade.in {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+
+.tutor-title{
+	position: absolute;
+	display: block;
+	top: 35px;
+	left: 25px;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.subject-title{
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#TeachableInClass, #TeachableSubjects, #TeachableDistricts{
+	min-width: 100px;
+	margin-right: 0px !important;
+}
+
+#districts-modal, #subjects-modal, #classes-modal {
+	height: 15px;
+	width: 10px;
+	padding: 5px;
+	margin-left: 10px !important;
+	margin-bottom: 10px;
+}

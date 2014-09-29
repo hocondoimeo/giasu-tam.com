@@ -54,7 +54,7 @@ a.active {
 .content-top, .menu{ padding-top: 20px;}
 
 #content-top-left,  #content-top-right , #content-top-center{
-	min-height: 450px;
+	min-height: 452px;
 }
 
 #content-middle-left{
@@ -123,7 +123,7 @@ ul.content-top-menu,  ul.content-top-rmenu{
 
 .footer{
        margin-top: 20px;
-    }
+}
 
 /* border blocks */
 .content-top-center, .content-top-left, .content-top-right , .content-block, .news-block{

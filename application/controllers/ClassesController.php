@@ -234,7 +234,7 @@ class ClassesController extends Zend_Controller_Action
     		$mail->addHeader('Content-Type', 'text/html');
     		$mail->addHeader('Content-Transfer-Encoding', '8bit');
     		$mail->addHeader('X-Mailer:', 'PHP/'.phpversion());
-    		
+
     		$mail->setFrom($mailUserName, $mailFrom);
     		//add reply to avoid the mail direction to 'spam'/ 'junk' folder
     		$mail->setReplyTo($mailFrom, $subject);

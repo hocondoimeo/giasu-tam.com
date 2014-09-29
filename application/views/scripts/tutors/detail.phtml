@@ -29,19 +29,19 @@
 								            <div class="lastest-date desc-news1"><span>Tốt nghiệp trường: </span>
 								            		<?php echo $this->tutor['University']?>
 								            </div>
-								            <div class="lastest-date desc-news1"><span>Địa chỉ: </span>
-								            		<?php echo $this->tutor['Address']?>
-								            </div>
+								            <!-- <div class="lastest-date desc-news1"><span>Địa chỉ: </span> -->
+								            		<?php //echo $this->tutor['Address']?>
+								            <!-- </div> -->
 								            <?php $date = new Zend_Date($this->tutor['CreatedDate'], DATE_FORMAT_DATABASE);?>
-								            <div class="span"><span>Ngày tham gia: </span>
+								            <div class="lastest-date desc-news1"><span>Ngày tham gia: </span>
 								            	<?php echo $date->toString(DATE_FORMAT_ZEND);?>
 								            </div>
-								            <div class="span"><span>Email: </span>
-								            		<?php echo $this->tutor['Email']?>
-								            </div>
-								            <div class="span"><span>Điện thoại: </span>
-								            		<?php echo $this->tutor['Phone']?>
-								            </div>
+								            <!-- <div class="span"><span>Email: </span> -->
+								            		<?php //echo $this->tutor['Email']?>
+								            <!-- </div> -->
+								            <!-- <div class="span"><span>Điện thoại: </span> -->
+								            		<?php //echo $this->tutor['Phone']?>
+								            <!-- </div> -->
 								            <?php if(!empty($this->tutor['Introduction'])):?>
 								            <div class="span"><span>Giới thiệu bản thân: </span>
 								            		<?php echo $this->tutor['Introduction']?>

@@ -57,6 +57,9 @@ h3.bottom-news { line-height: 20px}
 .news-date{
     color: #999;
 }
+.more-news-append { display: none;}
+.first-lastest-news  { display: none !important;}
+
 @media screen and (min-width: 1200px){
     .load-more-news{
        width: 66.61196581196582% !important;
@@ -149,4 +152,6 @@ h3.bottom-news { line-height: 20px}
        margin-left: 0px\9 !important;
        *margin-left: 0px !important;
     }
+	.more-news-append  { display: block;}
+   .more-news-append  .first-lastest-news  { display: block !important;}
 }

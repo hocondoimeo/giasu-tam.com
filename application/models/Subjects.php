@@ -23,7 +23,7 @@ class Application_Model_Subjects extends Application_Model_Abstract {
     }
     
     public function getSubjectName($subjectIds = ''){
-    	$cols = array('SubjectName');
+    	$cols = array('SubjectId', 'SubjectName');
     	$select = $this->getItemsBySelectQuery($cols, array('SubjectId  IN ('.$subjectIds.') AND IsDisabled = 0'));
     	$result = $this->fetchAll($select);
     	if(count($result)) return $result;

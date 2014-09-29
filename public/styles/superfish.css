@@ -187,7 +187,9 @@ li.sfHover.active > a > .sf-sub-indicator {
     margin: 0 20px;    
 }
 
-
+.LeftContentTopParent, .RightContentTopParent, .LeftContentMiddleParent {
+	display: none;
+}
 
 
 @media (max-width: 979px) {        
@@ -449,6 +451,10 @@ li.sfHover.active > a > .sf-sub-indicator {
     .sf-menu li.dark-blue-menu ul li.active > a span:first-child { border-bottom: none; color: #FFF; }
     
     .content-top, .menu {padding-top: 10px !important;}
+    
+	.LeftContentTopParent, .RightContentTopParent, .LeftContentMiddleParent {
+		display: block;
+	}
 }
 
 

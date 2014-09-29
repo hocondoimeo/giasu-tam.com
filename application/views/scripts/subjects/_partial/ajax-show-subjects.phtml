@@ -1,0 +1,28 @@
+<?php
+/**
+ * partial loop of Tutors
+ * Tutors
+ */
+ 
+    $dataRow       = $this->dataRow;
+    
+?>
+<tr>
+    
+    <td>
+        <?php echo $dataRow->SubjectId;?>
+    </td>
+
+    <td>
+        <?php echo $dataRow->SubjectName;?>
+    </td>
+    
+    <?php 
+    	$checked = '';
+    	if(in_array($dataRow->SubjectId, explode(',', $this->csubjects)))
+    		$checked = ' checked="checked"';
+    ?>
+    <td>
+    	<input type="checkbox" id="<?php echo $dataRow->SubjectId; ?>" value="<?php echo $dataRow->SubjectName; ?>" <?php echo $checked?>>
+    </td>
+</tr>

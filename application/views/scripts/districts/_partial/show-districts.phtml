@@ -1,0 +1,33 @@
+<?php
+/**
+ * partial loop of Districts
+ * Districts
+ */
+ 
+    $dataRow       = $this->dataRow;
+    
+?>
+<tr>
+    
+    <td>
+        <?php echo $dataRow->DistrictId;?>
+    </td>
+
+    <td>
+        <?php echo $dataRow->DistrictName;?>
+    </td>
+
+    <td style="vertical-align: middle">
+        <?php if(!$dataRow->IsDisabled):?><span class="label label-success">Active</span><?php endif;?>
+        <?php if($dataRow->IsDisabled):?><span class="label label-default">Inactive</span><?php endif;?>
+    </td>
+    
+    <td>
+        <a href="/districts/update-districts/id/<?php echo $dataRow->DistrictId; ?>" class="btn btn-warning"> <i class="icon-edit"></i> 
+           Update
+        </a>
+        <a href="/districts/delete-districts/id/<?php echo $dataRow->DistrictId; ?>" class="btn btn-danger btn-delete"> <i class="icon-remove icon-white"></i> 
+           Delete
+        </a>
+    </td>
+</tr>

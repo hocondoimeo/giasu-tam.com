@@ -33,7 +33,7 @@ foreach ($arrCategories as $key => $arrCategory) {
 }
 ?>
 <?php if ($count): ?>
-    <div class="social-links" count="<?php echo $count; ?>" style="width: 100%;">
+    <div class="social-links1" count="<?php echo $count; ?>" style="width: 100%;">
                 <div class="social-link-custom-div1">&nbsp</div>
                 <div class="social-link-custom-div2">
                     <div class="group-social-link-footer" >
@@ -57,7 +57,7 @@ foreach ($arrCategories as $key => $arrCategory) {
                         <?php if (!empty($likeFaceBookUser)):?>
                         <li class="one-link-footer <?php echo (($this->format()->isShowClassFB($followLinkedInUser, $followTwitterUser)))?'footer-link-media':"";?>" <?php if (empty($likeFaceBookUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
                             <a href="http://www.facebook.com/<?php echo $likeFaceBookUser; ?>" target="_blank">
-                                <img class="social-links-facebook" src= "/images/footer/facebook.png" rel="tooltip" data-placement="bottom"
+                                <img class="social-links-facebook" src= "/images/footer/facebookIcon.png" rel="tooltip" data-placement="bottom"
                                      data-original-title="<?php echo "Open $likeFaceBookUser's Facebook page"; ?>"/></a>
                         </li>
                         <?php endif;?>
