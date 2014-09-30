@@ -1,0 +1,91 @@
+<?php 
+			$form =  $this->form;
+?>
+				<div id="people-block">
+                        <h3> Đăng ký tìm gia sư</h3>
+
+                        <div class="row-fluid">
+                            <div class="span12 people-right-block">
+                            	<div class="row-fluid">	
+								<?php if(! empty($this->messageStatus) && isset($this->messageStatus)): ?>
+        						<?php $messageStatus = explode("/", $this->messageStatus); ?>
+								<div class="span12">
+								     <div class="alert alert-<?php echo $messageStatus[0];?>">
+								        <button class="close" data-dismiss="alert" type="button">X</button>
+								        <?php echo $messageStatus[1];?>
+								        <?php if(isset($this->messages) && sizeof($this->messages) > 0): ?>
+						                    <ul>
+						                        <?php foreach ($this->messages as $fieldName => $message) : ?>
+						                            <?php if ($this->form->$fieldName) : 
+						                            		$msg = $this->form->$fieldName->getLabel();
+						                            ?>
+						                                <li><?php echo substr($msg, 0, -1).': '.$message; ?></li>
+						                            <?php else : ?>
+						                                <li><?php echo $message; ?></li>
+						                            <?php endif; ?>
+						                        <?php endforeach; ?>
+						                    </ul>
+						                <?php endif; ?>
+								    </div>
+								</div>
+								<?php endif;?>
+								</div>
+                                <div class="row-fluid lastest-block">
+                                    <div class="span7">
+                                        <form class="form-horizontal" method="post" action="">
+								            <fieldset class="well the-fieldset">
+								            	<?php //echo $form->UserId; ?>
+								            	<?php echo $form->Email; ?>
+								                
+								                <div class="form-actions">								                    
+								            			<?php echo $this->renderFormElement($form->Save); ?>
+								            			<?php echo $this->renderFormElement($form->Reset); ?>
+								                </div>
+								            </fieldset>
+								        </form>
+                                    </div>
+                                     <div  class="span1 pull-left or-seperator">
+					                		<img src="/images/icons/or_seperator.png"/>
+					                </div>
+                                   <div class="span4 pull-left classes featurette">
+							            <fieldset class="well the-fieldset">
+							            	<legend>Đăng ký bằng:</legend>
+								            <div class="lastest-date1 desc-news"><!-- <span>Facebook: </span> -->
+								            		<a href="<?php echo $this->facebookAuthUrl ?>" rel="0" class="newWindow"><img src="/images/icons/facebook_login.png"/></a>
+								            </div>
+								            <div class="lastest-date1 desc-news"><!-- <span>Google: </span> -->
+								            		<a href="<?php echo $this->googleAuthUrl ?>" rel="1" class="newWindow"><img src="/images/icons/google_login.png"/></a>
+								            </div>
+								            <div class="lastest-date1 desc-news"><!-- <span>Twitter: </span> -->
+								            		<a href="<?php echo $this->twitterAuthUrl ?>" rel="2" class="newWindow"><img src="/images/icons/twitter_login.png"/></a>
+								            </div>
+								        </fieldset>			            
+						            </div> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+<script>	
+	$(document).ready(function(){
+	    $('.newWindow').click(function (event){
+	    	var win;
+	        var checkConnect;
+	        
+	        var url = $(this).attr("href");
+	        var windowName = "popUp";//$(this).attr("name");
+			var windowSizeArray = [ "width=300,height=400", "width=300,height=400", "width=300,height=400" ];
+	        var windowSize = windowSizeArray[ $(this).attr("rel") ];
+	
+	        win =  window.open(url, windowName, windowSize);
+	
+	        checkConnect = setInterval(function() {
+	            if (!win || !win.closed) return;
+	            clearInterval(checkConnect);
+	            window.location.href = '<?php echo FRONTEND_DOMAIN_NAME.$this->urlRedirect; ?>';
+	        }, 100);
+	        
+	        event.preventDefault();
+	
+	    });
+	});
+</script>

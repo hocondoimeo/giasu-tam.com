@@ -1,4 +1,4 @@
-
+SetEnv APPLICATION_ENV development
 RewriteEngine On
 
 #access direct images
@@ -30,10 +30,10 @@ RewriteBase /
 # Allow any files or directories that exist to be displayed directly
 #RewriteCond ${REQUEST_URI} ^.+$
 #RewriteCond %{REQUEST_FILENAME} \.(gif|jpe?g|png|js|css|swf|php|ico|txt|pdf|xml)$ [OR]
-RewriteCond %{REQUEST_FILENAME} -f [OR]
-RewriteCond %{REQUEST_FILENAME} -d [OR]
-RewriteCond %{REQUEST_FILENAME} -l
-RewriteRule ^ - [L]
+#RewriteCond %{REQUEST_FILENAME} -f [OR]
+#RewriteCond %{REQUEST_FILENAME} -d [OR]
+#RewriteCond %{REQUEST_FILENAME} -l
+#RewriteRule ^ - [L]
 
 # Rewrite all other URLs to index.php/URL
-RewriteRule .* index.php/$0 [PT]
+#RewriteRule .* index.php/$0 [PT]

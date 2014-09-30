@@ -1,0 +1,36 @@
+<?php
+function display($input) {
+	if(is_object($input)) {
+		$input = (array) $input;
+	}
+	if(is_array($input)) {
+		echo '<dl>';
+		foreach($input as $key => $value) {
+			echo '<dt>' . $key . '</dt>';
+			echo '<dd>';
+			if(is_array($value) || is_object($value))
+				display($value);
+			else 
+				echo $value;
+			echo '</dd>';
+		}
+		echo '</dl>';
+	}
+	else {
+		echo $input;
+	}
+}
+
+
+//$provider->getName();$provider->getApi()->getPicture();$provider->getApi()->getProfile();
+$modelConfig = new Application_Model_Configs();
+$tutorConfig = $modelConfig->getConfigDetail("dang-ky-tim-gia-su");
+//$this->_redirect('/news/detail/id/'.$tutorConfig['ConfigValue']);
+//$this->_helper->redirector('news','detail/id/'.$tutorConfig['ConfigValue']); 
+//$this->gotoUrl('/news/detail/id/'.$tutorConfig['ConfigValue']);
+//$this->redirect('/news/detail/id/'.$tutorConfig['ConfigValue']); 
+//$this->_helper->redirector('news','show-news');
+//Zend_Controller_Action_Helper_Redirector::gotoUrl('/news/detail/id/'.$tutorConfig['ConfigValue']);
+echo "<script>parent.close();window.location.href = '{FRONTEND_DOMAIN_NAME}/news/detail/id/{$tutorConfig['ConfigValue']}';</script>";
+?>
+
