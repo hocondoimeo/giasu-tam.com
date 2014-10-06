@@ -199,7 +199,7 @@ class Application_Form_Tutors extends Zend_Form
         $teachableInClass->addFilter('StringTrim');
         $teachableInClass->setRequired(false);
         $teachableInClass->setAttrib('disabled', true);
-        $teachableInClass->setDescription('<a id="classes-modal" class="btn btn-info" title="Chọn lớp">...</a>');
+        $teachableInClass->setDescription('<a id="grades-modal" class="btn btn-info" title="Chọn lớp">...</a>');
         $teachableInClass->setDecorators(array(
         		'ViewHelper',
         		array('Description', array('escape' => false)),
