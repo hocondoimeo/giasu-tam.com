@@ -1,0 +1,28 @@
+<?php
+/**
+ * partial loop of Tutors
+ * Tutors
+ */
+ 
+    $dataRow       = $this->dataRow;
+    
+?>
+<tr>
+    
+    <!-- <td> -->
+        <?php //echo $dataRow->DistrictId;?>
+    <!-- </td> -->
+
+    <td>
+        <?php echo $dataRow->GradeName;?>
+    </td>
+    
+    <?php 
+    	$checked = '';
+    	if(in_array($dataRow->GradeId, explode(',', $this->cgrades)))
+    		$checked = ' checked="checked"';
+    ?>
+    <td style="vertical-align: middle">
+    	<input type="checkbox" id="<?php echo $dataRow->GradeId; ?>" value="<?php echo $dataRow->GradeName; ?>" <?php echo $checked?>>
+    </td>
+</tr>
