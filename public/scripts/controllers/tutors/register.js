@@ -27,11 +27,11 @@ $(document).ready(function() {
 	//var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
 	//$.fn.bootstrapBtn = bootstrapButton; 
 	
-	$('#tutors-modal').live('click', function(){
-        var url = '/tutors/ajax-show-tutors';
+	$('#classes-modal').live('click', function(){
+        var url = '/classes/ajax-show-classes';
         //$('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
-        var tutors = $('#ClassTutors').val();
-        if($.trim(tutors) != '')  url += '/ctutors/'+tutors;
+        var classes = $('#TeachableInClass').val();
+        if($.trim(classes) != '')  url += '/cclasses/'+classes;
         $.ajax({
             url : url,
             method: 'get',
@@ -44,7 +44,7 @@ $(document).ready(function() {
     $('#subjects-modal').live('click', function(){
         var url = '/subjects/ajax-show-subjects';
         //$('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
-        var subjects = $('#ClassSubjects').attr('subs');
+        var subjects = $('#TeachableSubjects').attr('subs');
         if($.trim(subjects) != '')  url += '/csubjects/'+subjects;
         $.ajax({
             url : url,
@@ -55,27 +55,16 @@ $(document).ready(function() {
         });
     });
     
-    $('#districts-modal1').live('click', function(){
+    $('#districts-modal').live('click', function(){
         var url = '/districts/ajax-show-districts';
         //$('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
-        var districts = $('#TeachableDistricts').val();
+        var districts = $('#TeachableDistricts').attr('subs');
         if($.trim(districts) != '')  url += '/cdistricts/'+districts;
         $.ajax({
             url : url,
             method: 'get',
             success : function(data){
-                //loadModal(data);
-            	/*$("#myModal").css("display","block");
-            	 $("#myModal").css("top","500px");
-            	$('#myModal').on('hidden', function () {
-                    $(".modal-backdrop").remove();
-                });
-                $('#myModal').on('hide', function () {
-                    $(".modal-backdrop").remove();
-                });
-                $(".modal-body").addClass("max-height-light-box");
-                $(".modal-body").html('test');*/
-            	//$('#myModal').modal('show');
+                loadModal(data);
             },
             error: function (request, status, error) {
                 alert(request.responseText);

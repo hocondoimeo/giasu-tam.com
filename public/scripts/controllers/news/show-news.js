@@ -47,3 +47,8 @@ function showLastestNewsBlock(){
     $('.only-popular').hide();
     $('.load-more-news').show();
 }
+
+function scrollToView(){
+	var aTag = $("#people-block");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}

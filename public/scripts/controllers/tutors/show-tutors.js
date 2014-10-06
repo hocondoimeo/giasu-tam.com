@@ -38,3 +38,8 @@ function loadPage(url, page){
         }
     });
 }
+
+function scrollToView(){
+	var aTag = $("#people-block");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+}

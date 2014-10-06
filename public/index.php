@@ -1,5 +1,4 @@
 <?php
-
 defined('APPLICATION_PATH')
     || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
 
@@ -9,19 +8,17 @@ defined('APPLICATION_ENV')
     
 
 //config for layout
-//require_once APPLICATION_PATH . '/../library/Function/counter.php';
+//require_once APPLICATION_PATH . '/../library/Function/Application.php';
 require_once APPLICATION_PATH . '/../library/Function/layout.php';
 require_once APPLICATION_PATH . '/configs/constants.php';
 
 
 // Ensure library/ is on include_path
 set_include_path(implode(PATH_SEPARATOR, array(
-     //'/../library',
-     //'../library',
+    realpath(APPLICATION_PATH .  '/../library'),
+     '/../library',
     get_include_path(),
 )));
-
-
 
 /** Zend_Application */
 require_once 'Zend/Application.php';

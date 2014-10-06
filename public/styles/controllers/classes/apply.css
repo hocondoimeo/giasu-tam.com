@@ -6,17 +6,20 @@ h3.bottom-news { line-height: 20px !important}
     /*margin-top: 20px;*/
 }
 
-.classes .the-fieldset { min-height:360px !important;}
+.classes .the-fieldset { min-height: 400px !important;}
 .classes  legend{ margin-bottom: 0px !important;}
 .form-horizontal {padding-top: 20px;}
-.form-horizontal .the-fieldset {padding-top: 30px; min-height:310px !important;}
+.form-horizontal .the-fieldset {
+	padding-top: 30px; min-height:350px !important;
+}
 
 .all-popular-block{
     padding: 10px;
 }
 
-.form-actions{ margin-top: 50px;}
+.form-actions{ margin-top: 55px;}
 
+#Save, #Reset {margin-top: 5px;}
 #Reset {margin-left: 30px;}
 
 .all-popular-block .desc-news{

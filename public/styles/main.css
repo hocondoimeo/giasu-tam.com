@@ -20,6 +20,10 @@ div.top-banner {
     display:inline-block;	
 }
 
+div.top-banner  img{
+	width: 100% !important;
+} 
+
 .logo{
 	min-height: 245px; 
 	vertical-align: center;}

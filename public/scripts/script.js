@@ -7,32 +7,51 @@ $(window).resize(function () {
     showNewsInSmallViewPort();
 });
 jQuery(function(){    
-    jQuery('ul.sf-menu').superfish({
-        delay:0
-    });
-    /*
-     * @author thu.nguyen
-     * @desc hide sub menu when click on main menu
-     * */
-    $(".menu-device").bind('click',function() {
-        if ($(this).hasClass('sfHover')){
-           $(this).hideSuperfishUl();
-        }else{
-           $(this).showSuperfishUl();
+	var menu = $("#menus");
+	menu.find('ul.sf-menu').superfish({
+        	delay:0, 
+        	speed: 'fast',
+        	autoArrows:    false,
+            dropShadows:   false,
+            disableHI: true,
+            onHide:        function(){
+                if (this.parent().is('.sfPersist')) {
+                    this.show().css('visibility','visible').parent().addClass('sfHover');
+                }
+            }
+    }).find('li > ul > li').click(function(){
+        // hide previously persistent children (LOL that just sounds wrong)
+        menu.find('.sfPersist')
+            .removeClass('sfPersist sfHover')
+            .find('> ul').hide().css('visibility','hidden');
+
+        // add children that should be persistent
+        if ($(this).is('.sfSelected')) {
+            // if previously selected, keep hidden
+            menu.find('li.sfSelected').removeClass('sfSelected');
+        } else {
+            // Hide other selected classes
+            menu.find('li.sfSelected').removeClass('sfSelected');
+            // if newly selected, then show
+            $(this)
+                .addClass('sfSelected') // remember which one is selected
+                .parent()
+                .show().css('visibility','visible')
+                .parent().addClass('sfHover sfPersist');
         }
     });
 
     //    $('.sf-sub-indicator').parent().next('ul').find('li:last-child').corner('bottom');
     //    $('div[class^=pitch]').corner();
     // active the top menu
-    if (typeof activeMenu != "undefined") 
-    	activeMenuFunction(activeMenu);
+    //if (typeof activeMenu != "undefined") 
+    	//activeMenuFunction(activeMenu);
     // active the sub menu
-    if (typeof activeSubMenu != "undefined")
-    	activeMenuFunction(activeSubMenu);
+    //if (typeof activeSubMenu != "undefined")
+    	//activeMenuFunction(activeSubMenu);
     
     /**show menu small**/    
-    $(".dark-yellow-menu.news").children().eq(0).addClass("border-bottom-menu-small");
+    //$(".dark-yellow-menu.news").children().eq(0).addClass("border-bottom-menu-small");
   
     $(".menu-small-viewport").click(function(){
         if($(".sf-menu").hasClass("display-menu")){
@@ -59,7 +78,7 @@ jQuery(function(){
             $(".right-nav-triangle").addClass("expanded");
         }
         
-    });    
+    });
 });
 
 function activeMenuFunction(activeMenu) {
@@ -72,15 +91,6 @@ function activeMenuFunction(activeMenu) {
     }
 }
 var heightDocument = 0;
-
-$(document).ready(function(){      
-    //heightDocument = $(document).height();
-    //resizeHeight(0);
-    /*$(window).resize(function () {       
-        resizeHeight(1);
-    });*/
-    //hideDeviceTablet();
-});
 
 function resizeHeight(resize){
     if (isMobile.any()){
@@ -103,26 +113,6 @@ function resizeHeight(resize){
     }
     
 }
-var isMobile = {
-        Android: function() {
-            return navigator.userAgent.match(/Android/i);
-        },
-        BlackBerry: function() {
-            return navigator.userAgent.match(/BlackBerry/i);
-        },
-        iOS: function() {
-            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-        },
-        Opera: function() {
-            return navigator.userAgent.match(/Opera Mini/i);
-        },
-        Windows: function() {
-            return navigator.userAgent.match(/IEMobile/i);
-        },
-        any: function() {
-            return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
-        }
-    };
 
 function hideDeviceTablet(){
 	var isInFrame = (window != top) ? true : false; // check page in frame or not
@@ -133,23 +123,7 @@ function hideDeviceTablet(){
 
 function showNewsInSmallViewPort(){
     var bodyWidth = $(window).width();
-    if(bodyWidth < 768){
-    	//show small menu viewport
-    	$(".menu-small-viewport").each(function(){
-            $(this).show();
-        });
-      //show carousel control small viewport
-    	/*$(".carousel-control").each(function(){
-            $(this).show();
-        });*/
-    	
-    	$("#myCarousel").swiperight(function() {  
-    	      $("#myCarousel").carousel('prev');  
-    	    });  
-	   $("#myCarousel").swipeleft(function() {  
-	      $("#myCarousel").carousel('next');  
-	   }); 
-    	   
+    if(bodyWidth < 768){    	   
         //hide all
     	$(".menu").each(function(){
             $(this).hide();
@@ -169,14 +143,21 @@ function showNewsInSmallViewPort(){
         $(".news-block .featurette-divider-social").each(function(){
             $(this).hide();
         });
-        //just show 3 news
-        $(".news-block .featurette").eq(0).show();
-        $(".news-block .featurette").eq(1).show();
-        $(".news-block .featurette").eq(2).show();
-        $(".news-block .featurette-divider-social").eq(0).show();
-        $(".news-block .featurette-divider-social").eq(1).show();
-        //add number attribute for new-block div tag
-        $(".news-block").attr('news-number', 3);
+    	//show small menu viewport
+    	$(".menu-small-viewport").each(function(){
+            $(this).show();
+        });
+      //show carousel control small viewport
+    	/*$(".carousel-control").each(function(){
+            $(this).show();
+        });*/
+    	
+    	$("#myCarousel").swiperight(function() {  
+    	      $("#myCarousel").carousel('prev');  
+    	    });  
+	   $("#myCarousel").swipeleft(function() {  
+	      $("#myCarousel").carousel('next');  
+	   }); 
     }
     else{
     	//hide small menu viewport
@@ -186,10 +167,6 @@ function showNewsInSmallViewPort(){
             });  
     	}
     	
-    	//hide carousel control small viewport
-    	/*$(".carousel-control").each(function(){
-            $(this).hide();
-        });*/
         //show all
     	$(".menu").each(function(){
             $(this).show();
@@ -210,7 +187,7 @@ function showNewsInSmallViewPort(){
             $(this).show();
         });
         //add number attribute for new-block div tag
-        $(".news-block").attr('news-number', 5);
+        //$(".news-block").attr('news-number', 5);
     }
 }
 
@@ -244,7 +221,7 @@ function loadJsOrCssFile(filename, filetype){
  * @author duy.ngo
  */
 function loadModal(content){
-	var html = '<div id="loadModal" class="modal container hide fade" role="dialog" tabindex="-1">';
+	var html = '<div id="loadModal" class="modal  hide fade modal-white" role="dialog" tabindex="-1">';
 	html += '<div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true" title="close">x</button></div>';
 	html += '<div class="modal-body"><div class="row-fluid"><center style="padding: 10px;" class="load-content">'+content+'</center></div></div></div>'; 
 	$('#loadModal').remove();

@@ -1,5 +1,9 @@
 .modal-backdrop1 , .modal-white{
-	background-color: #eee; z-index: 9999; width: 50%
+	background-color: #eee;
+	 z-index: 9999; 
+	 width: 30% !important;
+	margin-top: 45%;
+	margin-left: 10%;
 }
 .modal-backdrop.fade {
 	opacity: 0;
