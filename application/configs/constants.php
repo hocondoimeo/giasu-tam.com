@@ -9,7 +9,7 @@ define('NUMBER_OF_ITEM_PER_PAGE', 20);
 
 /************************* Domain *******************************/
 
-if (APPLICATION_ENV == 'local') {
+if (APPLICATION_ENV == 'development') {
 	define('FRONTEND_DOMAIN_NAME', 'http://giasu.com');
 	define('BACKEND_DOMAIN_NAME', 'http://admin.giasu.com');
 
@@ -83,3 +83,5 @@ define('TUTORS_ITEMS', 5);
 
 /************************* Classes *******************************/
 define('CLASSES_ITEMS', 6);
+$grades = array('Mầm Non','Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Ôn Thi Tốt Nghiệp','Luyện Thi ĐH');
+define('CLASSES_GRADE' , serialize($grades));

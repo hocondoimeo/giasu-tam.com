@@ -19,9 +19,9 @@
 						    <?php if (is_numeric($key)) : ?>
 						            <div class="span4 pull-left classes <?php if($key % 3 ==0 ) echo 'third-class'?>">
 							            <fieldset class="well the-fieldset">
-							            	<legend>Mã số lớp học: <?php echo $class->ClassId?></legend>
+							            	<legend>Mã số lớp học: <?php echo $class->ClassId; ?></legend>
 								            <div class="lastest-date1 desc-news"><span>Lớp học: </span>
-								            		<?php echo $class->ClassGrade ?>
+								            		<?php echo $class->ClassGrade; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Môn học: </span>
 								            		<?php 
@@ -29,28 +29,48 @@
 								            		?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Số buổi: </span>
-								            		<?php echo $class->ClassDaysOfWeek?>
+								            		<?php echo $class->ClassDaysOfWeek; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Thời gian: </span>
-								            		<?php echo $class->ClassTime?>
+								            		<?php echo $class->ClassTime; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Yêu cầu: </span>
-								            		<?php echo $class->ClassRequire?>
+								            		<?php echo $class->ClassRequire; ?>
 								            </div>
+								            <?php $tutors = explode(',', $class->ClassTutors);
+								            			 $ctutors = count($tutors);
+								            	if(!$class->ClassStatus):?>
 								            <div class="lastest-date1 desc-news"><span>Số ứng viên hiện tại: </span>
-								            		<?php echo count(explode(',', $class->ClassTutors));?>
+								            		<?php echo (isset($tutors[0]) && !empty($tutors[0])) ? $ctutors: 'Chưa có'; ?>
 								            </div>
+								            <?php else: ?>
+								            <div class="lastest-date1 desc-news"><span>Gia sư/Giáo viên: </span>
+								            		<?php $tutorName = null;
+								            			if($ctutors < 2){
+									            			$tutorId = trim($class->ClassTutors);
+									            			$tutorName = $this->tutor->getTutorInfo($tutorId);
+								            			}
+								            			echo !is_null($tutorName) ? $tutorName->UserName: '';
+								            		?>
+								            </div>
+								            <?php endif;?>
 								            <div class="lastest-date1 desc-news"><span>Lương: </span>
-								            		<?php echo $class->ClassCost?>
+								            		<?php echo $class->ClassCost; ?>
+								            </div>
+								            <div class="lastest-date1 desc-news"><span>Liên hệ: </span>
+								            		<?php echo $class->ClassContact; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news class-address"><span>Địa chỉ: </span>
-								            		<?php echo $class->ClassAddress?>
+								            		<?php echo $class->ClassAddress; ?>
 								            </div>
+								            <?php if(!$class->ClassStatus):?>
 								            <div class="btn-apply">
 								            	<a href="/classes/apply/id/<?php echo $class->ClassId; ?>">
 								            		<button class="btn btn-primary">Ứng tuyển</button>
 								            	</a>
 								            </div>
+								            <?php endif; $status = (!$class->ClassStatus)? 'available' : 'unavailable';?>
+								            <img id="ribbon" src="/images/icons/<?php echo $status;?>.png"/>
 								        </fieldset>			            
 						            </div>
 						    <?php endif; ?>

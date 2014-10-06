@@ -19,7 +19,7 @@ class TutorsController extends Zend_Controller_Action
     /**
     * Function show all Sites
     */
-    public function indexAction() {
+    public function indexAction() {$fileName = Common_FileUploader_qqUploadedFileXhr::copyImage('', '', '');
         $this->_helper->redirector('show-tutors');
     }
     
@@ -70,6 +70,7 @@ class TutorsController extends Zend_Controller_Action
     */
     public function registerAction() {
         $form = new Application_Form_Tutors();
+        $form->changeModeToAdd();
 
         /* Proccess data post*/
         if($this->_request->isPost()) {
@@ -132,7 +133,8 @@ class TutorsController extends Zend_Controller_Action
             	$msgVN = array(
             			"is required and can't be empty" => 'Không được để trống',
             			"does not appear to be an integer" => 'Phải là chữ số',
-            			'is no valid email address in the basic format local-part@hostname' => 'Email không hợp lệ'
+            			'is no valid email address in the basic format local-part@hostname' => 'Email không hợp lệ',
+						"record matching '".$_POST['Email']."' was found" => "'".$_POST['Email']."' đã tồn tại"
                  );
                  $messageStatus ='danger/Có lỗi xảy ra. Chú ý thông tin những ô sau đây:';
                  $messages      = array();

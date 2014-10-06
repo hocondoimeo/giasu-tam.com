@@ -14,6 +14,10 @@ class Application_Model_Subjects extends Application_Model_Abstract {
     protected $_name        = 'Subjects';
     protected $_primary     = array('SubjectId',);
 
+    public $searchFields = array();
+    public $sortFields   = array();
+    
+    
 /********************************************************************
 * PUT YOUR CODE HERE
 ********************************************************************/

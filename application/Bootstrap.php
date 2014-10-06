@@ -8,9 +8,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     	$layout->setLayout('layout');        
         //$this->bootstrap('view');
         //$view = $this->getResource('view');
-
         //$this->_setNavigation($view);
     }
+    
+     protected function _initAutoloader()
+    {
+    	require_once 'Zend/Loader/Autoloader.php';    	  	
+    	    	
+    	$loader = Zend_Loader_Autoloader::getInstance();
+    	$loader->registerNamespace(array('Tbs', realpath(APPLICATION_PATH .  '/../library/Tbs')));
+    } 
 
     public function _setNavigation($view){
 
@@ -34,12 +41,31 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
     	Zend_Session::start();
     }
     
+    protected function _initAttributeExOpenIDPath() {
+    	$autoLoader = Zend_Loader_Autoloader::getInstance();
+    
+    	$resourceLoader = new Zend_Loader_Autoloader_Resource(array(
+    			'basePath' => APPLICATION_PATH,
+    			'namespace' => 'My_',
+    	));
+    
+    	$resourceLoader->addResourceType('openidextension', 'openid/extension/', 'OpenId_Extension');
+    	$resourceLoader->addResourceType('authAdapter', 'auth/adapter', 'Auth_Adapter');
+    
+    	$autoLoader->pushAutoloader($resourceLoader);
+    }
+    
+    protected function _initAppKeysToRegistry() {    
+    	$appkeys = new Zend_Config_Ini(APPLICATION_PATH . '/configs/appkeys.ini');
+    	Zend_Registry::set('keys', $appkeys);
+    }
+    
     /**
      *
      * This puts the application.ini setting in the registry
      */
     protected function _initConfig()
-    {
+    {//var_dump($this->getOptions());die;
     	Zend_Registry::set('config', $this->getOptions());
     }
     

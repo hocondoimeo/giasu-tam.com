@@ -41,7 +41,7 @@
 								                <?php  echo $form->extra;?>
 							                        <div class="control-group">
 							                            <div class="controls">
-							                              <ul id="separate-list" style="display:none"></ul>
+							                              <ul id="separate-list" style="display:none" ></ul>
 							                            </div>
 							                          </div>
 								                
@@ -56,36 +56,3 @@
                             </div>
                         </div>
                     </div>
-<script>
-$('#districts-modal').click(function(){    var url = '/districts/ajax-show-districts';
-    //$('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
-    var districts = $('#TeachableDistricts').val();
-    if($.trim(districts) != '')  url += '/cdistricts/'+districts;
-    loadModal('ss');
-    //alert('ss');
-    
-   /*  $.ajax({
-        url : url,
-        method: 'get',
-        success : function(data){
-        /* 	$("#myModal").css("display","block");
-          	 $("#myModal").css("top","500px");
-          	$('#myModal').on('hidden', function () {
-                  $(".modal-backdrop").remove();
-              });
-              $('#myModal').on('hide', function () {
-                  $(".modal-backdrop").remove();
-              });
-              $(".modal-body").addClass("max-height-light-box");
-              $(".modal-body").html('test');
-          	$('#myModal').modal('show');
-        },
-        error: function (request, status, error) {
-            alert(request.responseText);
-        }
-    }); */
-});
-
-//loadModal('ss');
-
-</script>

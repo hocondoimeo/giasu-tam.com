@@ -12,7 +12,7 @@ class Application_Model_Users extends Application_Model_Abstract {
 * Define table Users
 ********************************************************************/
     protected $_name        = 'Users';
-    protected $_primary     = array('UserId',);
+    protected $_primary     = 'UserId';
 
     protected $_dependentTables = array(
 

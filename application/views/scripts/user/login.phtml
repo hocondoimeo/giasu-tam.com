@@ -1,4 +1,5 @@
-<?php 
+<?php
+if(!empty($this->msg) && ($this->msg === 'success')) echo "<script>parent.close();</script>"; 
 			$form =  $this->form;
 ?>
 				<div id="people-block">
@@ -51,13 +52,13 @@
 							            <fieldset class="well the-fieldset">
 							            	<legend>Đăng ký bằng:</legend>
 								            <div class="lastest-date1 desc-news"><!-- <span>Facebook: </span> -->
-								            		<a href="<?php echo $this->facebookAuthUrl ?>" rel="0" class="newWindow"><img src="/images/icons/facebook_login.png"/></a>
+								            		<a href="<?php echo $this->facebookAuthUrl; ?>" rel="0" class="newWindow"><img src="/images/icons/facebook_login.png"/></a>
 								            </div>
 								            <div class="lastest-date1 desc-news"><!-- <span>Google: </span> -->
-								            		<a href="<?php echo $this->googleAuthUrl ?>" rel="1" class="newWindow"><img src="/images/icons/google_login.png"/></a>
+								            		<a href="<?php echo $this->googleAuthUrl; ?>" rel="1" class="newWindow"><img src="/images/icons/google_login.png"/></a>
 								            </div>
 								            <div class="lastest-date1 desc-news"><!-- <span>Twitter: </span> -->
-								            		<a href="<?php echo $this->twitterAuthUrl ?>" rel="2" class="newWindow"><img src="/images/icons/twitter_login.png"/></a>
+								            		<a href="<?php echo $this->twitterAuthUrl; ?>" rel="2" class="newWindow"><img src="/images/icons/twitter_login.png"/></a>
 								            </div>
 								        </fieldset>			            
 						            </div> 

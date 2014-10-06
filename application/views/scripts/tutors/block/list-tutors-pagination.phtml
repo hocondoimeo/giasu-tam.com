@@ -7,7 +7,7 @@ page="<?php echo $cpage?>">
 <ul>
 <!-- Previous page link -->
 <?php if (isset($this->previous)): ?>
-  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$this->previous; ?>','<?php echo $this->previous;?>')">
+  <li><a href="#lastest-news-content" onclick="scrollToView();loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$this->previous; ?>','<?php echo $this->previous;?>')">
     «
   </a> </li>
 <?php else: ?>
@@ -17,7 +17,7 @@ page="<?php echo $cpage?>">
 <!-- Numbered page links -->
 <?php foreach ($this->pagesInRange as $page): ?>
   <?php if ($page != $this->current): ?>
-    <li><a href='#lastest-news-content' onclick="loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$page; ?>','<?php echo $page;?>')">
+    <li><a href='#lastest-news-content' onclick="scrollToView();loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$page; ?>','<?php echo $page;?>')">
         <?php echo $page; ?>
     </a></li>
   <?php else: ?>
@@ -27,7 +27,7 @@ page="<?php echo $cpage?>">
 
 <!-- Next page link -->
 <?php if (isset($this->next)): ?>
-  <li><a href="#lastest-news-content" onclick="loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$this->next; ?>','<?php echo $this->next;?>')">
+  <li><a href="#lastest-news-content" onclick="scrollToView();loadPage('<?php echo '/tutors/ajax-get-tutors/page/'.$this->next; ?>','<?php echo $this->next;?>')">
     »
   </a></li>
 <?php else: ?>
@@ -36,31 +36,3 @@ page="<?php echo $cpage?>">
 </ul>
 </div>
 <?php endif; ?>
-
-<?php
-/*
- * Drop down paginaton example
- */
-/*
-?>
-<?php if ($this->pageCount): ?>
-<select id="paginationControl" size="1">
-<?php foreach ($this->pagesInRange as $page): ?>
-  <?php $selected = ($page == $this->current) ? ' selected="selected"' : ''; ?>
-  <option value="<?php
-        echo $this->url(array('page' => $page));?>"<?php echo $selected ?>>
-    <?php echo $page; ?>
-  </option>
-<?php endforeach; ?>
-</select>
-<?php endif; ?>
-
-<script type="text/javascript"
-     src="http://ajax.googleapis.com/ajax/libs/prototype/1.6.0.2/prototype.js">
-</script>
-<script type="text/javascript">
-$('paginationControl').observe('change', function() {
-    window.location = this.options[this.selectedIndex].value;
-})
-</script>
-*/?>

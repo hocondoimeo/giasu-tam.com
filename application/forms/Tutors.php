@@ -199,7 +199,7 @@ class Application_Form_Tutors extends Zend_Form
         $teachableInClass->addFilter('StringTrim');
         $teachableInClass->setRequired(false);
         $teachableInClass->setAttrib('disabled', true);
-        $teachableInClass->setDescription('<a id="subjects-modal" class="btn btn-info" title="Chọn lớp">...</a>');
+        $teachableInClass->setDescription('<a id="classes-modal" class="btn btn-info" title="Chọn lớp">...</a>');
         $teachableInClass->setDecorators(array(
         		'ViewHelper',
         		array('Description', array('escape' => false)),
@@ -382,5 +382,16 @@ class Application_Form_Tutors extends Zend_Form
         		'Fieldset',
         		array('HtmlTag', array('tag'=>'fieldset', 'class'=>'well the-fieldset')),
         ));
+    }
+    
+    public function changeModeToAdd() {
+    	$this->getElement('TeachableDistricts')->setAttrib('subs','');
+    	$this->getElement('TeachableSubjects')->setAttrib('subs','');
+    }
+    
+    public function changeModeToDistrictId() {
+    	$cateModel =  new Application_Model_Districts();
+    	$this->getElement('DistrictId')
+    	->addMultiOptions($cateModel->getFormPairs());
     }
 }

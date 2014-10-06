@@ -83,10 +83,15 @@ $class = $this->class;
 								            		<?php echo $class['ClassRequire'];?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Số ứng viên hiện tại: </span>
-								            		<?php echo count(explode(',', $class['ClassTutors']));?>
+								            		<?php $tutors = explode(',', $class['ClassTutors']);?>
+								            		<?php $ctutors = count($tutors);?>								            		
+								            		<?php echo (isset($tutors[0]) && !empty($tutors[0])) ? $ctutors: 'Chưa có'; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Lương: </span>
 								            		<?php echo $class['ClassCost'];?>
+								            </div>
+								            <div class="lastest-date1 desc-news"><span>Liên hệ: </span>
+								            		<?php echo $class['ClassContact']; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Địa chỉ: </span>
 								            		<?php echo $class['ClassAddress'];?>

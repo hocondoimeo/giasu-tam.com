@@ -24,7 +24,7 @@ class ClassesController extends Zend_Controller_Action
     }
     
     public function applyAction(){
-    	if(null == $id = $this->_request->getParam('id',null)){
+    	if(null == $id = $this->_request->getParam('id',null)){	
     		$this->_helper->flashMessenger->addMessage('%%ERROR_URL%%');
     		$this->_helper->redirector('show-classes');
     	}
@@ -175,6 +175,10 @@ class ClassesController extends Zend_Controller_Action
     	$paginator->setCurrentPageNumber($page);
     
     	$this->view->paginator   = $paginator;
+    }
+    
+    public function ajaxShowClassesAction(){
+    	$this->_helper->layout->disableLayout();
     }
     
     /**

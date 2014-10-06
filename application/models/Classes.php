@@ -33,15 +33,16 @@ class Application_Model_Classes extends Application_Model_Abstract {
      * @since Tue Now 12, 9:48 AM
      */
     public function getAllAvaiabled($params = array()){
-    	$select = $this->select()->where('IsDisabled = 0')->where('ClassStatus = 0');
+    	$select = $this->select()->where('IsDisabled = 0');
     	if(count($params))
     		foreach ($params as $param)
-    			$select->where($param);//die($select);
+    			$select->where($param);
         return$select ->order("ClassId DESC");
     }
 
     public function getClassDetail($classId){
-    	$cols = array('ClassId', 'ClassGrade', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 'ClassRequire', 'ClassTutors', 'ClassCost', 'ClassAddress');
+    	$cols = array('ClassId', 'ClassGrade', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 
+    								'ClassRequire', 'ClassTutors', 'ClassCost', 'ClassAddress', 'ClassContact');
     	$select = $this->getItemsBySelectQuery($cols, array('ClassId = '.$classId, 'IsDisabled = 0', 'ClassStatus = 0'));
     	$result = $this->fetchRow($select);
     	if(count($result)) return $result;
