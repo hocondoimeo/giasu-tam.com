@@ -1,13 +1,5 @@
-<?php
-namespace TBS\Auth\Adapter;
-
-use \TBS\Auth\Identity\Google as Identity;
-use \TBS\OAuth2\Consumer;
-
-use \Zend_Auth_Result as Result;
-use \Zend_Registry as Registry;
-
-class Google implements \Zend_Auth_Adapter_Interface
+<?php 
+class Tbs_Auth_Adapter_Google implements Zend_Auth_Adapter_Interface
 {
    protected $_accessToken;
    protected $_requestToken;
@@ -22,32 +14,32 @@ class Google implements \Zend_Auth_Adapter_Interface
    public function authenticate()
    {
       $result = array();
-      $result['code'] = Result::FAILURE;
+      $result['code'] = Zend_Auth_Result::FAILURE;
       $result['identity'] = NULL;
       $result['messages'] = array();
  
       if(!array_key_exists('error',$this->_accessToken)) {
-         $result['code'] = Result::SUCCESS;
-         $result['identity'] = new Identity($this->_accessToken);
+         $result['code'] = Zend_Auth_Result::SUCCESS;
+         $result['identity'] = new Tbs_Auth_Identity_Google($this->_accessToken);
       }
  
-      return new Result($result['code'],
+      return new Zend_Auth_Result($result['code'],
                                   $result['identity'],
                                   $result['messages']);
    }
  
    public static function getAuthorizationUrl()
    {
-      $config = Registry::get('config');
+      $config = Zend_Registry::get('config');
       $options = is_object($config) ? $config->toArray() : $config;
-      return Consumer::getAuthorizationUrl($options['google']);
+      return Tbs_OAuth2_Consumer::getAuthorizationUrl($options['google']);
    }
  
    protected function _setRequestToken($requestToken)
    {
       $this->_options['code'] = $requestToken;
       
-      $accesstoken = Consumer::getAccessToken($this->_options);
+      $accesstoken = Tbs_OAuth2_Consumer::getAccessToken($this->_options);
 
       $accesstoken['timestamp'] = time();
       $this->_accessToken = $accesstoken;
@@ -55,7 +47,7 @@ class Google implements \Zend_Auth_Adapter_Interface
  
    protected function _setOptions($options = null)
    {
-      $config = Registry::get('config');
+      $config = Zend_Registry::get('config');
       $options = is_object($config) ? $config->toArray() : $config;
       $this->_options = $options['google'];
    }

@@ -1,15 +1,11 @@
 <?php
-namespace TBS\Auth\Identity;
-
-use \TBS\Resource\Google as Resource;
-
-class Google extends Generic
+class Tbs_Auth_Identity_Google extends Tbs_Auth_Identity_Generic
 {
    protected $_api;
  
    public function __construct($token)
    {
-		$this->_api = new Resource($token);
+		$this->_api = new Tbs_Resource_Google($token);
 		$this->_name = 'google';
 		$this->_id = $this->_api->getId();
    }

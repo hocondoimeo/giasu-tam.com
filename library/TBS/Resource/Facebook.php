@@ -1,9 +1,5 @@
 <?php
-namespace TBS\Resource;
-
-use \TBS\OAuth2\Consumer as Consumer;
-
-class Facebook
+class Tbs_Resource_Facebook
 {
     protected $_accessToken;
 
@@ -50,7 +46,7 @@ class Facebook
     protected function _getData($label, $url, $redirects = true)
     {
         if (!$this->_hasData($label)) {
-            $value = Consumer::getData($url, 
+            $value = Tbs_OAuth2_Consumer::getData($url, 
                                        $this->_accessToken['access_token'],
                                        $redirects);
             $this->_setData($label, $value);
