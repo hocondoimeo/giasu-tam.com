@@ -27,11 +27,11 @@ $(document).ready(function() {
 	//var bootstrapButton = $.fn.button.noConflict(); // return $.fn.button to previously assigned value
 	//$.fn.bootstrapBtn = bootstrapButton; 
 	
-	$('#classes-modal').live('click', function(){
-        var url = '/classes/ajax-show-classes';
+	$('#grades-modal').live('click', function(){
+        var url = '/grades/ajax-show-grades';
         //$('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
-        var classes = $('#TeachableInClass').val();
-        if($.trim(classes) != '')  url += '/cclasses/'+classes;
+        var grades = $('#TeachableInClass').attr('subs');
+        if($.trim(grades) != '')  url += '/cgrades/'+grades;
         $.ajax({
             url : url,
             method: 'get',
