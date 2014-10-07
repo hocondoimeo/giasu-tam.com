@@ -36,7 +36,7 @@
     </div>
 </div>
 <script>
-$("input[type=checkbox]").each(function() {
+$("input[type=checkbox][class=modal-checkbox]").each(function() {
 	$(this).live('click', function() {
 		var districts = ''; var districtIds = '';
 		if($(this).is(':checked')){

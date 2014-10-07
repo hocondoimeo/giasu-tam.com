@@ -15,7 +15,9 @@ $contentTop = array('LeftContentTop' => $leftContentTop, 'RightContentTop' => $r
 ?>
 <html>
     <head>
-        <?php 
+        <?php if (($controller == 'user' && $action == 'contact') || ($controller == 'tutors' && $action == 'register')):?>
+        <script type="text/javascript" src="/scripts/tinymce/js/tinymce/tinymce.min.js"></script>
+         <?php endif;
 	        getStyleContents($this, $controller, $action);
 	        getScriptContents($this, $controller, $action); 
         ?>

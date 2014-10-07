@@ -71,64 +71,81 @@ class TutorsController extends Zend_Controller_Action
     public function registerAction() {
         $form = new Application_Form_Tutors();
         $form->changeModeToAdd();
-
         /* Proccess data post*/
         if($this->_request->isPost()) {
             $formData = $this->_request->getPost();
             if($form->isValid($formData)) {
             	$data = $_POST;
+            	$career = unserialize(TUTOR_CAREERS);
+            	$search = array(array_search('Giáo Viên', $career), array_search('Giảng Viên', $career));
             	
-            	//copy new image from 'tmp' to 'images' folder then remove it
-            	$fileName = Common_FileUploader_qqUploadedFileXhr::copyImage($data['Avatar'], IMAGE_UPLOAD_PATH_TMP, IMAGE_UPLOAD_PATH);
-            	//copy exist image from 'images' to 'backup' folder then remove it
-            	//$fileNameBackup = Common_FileUploader_qqUploadedFileXhr::copyImage($data['OldImageName'], IMAGE_UPLOAD_PATH, IMAGE_UPLOAD_PATH_BACKUP);
-                
-                if($id = $this->_model->add($data)){
-                	// check isset in DB
-                	//send mail to user
-                	
-                	$email = $_POST["Email"];
-                	$mailUserName =null; $mailFrom = null; $configMails = null;
-                	try{
-                		$modelConfig = new Application_Model_Configs();
-                		$configMails = $modelConfig->getConfigValueByCategoryCode("GROUP_CONFIG_MAIL");
-                		foreach ($configMails as $key=>$configMail){
-                			switch ($configMail["ConfigCode"]){
-                				case "mail-user-name": $mailUserName = $configMail["ConfigValue"];break;
-                				case "mail-user-name-from": $mailFrom = $configMail["ConfigValue"];break;		
-                			}
-                		}
-                		$tutorConfig = $modelConfig->getConfigDetail("dang-ky-gia-su");
-                	}catch (Zend_Exception $e){
-                		
-                	}
-                	
-                	$rsInitMail = $this->_initMail($configMails);
-                	if($rsInitMail[0]){
-                		$subject = $tutorConfig['ConfigName'];
-                		
-                		// initialize template
-                		$html = new Zend_View();
-                		$html->setScriptPath(APPLICATION_PATH . '/views/scripts/email_templates/');
-                		
-                		$html->assign('name', $data['UserName']);
-                		$html->assign('tutorId', $id);
-                		
-                		$message = $html->render('register-tutor.phtml');
-                		$sendResult = $this->sendMail($email, $subject, $message,$mailUserName,$mailFrom);
-                	
-                		if($sendResult[0]){
-                			$this->_redirect('/news/detail/id/'.$tutorConfig['ConfigValue']);
-                		}
-                		else{
-                			$this->view->messageStatus = 'danger/Gửi email cho bạn thất bại.';
-                		}
-                	}
-                	else{
-                		$this->view->messageStatus = 'danger/Hiện tại hệ thống không đáp ứng kịp.';
-                	}                 	
-                }                
+            	if(in_array($data['Career'], $search) && empty($data['CareerLocation'])){
+            		$messageStatus ='danger/Có lỗi xảy ra. Chú ý thông tin những ô sau đây:';
+            		$messages      = array('CareerLocation' => 'Nơi Công Tác không được trống nếu là Giáo/Giảng Viên');
+            		$this->view->messages = $messages;
+            		$this->view->messageStatus = $messageStatus;
+            	}else{            	
+		            	//copy new image from 'tmp' to 'images' folder then remove it
+		            	$fileName = Common_FileUploader_qqUploadedFileXhr::copyImage($data['Avatar'], IMAGE_UPLOAD_PATH_TMP, IMAGE_UPLOAD_PATH);
+		            	//copy exist image from 'images' to 'backup' folder then remove it
+		            	//$fileNameBackup = Common_FileUploader_qqUploadedFileXhr::copyImage($data['OldImageName'], IMAGE_UPLOAD_PATH, IMAGE_UPLOAD_PATH_BACKUP);
+		                
+		                if($id = $this->_model->add($data)){
+		                	// check isset in DB
+		                	//send mail to user
+		                	
+		                	$email = $_POST["Email"];
+		                	$mailUserName =null; $mailFrom = null; $configMails = null;
+		                	try{
+		                		$modelConfig = new Application_Model_Configs();
+		                		$configMails = $modelConfig->getConfigValueByCategoryCode("GROUP_CONFIG_MAIL");
+		                		foreach ($configMails as $key=>$configMail){
+		                			switch ($configMail["ConfigCode"]){
+		                				case "mail-user-name": $mailUserName = $configMail["ConfigValue"];break;
+		                				case "mail-user-name-from": $mailFrom = $configMail["ConfigValue"];break;		
+		                			}
+		                		}
+		                		$tutorConfig = $modelConfig->getConfigDetail("dang-ky-gia-su");
+		                	}catch (Zend_Exception $e){
+		                		
+		                	}
+		                	
+		                	$rsInitMail = $this->_initMail($configMails);
+		                	if($rsInitMail[0]){
+		                		$subject = $tutorConfig['ConfigName'];
+		                		
+		                		// initialize template
+		                		$html = new Zend_View();
+		                		$html->setScriptPath(APPLICATION_PATH . '/views/scripts/email_templates/');
+		                		
+		                		$html->assign('name', $data['UserName']);
+		                		$html->assign('tutorId', $id);
+		                		
+		                		$message = $html->render('register-tutor.phtml');
+		                		$sendResult = $this->sendMail($email, $subject, $message,$mailUserName,$mailFrom);
+		                	
+		                		if($sendResult[0]){
+		                			$this->_redirect('/news/detail/id/'.$tutorConfig['ConfigValue']);
+		                		}
+		                		else{
+		                			$this->view->messageStatus = 'danger/Gửi email cho bạn thất bại.';
+		                		}
+		                	}
+		                	else{
+		                		$this->view->messageStatus = 'danger/Hiện tại hệ thống không đáp ứng kịp.';
+		                	}                 	
+		                }               
+            	} 
             }else{
+            	if(isset($_POST['TeachableInClass'])  && !empty($_POST['TeachableInClass']) && isset($_POST['TeachableInClassText']))
+            		$form->changeModeToClass($_POST['TeachableInClass'], $_POST['TeachableInClassText']);
+            	
+            	if(isset($_POST['TeachableSubjects'])  && !empty($_POST['TeachableSubjects']) && isset($_POST['TeachableSubjectsText']))
+            		$form->changeModeToSubjects($_POST['TeachableSubjects'], $_POST['TeachableSubjectsText']);
+            	
+            	if(isset($_POST['TeachableDistricts'])  && !empty($_POST['TeachableDistricts']) && isset($_POST['TeachableDistrictsText']))
+            		$form->changeModeToDistricts($_POST['TeachableDistricts'], $_POST['TeachableDistrictsText']);
+            	
             	$this->view->avatar = (isset($_POST['Avatar'])  && !empty($_POST['Avatar']))?$_POST['Avatar']:'';
             	$msgVN = array(
             			"is required and can't be empty" => 'Không được để trống',

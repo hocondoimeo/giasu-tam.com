@@ -11,14 +11,6 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         //$this->_setNavigation($view);
     }
     
-     protected function _initAutoloader()
-    {
-    	require_once 'Zend/Loader/Autoloader.php';    	  	
-    	    	
-    	$loader = Zend_Loader_Autoloader::getInstance();
-    	$loader->registerNamespace(array('Tbs', realpath(APPLICATION_PATH .  '/../library/Tbs')));
-    } 
-
     public function _setNavigation($view){
 
          $config = new Zend_Config_Ini(APPLICATION_PATH.'/layouts/navigation.ini', 'run');
@@ -65,7 +57,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
      * This puts the application.ini setting in the registry
      */
     protected function _initConfig()
-    {//var_dump($this->getOptions());die;
+    {
     	Zend_Registry::set('config', $this->getOptions());
     }
     

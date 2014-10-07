@@ -159,7 +159,7 @@ class ClassesController extends Zend_Controller_Action
     	$class = $this->_getParam('class', null);
     	$district = $this->_getParam('district', null);
     	$subject = $this->_getParam('subject', null);
-    	if(!is_null($class)) $params[] = 'ClassMember='.$class;
+    	if(!is_null($class)) $params[] = 'ClassGrade='.$class;
     	if(!is_null($district)) $params[] =  'DistrictId='.$district;
     	if (!is_null($subject)){ 
     		$sub = "ClassSubjects like '{$subject},%' ";

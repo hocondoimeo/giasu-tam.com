@@ -20,14 +20,13 @@ class Application_Form_Tutors extends Zend_Form
         $birthDay->setLabel('Ngày sinh *');
         $birthDay->addFilter('StringTrim');
         $birthDay->setRequired(true);
-        //$birthDay->setDecorators(array('ViewHelper'));
         $birthDay->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $birthDay->addValidator('stringLength', false, array(2, 50, "messages" => "Ngày sinh dài tối đa 50 ký tự"));
+        $birthDay->addValidator('stringLength', false, array(2, 50, "messages" => " dài tối đa 50 ký tự"));
         $this->addElement($birthDay);
         
         $gender = new Zend_Form_Element_Select('Gender');
@@ -35,7 +34,6 @@ class Application_Form_Tutors extends Zend_Form
         $gender->addFilter('StringTrim');
         $gender->setRequired(true);
         $gender->setMultiOptions(array('1'=>'Nam', '0'=>'Nữ'));
-        //$birthDay->setDecorators(array('ViewHelper'));
         $gender->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -50,7 +48,6 @@ class Application_Form_Tutors extends Zend_Form
         $email->setLabel('Email *');
         $email->addFilter('StringTrim');
         $email->setRequired(true);
-        //$email->setDecorators(array('ViewHelper'));
         $email->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -59,49 +56,46 @@ class Application_Form_Tutors extends Zend_Form
         ));
         $email->addValidator(new Zend_Validate_Db_NoRecordExists("Tutors","Email"));
         $email->addValidator('EmailAddress', true);
-        $email->setRequired(true)->addValidator('NotEmpty',true,array('messages'=>array('isEmpty'=>"Email không phù hợp")));
+        $email->setRequired(true)->addValidator('NotEmpty',true,array('messages'=>array('isEmpty'=>" không phù hợp")));
         $this->addElement($email);
 
         $userName = new Zend_Form_Element_Text('UserName');
         $userName->setLabel('Họ tên *');
         $userName->addFilter('StringTrim');
         $userName->setRequired(true);
-        //$userName->setDecorators(array('ViewHelper'));
         $userName->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $userName->addValidator('stringLength', false, array(2, 50, "messages" => "Họ tên dài tối đa 2-50 ký tự"));
+        $userName->addValidator('stringLength', false, array(2, 50, "messages" => " dài tối đa 2-50 ký tự"));
         $this->addElement($userName);
 
         $address= new Zend_Form_Element_Text('Address');
         $address->setLabel('Địa chỉ *');
         $address->addFilter('StringTrim');
         $address->setRequired(true);
-        //$address->setDecorators(array('ViewHelper'));
         $address->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $userName->addValidator('stringLength', false, array(1, 100, "messages" => "Địa chỉ dài tối đa 100 ký tự"));
+        $userName->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
         $this->addElement($address);
 
         $phone  = new Zend_Form_Element_Text('Phone');
         $phone->setLabel('Điện thoại *');
         $phone->addFilter('StringTrim');
         $phone->setRequired(true);
-        //z$phone->setDecorators(array('ViewHelper'));
         $phone->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $phone->addValidator('stringLength', false, array(6, 50, "messages" => "Điện thoại dài tối đa 6-50 ký tự"));
+        $phone->addValidator('stringLength', false, array(6, 50, "messages" => " dài tối đa 6-50 ký tự"));
         $this->addElement($phone);
         
         $required = new Zend_Validate_NotEmpty ();
@@ -112,7 +106,6 @@ class Application_Form_Tutors extends Zend_Form
         $level->addFilter('StringTrim');
         $level->addValidator('Int');
         $level->setRequired(true);
-        /* $level->setDecorators(array('ViewHelper')); */
         $level->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -127,34 +120,32 @@ class Application_Form_Tutors extends Zend_Form
         $university->setLabel('Trường tố nghiệp *');
         $university->addFilter('StringTrim');
         $university->setRequired(true);
-        /* $university->setDecorators(array('ViewHelper')); */
         $university->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $university->addValidator('stringLength', false, array(1, 100, "messages" => "Trường tố nghiệp dài tối đa 100 ký tự"));
+        $university->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
         $this->addElement($university);
         
         $subject  = new Zend_Form_Element_Text('Subject');
         $subject->setLabel('Chuyên ngành *');
         $subject->addFilter('StringTrim');
         $subject->setRequired(true);
-        /* $subject->setDecorators(array('ViewHelper')); */
         $subject->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $subject->addValidator('stringLength', false, array(1, 100, "messages" => "Chuyên ngành dài tối đa 100 ký tự"));
+        $subject->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
         $this->addElement($subject);
         
         $experienceYears  = new Zend_Form_Element_Select('ExperienceYears');
         $experienceYears->setLabel('Số Năm Kinh Nghiệm *');
         $experienceYears->addFilter('StringTrim');
-        $experienceYears->setRequired(true);
+        $experienceYears->setRequired(false);
         $experienceYears->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -162,7 +153,8 @@ class Application_Form_Tutors extends Zend_Form
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
         $options = unserialize(EXPERIENCE_YEAR);
-        $experienceYears->addMultiOptions(array_combine($options, $options));
+        //$experienceYears->addMultiOptions(array_combine($options, $options));
+        $experienceYears->setMultiOptions(unserialize(EXPERIENCE_YEAR));
         $this->addElement($experienceYears);
         
         $career = new Zend_Form_Element_Select('Career');
@@ -170,7 +162,6 @@ class Application_Form_Tutors extends Zend_Form
         $career->addFilter('StringTrim');
         $career->addValidator('Int');
         $career->setRequired(true);
-        /* $career->setDecorators(array('ViewHelper')); */
         $career->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -183,15 +174,15 @@ class Application_Form_Tutors extends Zend_Form
         $careerLocation  = new Zend_Form_Element_Text('CareerLocation');
         $careerLocation->setLabel('Nơi Công Tác ( Giáo hoặc Giảng Viên ) *');
         $careerLocation->addFilter('StringTrim');
-        $careerLocation->setRequired(true);
-        /* $subject->setDecorators(array('ViewHelper')); */
+        $careerLocation->setRequired(false);
+        $careerLocation->setAttrib('style', 'min-height: 30px;');
         $careerLocation->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $careerLocation->addValidator('stringLength', false, array(1, 100, "messages" => "Nơi Công Tác dài tối đa 100 ký tự"));
+        $careerLocation->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
         $this->addElement($careerLocation);
         
         $teachableInClass = new Zend_Form_Element_Text('TeachableInClass');
@@ -213,7 +204,7 @@ class Application_Form_Tutors extends Zend_Form
         $teachableSubjects = new Zend_Form_Element_Text('TeachableSubjects');
         $teachableSubjects->setLabel('Môn Có Thể Dạy');
         $teachableSubjects->addFilter('StringTrim');
-        $teachableSubjects->setRequired(true);
+        $teachableSubjects->setRequired(false);
         $teachableSubjects->setAttrib('disabled', true);
         $teachableSubjects->setDescription('<a id="subjects-modal" class="btn btn-info" title="Chọn môn">...</a>');
         $teachableSubjects->setDecorators(array(
@@ -229,7 +220,7 @@ class Application_Form_Tutors extends Zend_Form
         $teachableDistricts = new Zend_Form_Element_Text('TeachableDistricts');
         $teachableDistricts->setLabel('Khu Vực Có Thể Dạy');
         $teachableDistricts->addFilter('StringTrim');
-        $teachableDistricts->setRequired(true);
+        $teachableDistricts->setRequired(false);
         $teachableDistricts->setAttrib('disabled', true);
         $teachableDistricts->setDescription('<span id="districts-modal" class="btn btn-info" title="Chọn quận">...</span>');
         $teachableDistricts->setDecorators(array(
@@ -282,15 +273,13 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $subject->addValidator('stringLength', false, array(1, 2000, "messages" => "Giới thiệu bản thân dài tối đa 2000 ký tự"));
+        $subject->addValidator('stringLength', false, array(1, 2000, "messages" => " dài tối đa 2000 ký tự"));
         $this->addElement($introduction);
 
         $isDisabled = new Zend_Form_Element_Text('IsDisabled');
         $isDisabled->setLabel('IsDisabled');
         $isDisabled->addFilter('StringTrim');
         $isDisabled->addValidator('Int');
-        /* $isDisabled->setRequired(true); */
-        /* $isDisabled->setDecorators(array('ViewHelper')); */
        $isDisabled ->setDecorators(array(
         		'ViewHelper',
         		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
@@ -303,24 +292,12 @@ class Application_Form_Tutors extends Zend_Form
         $submit->setLabel('Đăng ký');
         $submit->setAttrib('class', 'btn btn-primary');
         $submit->setDecorators(array('ViewHelper'));
-        /* $submit ->setDecorators(array(
-        		'ViewHelper',
-        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
-        		array('Label', array('class' => 'control-label')),
-        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
-        )); */
         $this->addElement($submit);
         
         $reset = new Zend_Form_Element_Reset('Reset');
         $reset->setLabel('Làm lại');
         $reset->setAttrib('class', 'btn btn-primary');
         $reset->setDecorators(array('ViewHelper'));
-        /* $reset ->setDecorators(array(
-        		'ViewHelper',
-        		array(array('control' => 'HtmlTag'), array('tag' => 'div', 'class' => 'element-control')),
-        		array('Label', array('class' => 'control-label')),
-        		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
-        )); */
         $this->addElement($reset);
         
         	       
@@ -345,6 +322,7 @@ class Application_Form_Tutors extends Zend_Form
         		'University',
         		'Subject',
         		'Career',
+        		'CareerLocation',
         		'ExperienceYears',
         ),'level',array('disableLoadDefaultDecorators' => false, 'legend' => 'Thông tin học vấn'));
         
@@ -387,11 +365,26 @@ class Application_Form_Tutors extends Zend_Form
     public function changeModeToAdd() {
     	$this->getElement('TeachableDistricts')->setAttrib('subs','');
     	$this->getElement('TeachableSubjects')->setAttrib('subs','');
+    	$this->getElement('TeachableInClass')->setAttrib('subs','');
     }
     
     public function changeModeToDistrictId() {
     	$cateModel =  new Application_Model_Districts();
-    	$this->getElement('DistrictId')
-    	->addMultiOptions($cateModel->getFormPairs());
+    	$this->getElement('DistrictId')->addMultiOptions($cateModel->getFormPairs());
+    }
+    
+    public function changeModeToClass($grades, $gradesText) {
+    	$this->getElement('TeachableInClass')->setValue($gradesText);
+    	$this->getElement('TeachableInClass')->setAttrib('subs', $grades);
+    }
+    
+    public function changeModeToSubjects($subjects, $subjectsText) {
+    	$this->getElement('TeachableSubjects')->setValue($subjectsText);
+    	$this->getElement('TeachableSubjects')->setAttrib('subs', $subjects);
+    }
+    
+    public function changeModeToDistricts($districts, $districtsText) {
+    	$this->getElement('TeachableDistricts')->setValue($districtsText);
+    	$this->getElement('TeachableDistricts')->setAttrib('subs', $districts);
     }
 }

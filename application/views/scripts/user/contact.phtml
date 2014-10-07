@@ -4,7 +4,7 @@
  //$content = (count($news)? $news->toArray() : '');
 ?>                 <!--People Sections-->
                     <div id="people-block">
-                        <!-- <h3> --><?php //echo (!empty($headingText['home_people'])) ? $headingText['home_people'] : ""; ?><!-- </h3> -->
+                         <h3> Thông tin cần tìm gia sư</h3>
 
                         <div class="row-fluid">
                             <div class="span12 people-right-block">
@@ -31,25 +31,25 @@
 								    </div>
 								</div>
 								<?php endif;?>
-								</div>
+								</div>	
                                 <div class="row-fluid">
                                     <div class="span12">
-                                        <form class="form-horizontal" method="post" action="" id="frmTutor">
-								            <!-- <fieldset> -->
-								            	<?php  echo $form->contact; ?>
-								            	<?php  echo $form->level; ?>
-								                <?php  echo $form->extra;?>
-							                        <div class="control-group">
-							                            <div class="controls">
-							                              <ul id="separate-list" style="display:none" ></ul>
-							                            </div>
-							                          </div>
-								                
-								                <div class="form-actions">								                    
-								            			<?php  echo $this->renderFormElement($form->Save); ?>
-								            			<?php  echo $this->renderFormElement($form->Reset); ?>
+                                        <form class="form-horizontal" method="post" action="" id="frmContact">
+								            <fieldset class="well the-fieldset">
+								            	<div class="span6">
+									            	<?php echo $form->ContactId;?>
+									                <?php echo $form->ContactName;?>
+									                <?php echo $form->ContactPhone;?>
+									                <?php //echo $form->UserId;?>
+									                <?php echo $form->ContactTitle;?>
+									                <?php echo $form->ContactContent;?>
+									                
+									                <div class="form-actions">								                    
+									            			<?php  echo $this->renderFormElement($form->Save); ?>
+									            			<?php  echo $this->renderFormElement($form->Reset); ?>
+									                </div>
 								                </div>
-								            <!-- </fieldset> -->
+								            </fieldset>
 								        </form>
                                     </div>
                                 </div>
