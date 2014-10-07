@@ -11,7 +11,6 @@ class Tbs_Auth_Adapter_Twitter implements Zend_Auth_Adapter_Interface
     {
         $this->_setOptions();
         $this->_consumer = new Zend_Oauth_Consumer($this->_options);
-		$this->_accessToken = Zend_Registry::set('twitterToken', array());
         $this->_setRequestToken($params);
     }
 
@@ -38,39 +37,8 @@ class Tbs_Auth_Adapter_Twitter implements Zend_Auth_Adapter_Interface
         $options = is_object($config) ? $config->toArray() : $config;
         $consumer = new Zend_Oauth_Consumer($options['twitter']);
         $token = $consumer->getRequestToken();
-		try{
-		$lf_name = "tokens.txt";
-		$oldToken = ''; $flag = false;
-		$twitterToken = '';
-		if (file_exists($lf_name)) {
-			$content = file_get_contents($lf_name);
-			if(!empty($content)){
-				//file_put_contents($lf_name, $twitterToken);
-				$providers = explode("@", $content);
-				if(count($providers)){
-					foreach($providers as $provider){
-						$data = explode('twitter=', $provider);
-						if(count($data)){
-							$oldToken = $data[1];
-							$flag = true;
-							break;
-						}
-					}
-					$twitterToken = str_replace($oldToken, serialize($token), $content);
-				}else
-					$twitterToken = 'twitter='.serialize($token).'@';
-			}else
-				$twitterToken = 'twitter='.serialize($token).'@';
-		}else{
-			$fp = fopen($lf_name ,"w");
-			fclose($fp);			
-			$twitterToken = 'twitter='.serialize($token).'@';
-		}
-		file_put_contents($lf_name, $twitterToken);
-		
-		}catch (Zend_Exception $e){
-		//var_dump($e->getMessage());die;
-        }
+        $twitterToken = new Zend_Session_Namespace('twitterToken');
+        $twitterToken->rt = serialize($token);
         return $consumer->getRedirectUrl(null, $token);
     }
 
@@ -83,32 +51,10 @@ class Tbs_Auth_Adapter_Twitter implements Zend_Auth_Adapter_Interface
 
     protected function _setRequestToken($params)
     {
-		try{
-		$lf_name = "tokens.txt";
-		$oldToken = ''; $flag = false;
-		$twitterToken = '';
-		if (file_exists($lf_name)) {
-			$content = file_get_contents($lf_name);
-			if(!empty($content)){
-				$providers = explode("@", $content);
-				if(count($providers)){
-					foreach($providers as $provider){
-						$data = explode('twitter=', $provider);
-						if(count($data)){
-							$oldToken = $data[1];
-							$flag = true;
-							break;
-						}
-					}
-				}				
-			}
-		}		
-		}catch (Zend_Exception $e){
-			//var_dump($e->getMessage());die;
-		}
-		if(!empty($oldToken))
-			$token = unserialize($oldToken);
+        $twitterToken = new Zend_Session_Namespace('twitterToken');
+        $token = unserialize($twitterToken->rt);
         $accesstoken = $this->_consumer->getAccessToken($params, $token);
+        unset($twitterToken->rt);
         $this->_accessToken = $accesstoken;
     }
 }

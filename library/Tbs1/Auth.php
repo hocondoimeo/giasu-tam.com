@@ -79,6 +79,7 @@ class Tbs_Auth
       if ($result->isValid()) {
          $this->getStorage()->write($currentIdentity);
       }
+ 
       return $result;
    }
  

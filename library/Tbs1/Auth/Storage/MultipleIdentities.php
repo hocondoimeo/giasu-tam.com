@@ -7,7 +7,7 @@ class Tbs_Auth_Storage_MultipleIdentities implements Zend_Auth_Storage_Interface
 
     public function __construct()
     {
-		Zend_Registry::set(self::SESSION_NAMESPACE, array());			
+        $this->_session = new Zend_Session_Namespace(self::SESSION_NAMESPACE);
     }
 
     public function isEmpty($provider = null)
@@ -24,7 +24,6 @@ class Tbs_Auth_Storage_MultipleIdentities implements Zend_Auth_Storage_Interface
 
     public function read($provider = null)
     {
-		$this->_session = Zend_Registry::get(self::SESSION_NAMESPACE);
         if (!isset($this->_session->identityContainer)) {
             return false;
         } else {
@@ -41,9 +40,7 @@ class Tbs_Auth_Storage_MultipleIdentities implements Zend_Auth_Storage_Interface
     {
         if (get_class($container) !== 'Tbs_Auth_Identity_Container') {
             throw new Exception('No valid identity container');
-        }		
-		Zend_Registry::set(self::SESSION_NAMESPACE, $container);
-		$this->_session = Zend_Registry::get(self::SESSION_NAMESPACE);
+        }
         $this->_session->identityContainer = serialize($container);
     }
 
