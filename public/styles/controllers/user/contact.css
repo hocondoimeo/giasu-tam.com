@@ -1,0 +1,10 @@
+.the-fieldset{
+	padding-top: 20px;
+}
+
+.mce-tinymce {
+	width: 340px !important;
+	min-height: 100px !important;
+	margin-top: 120px !important;
+	margin-left: 170px !important;
+}
