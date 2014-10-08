@@ -9,7 +9,7 @@
 								    <div class="row-fluid lastest-block">
 								        <div class="featurette">
 								            <div class="pull-left">
-									                <?php  if(isset($this->tutor['Avatar']) &&  !empty($this->tutor['Avatar'])):?>
+									                <?php  if(isset($this->tutor['Avatar']) &&  !empty($this->tutor['Avatar']) && file_exists(IMAGE_UPLOAD_PATH.$this->tutor['Avatar'])):?>
 									                <img class="desc-news" src="<?php echo IMAGE_UPLOAD_URL.$this->tutor['Avatar']?>" alt="<?php echo $this->tutor['Avatar']?>"/>
 									                <img class="small-news" src="<?php echo IMAGE_UPLOAD_URL.$this->tutor['Avatar']?>" alt="<?php echo $this->tutor['Avatar']?>"/>
 									                <?php else:?>
@@ -43,7 +43,7 @@
 								            		<?php //echo $this->tutor['Phone']?>
 								            <!-- </div> -->
 								            <?php if(!empty($this->tutor['Introduction'])):?>
-								            <div class="span"><span>Giới thiệu bản thân: </span>
+								            <div class="span intro"><span>Giới thiệu bản thân: </span>
 								            		<?php echo $this->tutor['Introduction']?>
 								            </div>
 								            <?php endif;?>

@@ -6,12 +6,16 @@ getHeaders($this, $controller, $action);
 
 $menusModel = new Application_Model_Menus();
 $menus = $menusModel->groupMenuByParent($menusModel->fetchAll($menusModel->getAllAvaiabled()));
+
 $configsModel = new Application_Model_Configs();
 $menuTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('TopMenu')); 
 $leftContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('LeftContentTopParent'), true);
 $rightContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('RightContentTopParent'), true);
 $leftContentMiddle = $menusModel->getMenu($menus, $configsModel->getConfigValue('LeftContentMiddleParent'), true);
-$contentTop = array('LeftContentTop' => $leftContentTop, 'RightContentTop' => $rightContentTop);
+
+$imagesModel = new Application_Model_Images();
+$middleContentTop = $imagesModel->fetchAll($imagesModel->getAllAvaiabled($configsModel->getConfigValue('TopContentMiddle')));
+$contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $middleContentTop, 'RightContentTop' => $rightContentTop);
 ?>
 <html>
     <head>

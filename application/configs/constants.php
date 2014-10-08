@@ -52,11 +52,22 @@ define('IMAGE_UPLOAD_PATH', UPLOAD_PATH . '/images/');
 define('IMAGE_UPLOAD_PATH_TMP', IMAGE_UPLOAD_PATH .'tmp/');
 define('IMAGE_UPLOAD_PATH_BACKUP', IMAGE_UPLOAD_PATH .'backup/');
 
+define('IMAGE_CAROUSEL_UPLOAD_PATH', IMAGE_UPLOAD_PATH . 'carousel/');
+define('IMAGE_CAROUSEL_UPLOAD_TMP', IMAGE_CAROUSEL_UPLOAD_PATH . 'tmp');
+define('IMAGE_CAROUSEL_UPLOAD_BACKUP', IMAGE_CAROUSEL_UPLOAD_PATH . 'backup/');
+
 define('IMAGE_UPLOAD_URI', '/uploads/images/');
 define('IMAGE_UPLOAD_URI_TMP', IMAGE_UPLOAD_URI . 'tmp/');
 
+define('IMAGE_CAROUSEL_UPLOAD_URI', '/uploads/images/carousel/');
+define('IMAGE_CAROUSEL_UPLOAD_URI_TMP', IMAGE_CAROUSEL_UPLOAD_URI . 'tmp/');
+
+
 define('IMAGE_UPLOAD_URL', FRONTEND_DOMAIN_NAME.'/uploads/images/');
 define('IMAGE_UPLOAD_URL_TMP', IMAGE_UPLOAD_URL .'tmp/');
+
+define('IMAGE_CAROUSEL_UPLOAD_URL', FRONTEND_DOMAIN_NAME.'/uploads/images/carousel/');
+define('IMAGE_CAROUSEL_UPLOAD_URL_TMP', IMAGE_CAROUSEL_UPLOAD_URL .'tmp/');
 
 define('IMAGE_SIZE_LIMIT', 200);
 $allowedExt = array('jpeg', 'jpg', 'png', 'gif');

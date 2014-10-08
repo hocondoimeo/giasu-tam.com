@@ -21,6 +21,33 @@
 	        	<?php //endif; ?>
 	        	<div id="content-top-center" class="span8 content-top-center">
 	        		<div id="myCarousel" class="carousel slide">
+	        		<?php if($cImgs  = count($this->MiddleContentTop)):
+	        				 foreach ($this->MiddleContentTop as $key => $item):
+	        					if($key < 1):
+	        		?>
+	        			<ol class="carousel-indicators">
+	        		<?php for($i=0; $i < $cImgs; $i++):?>
+						    <li data-target="#myCarousel" data-slide-to="<?php echo $i ;?>" <?php echo ($i  < 1)?'class="active"':'';?>></li>
+					<?php endfor;?>
+						  </ol>
+						  <!-- Carousel items -->
+						  <div class="carousel-inner">
+					<?php endif; ?>
+						    <div class="<?php echo ($key < 1)?'active ':'';?>item">
+						    <?php  if(isset($item->ImageUrl) &&  !empty($item->ImageUrl) && file_exists(IMAGE_CAROUSEL_UPLOAD_PATH.$item->ImageUrl)):?>
+						    	<img src=<?php echo IMAGE_CAROUSEL_UPLOAD_URL.$item->ImageUrl; ?>" alt="">
+						    <?php else:?>
+				                <img class="desc-news1" src="/images/carousel/bootstrap-mdo-sfmoma-01.jpg"/>
+				             <?php endif; ?>
+							    	<div class="carousel-caption">
+					                      <h4><?php echo $item->ImageName; ?></h4>
+					                      <p><?php echo (!strlen($item->ImageDesc) > 200)?$item->ImageDesc:substr($item->ImageDesc, 0, 200).'...'; ?></p>
+					                    </div>
+								    </div>
+							<?php if($key == ($cImgs-1)): ?>	
+						  		 </div>
+	        		<?php endif;endforeach; ?>
+	        		<?php else: ?>
 						  <ol class="carousel-indicators">
 						    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
 						    <li data-target="#myCarousel" data-slide-to="1"></li>
@@ -57,6 +84,7 @@ Quý Phụ Huynh!
 						  <!-- Carousel nav -->
 						  <!-- <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
 						  <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a> -->
+						  <?php endif; ?>
 						</div>
 	        	</div>
 	        	<script>$('.carousel').carousel();</script>
