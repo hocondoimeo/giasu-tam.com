@@ -1525,7 +1525,7 @@ div.paginationControl a{color:#06C !important}
 #people-block ul { list-style: none outside none; margin: 0;}
 .popular-block, .lastest-block { padding-bottom:20px;}
 .news-date { color: #CCC; margin-top: 5px;}
-.lastest-date{ margin-left:255px;}
+/*.lastest-date{ margin-left:255px;}*/
 .popular-date, div.news-desc { margin-left:135px; }
 .popular-block img.desc-news { width: auto; max-width: 120px; height: auto; max-height: 60px;}
 #people-block .lastest-block img, .popular-block img { margin-right:15px; /*width: 100px; height: 100px;*/}

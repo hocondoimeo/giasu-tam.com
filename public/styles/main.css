@@ -99,7 +99,7 @@ a.active {
 }
 
 #content-top-left  li	, #content-top-right  li, #content-middle-left  li{
-	padding: 6px 5px 5px 15px;
+	padding: 6px 5px 5px 5px;
 	border-bottom: 1px solid #cecece;
 	display: list-item	;
 	text-align: -webkit-match-parent;
