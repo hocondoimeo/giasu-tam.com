@@ -8,3 +8,39 @@
 	margin-top: 120px !important;
 	margin-left: 170px !important;
 }
+
+@media (max-width: 767px) {
+	.modal{
+		min-width: 250px;
+	}
+	legend{
+		text-align: left;
+		margin-left: 10px;
+	}
+	.form-group{ 
+		min-height: 65px;
+		margin-left: 10px;
+		width: inherit;
+	}
+	.mce-tinymce{		
+		margin-top: 0px !important;
+	}
+	.hint{padding-left: 0px;}
+	#CareerLocation{
+		min-height: 20px !important;
+	}
+	#Save{
+		margin-left: 20px;
+		margin-bottom: 15px;
+	}
+	.form-horizontal .form-actions {
+		 padding-left: 0px !important;
+	}
+}
+
+@media (max-width: 380px) {
+	.mce-tinymce{
+		margin-left: 0px !important;
+		max-width: 260px !important;
+	}
+}

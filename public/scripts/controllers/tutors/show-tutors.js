@@ -5,7 +5,7 @@ $(document).ready(function() {
         var url = '/tutors/ajax-get-tutors/page/'+(currentpage + 1);
         $(".loadmorenews").hide();
 
-        $('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
+        $('.lastest-news-content').append('<div class="loading-news"><img src="/images/icons/preloading.gif"/><div>');
         $.ajax({
             url : url,
             method: 'get',

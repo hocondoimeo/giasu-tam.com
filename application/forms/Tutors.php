@@ -26,7 +26,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $birthDay->addValidator('stringLength', false, array(2, 50, "messages" => " dài tối đa 50 ký tự"));
+        $birthDay->addValidator('stringLength', false, array(2, 50, "messages" => "Ngày sinh dài tối đa 50 ký tự"));
         $this->addElement($birthDay);
         
         $gender = new Zend_Form_Element_Select('Gender');
@@ -56,7 +56,7 @@ class Application_Form_Tutors extends Zend_Form
         ));
         $email->addValidator(new Zend_Validate_Db_NoRecordExists("Tutors","Email"));
         $email->addValidator('EmailAddress', true);
-        $email->setRequired(true)->addValidator('NotEmpty',true,array('messages'=>array('isEmpty'=>" không phù hợp")));
+        $email->setRequired(true)->addValidator('NotEmpty',true,array('messages'=>array('isEmpty'=>"Email không phù hợp")));
         $this->addElement($email);
 
         $userName = new Zend_Form_Element_Text('UserName');
@@ -69,7 +69,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $userName->addValidator('stringLength', false, array(2, 50, "messages" => " dài tối đa 2-50 ký tự"));
+        $userName->addValidator('stringLength', false, array(2, 50, "messages" => "Họ tên dài tối đa 2-50 ký tự"));
         $this->addElement($userName);
 
         $address= new Zend_Form_Element_Text('Address');
@@ -82,7 +82,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $userName->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
+        $userName->addValidator('stringLength', false, array(1, 100, "messages" => "Địa chỉ dài tối đa 100 ký tự"));
         $this->addElement($address);
 
         $phone  = new Zend_Form_Element_Text('Phone');
@@ -95,7 +95,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'col-lg-2 control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $phone->addValidator('stringLength', false, array(6, 50, "messages" => " dài tối đa 6-50 ký tự"));
+        $phone->addValidator('stringLength', false, array(6, 50, "messages" => "Điện thoại dài tối đa 6-50 ký tự"));
         $this->addElement($phone);
         
         $required = new Zend_Validate_NotEmpty ();
@@ -117,7 +117,7 @@ class Application_Form_Tutors extends Zend_Form
         $this->addElement($level);
         
         $university  = new Zend_Form_Element_Text('University');
-        $university->setLabel('Trường tố nghiệp *');
+        $university->setLabel('Trường tốt nghiệp *');
         $university->addFilter('StringTrim');
         $university->setRequired(true);
         $university->setDecorators(array(
@@ -126,7 +126,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $university->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
+        $university->addValidator('stringLength', false, array(1, 100, "messages" => "Trường tố nghiệp dài tối đa 100 ký tự"));
         $this->addElement($university);
         
         $subject  = new Zend_Form_Element_Text('Subject');
@@ -139,7 +139,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $subject->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
+        $subject->addValidator('stringLength', false, array(1, 100, "messages" => "Chuyên ngành dài tối đa 100 ký tự"));
         $this->addElement($subject);
         
         $experienceYears  = new Zend_Form_Element_Select('ExperienceYears');
@@ -182,7 +182,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $careerLocation->addValidator('stringLength', false, array(1, 100, "messages" => " dài tối đa 100 ký tự"));
+        $careerLocation->addValidator('stringLength', false, array(1, 100, "messages" => "Nơi Công Tác dài tối đa 100 ký tự"));
         $this->addElement($careerLocation);
         
         $teachableInClass = new Zend_Form_Element_Text('TeachableInClass');
@@ -273,7 +273,7 @@ class Application_Form_Tutors extends Zend_Form
         		array('Label', array('class' => 'control-label')),
         		array(array('controls' => 'HtmlTag'), array('tag' => 'div', 'class' => 'form-group'))
         ));
-        $subject->addValidator('stringLength', false, array(1, 2000, "messages" => " dài tối đa 2000 ký tự"));
+        $subject->addValidator('stringLength', false, array(1, 2000, "messages" => "Giới thiệu bản thân dài tối đa 2000 ký tự"));
         $this->addElement($introduction);
 
         $isDisabled = new Zend_Form_Element_Text('IsDisabled');

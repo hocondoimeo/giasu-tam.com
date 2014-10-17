@@ -1,11 +1,22 @@
 <?php
- $modelNews = new Application_Model_News();
  $form =  $this->form;
- //$content = (count($news)? $news->toArray() : '');
-?>                 <!--People Sections-->
+ $configsModel = new Application_Model_Configs();
+ $fbAcc = $configsModel->getConfigValue('account-facebook');
+ $url = 'http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2F'.$fbAcc;
+ $url .= '&height=250&colorscheme=light&show_faces=true&border_color=%23C4C4C4&stream=false&header=false';
+ $style = 'border: none; overflow: hidden; width: 100%; height: 250px; background: #FFFFFF;';
+?>               					
+					<!--People Sections-->
                     <div id="people-block">
-                        <!-- <h3> --><?php //echo (!empty($headingText['home_people'])) ? $headingText['home_people'] : ""; ?><!-- </h3> -->
-
+					<?php if(!empty($fbAcc)):?>
+					<div class="exelikebox large-screen">
+						<div class="slide-iframe">
+							<iframe src="<?php echo $url; ?>"
+							scrolling="no" frameborder="0" allowtransparency="true" 
+							style="<?php echo $style; ?>"></iframe>
+						</div>
+					  </div>  
+					   <?php endif;?>
                         <div class="row-fluid">
                             <div class="span12 people-right-block">
                             	<div class="row-fluid">	

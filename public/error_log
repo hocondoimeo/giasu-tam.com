@@ -1,0 +1,778 @@
+[12-Sep-2014 19:07:25 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:07:25 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:08:09 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:08:09 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:09 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:09 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:15 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:15 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:29 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:29 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:34 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:34 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:38 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:38 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:48 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:48 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:52 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:52 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:54 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:54 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:56 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:56 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:57 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:57 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:59 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:13:59 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:11 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:11 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:17 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:17 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:17 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:14:17 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:03 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:03 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:08 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:08 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:17 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:17 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:24 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:24 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:25 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:25 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:30 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:16:30 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:19:44 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:19:44 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:19:52 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:19:52 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:24:00 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 40
+[12-Sep-2014 19:24:00 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library/:/home/gia53c14/public_html/library/Zend:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 40
+[12-Sep-2014 19:24:53 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:24:53 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library/:/home/gia53c14/public_html/library/Zend:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:25:15 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 39
+[12-Sep-2014 19:25:15 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library/:/home/gia53c14/public_html/library/Zend:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 39
+[13-Sep-2014 05:33:13 Australia/Melbourne] PHP Warning:  include_once(Zend/Controller/Action/Helper/ViewRenderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:33:13 Australia/Melbourne] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Controller/Action/Helper/ViewRenderer.php' for inclusion (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:33:13 Australia/Melbourne] PHP Fatal error:  Class 'Zend_Controller_Action_Helper_ViewRenderer' not found in /home/gia53c14/public_html/library/Zend/Application/Resource/View.php on line 55
+[13-Sep-2014 05:37:24 Australia/Melbourne] PHP Warning:  include_once(Zend/Controller/Action/Helper/ViewRenderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:24 Australia/Melbourne] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Controller/Action/Helper/ViewRenderer.php' for inclusion (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:24 Australia/Melbourne] PHP Fatal error:  Class 'Zend_Controller_Action_Helper_ViewRenderer' not found in /home/gia53c14/public_html/library/Zend/Application/Resource/View.php on line 55
+[13-Sep-2014 05:37:28 Australia/Melbourne] PHP Warning:  include_once(Zend/Controller/Action/Helper/ViewRenderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:28 Australia/Melbourne] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Controller/Action/Helper/ViewRenderer.php' for inclusion (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:28 Australia/Melbourne] PHP Fatal error:  Class 'Zend_Controller_Action_Helper_ViewRenderer' not found in /home/gia53c14/public_html/library/Zend/Application/Resource/View.php on line 55
+[13-Sep-2014 05:37:30 Australia/Melbourne] PHP Warning:  include_once(Zend/Controller/Action/Helper/ViewRenderer.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:30 Australia/Melbourne] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Zend/Controller/Action/Helper/ViewRenderer.php' for inclusion (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[13-Sep-2014 05:37:30 Australia/Melbourne] PHP Fatal error:  Class 'Zend_Controller_Action_Helper_ViewRenderer' not found in /home/gia53c14/public_html/library/Zend/Application/Resource/View.php on line 55
+[13-Sep-2014 05:40:35 Australia/Melbourne] PHP Warning:  require_once(Zend/View/Helper/Navigation/HelperAbstract.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/View/Helper/Navigation.php on line 26
+[13-Sep-2014 05:40:35 Australia/Melbourne] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/View/Helper/Navigation/HelperAbstract.php' (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/View/Helper/Navigation.php on line 26
+[13-Sep-2014 05:42:29 Australia/Melbourne] PHP Warning:  require_once(Zend/View/Helper/Navigation/HelperAbstract.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/View/Helper/Navigation.php on line 26
+[13-Sep-2014 05:42:29 Australia/Melbourne] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/View/Helper/Navigation/HelperAbstract.php' (include_path='/home/gia53c14/public_html/application../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/View/Helper/Navigation.php on line 26
+[13-Sep-2014 05:55:59 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000] [1044] Access denied for user 'gia53c14_giasu'@'localhost' to database 'gia53c14_giasu'' in /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php:129
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(129): PDO->__construct('mysql:host=loca...', 'gia53c14_giasu', 'gia53c14', Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(459): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Menus...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Menus...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('Menus', NULL)
+#6 /home in /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php on line 144
+[13-Sep-2014 05:58:19 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.Menus' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Menus...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Menus...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('Menus', NULL)
+#6 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abs in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[13-Sep-2014 06:00:14 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.Menus' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Menus...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Menus...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('Menus', NULL)
+#6 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table_Abs in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[13-Sep-2014 06:00:35 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.Configs' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Confi...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Confi...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('Configs', NULL)
+#6 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(845): Zend_Db_Table in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[13-Sep-2014 06:01:12 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.ConfigCategories' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select), Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(1505): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Table_Select))
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(1321): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#6 /home/gia53c14/public_html/application/models/Configs. in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[13-Sep-2014 06:01:15 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.ConfigCategories' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query(Object(Zend_Db_Table_Select), Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(1505): Zend_Db_Adapter_Pdo_Abstract->query(Object(Zend_Db_Table_Select))
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(1321): Zend_Db_Table_Abstract->_fetch(Object(Zend_Db_Table_Select))
+#6 /home/gia53c14/public_html/application/models/Configs. in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[13-Sep-2014 06:01:52 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'gia53c14_giasutam.StaticContents' doesn't exist' in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php:228
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php(228): PDOStatement->execute(Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Statement.php(300): Zend_Db_Statement_Pdo->_execute(Array)
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(479): Zend_Db_Statement->execute(Array)
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Stati...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Stati...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('StaticContents', NULL)
+#6 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(845): in /home/gia53c14/public_html/library/Zend/Db/Statement/Pdo.php on line 234
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Undefined variable: post in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Undefined variable: post in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Undefined variable: post in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Undefined variable: post in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Undefined variable: post in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[20-Sep-2014 13:17:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/news/block/lastest-news.phtml on line 24
+[24-Sep-2014 00:07:50 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:06 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:43 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:45 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:46 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:47 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:47 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:08:48 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:13:48 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:14:38 Australia/Melbourne] PHP Catchable fatal error:  Object of class Zend_Db_Table_Row could not be converted to string in /home/gia53c14/public_html/application/views/scripts/news/detail.phtml on line 14
+[24-Sep-2014 00:14:42 Australia/Melbourne] PHP Catchable fatal error:  Object of class Zend_Db_Table_Row could not be converted to string in /home/gia53c14/public_html/application/views/scripts/news/detail.phtml on line 14
+[24-Sep-2014 00:14:56 Australia/Melbourne] PHP Catchable fatal error:  Object of class Zend_Db_Table_Row could not be converted to string in /home/gia53c14/public_html/application/views/scripts/news/detail.phtml on line 14
+[24-Sep-2014 00:17:14 Australia/Melbourne] PHP Fatal error:  Class 'Application_Model_Tutors' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 16
+[24-Sep-2014 00:19:36 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:36 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:36 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:19:38 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:38 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:38 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:19:39 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:39 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:39 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:19:40 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:40 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:19:40 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:22:07 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:07 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:07 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:22:48 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:48 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:48 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:22:50 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:50 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:22:50 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:24:04 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:24:04 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:24:04 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:24:34 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:24:34 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 119
+[24-Sep-2014 00:24:34 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 119 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 00:25:16 Australia/Melbourne] PHP Notice:  Use of undefined constant TUTOR_LEVELS - assumed 'TUTOR_LEVELS' in /home/gia53c14/public_html/application/forms/Tutors.php on line 116
+[24-Sep-2014 00:25:16 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 12 bytes in /home/gia53c14/public_html/application/forms/Tutors.php on line 116
+[24-Sep-2014 00:25:16 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Zend_Form_Element_Multi::setMultiOptions() must be an array, boolean given, called in /home/gia53c14/public_html/application/forms/Tutors.php on line 116 and defined in /home/gia53c14/public_html/library/Zend/Form/Element/Multi.php on line 142
+[24-Sep-2014 23:03:57 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Function/counter.php on line 154
+[24-Sep-2014 23:03:57 Australia/Melbourne] PHP Notice:  Undefined offset: 2 in /home/gia53c14/public_html/library/Function/counter.php on line 155
+[25-Sep-2014 14:34:40 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[25-Sep-2014 14:34:40 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[25-Sep-2014 23:48:13 Australia/Melbourne] PHP Fatal error:  Call to undefined method Application_Model_Tutors::checkTutorIsExist() in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 41
+[25-Sep-2014 23:49:04 Australia/Melbourne] PHP Fatal error:  Call to undefined method Application_Model_Tutors::checkTutorIsExist() in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 41
+[25-Sep-2014 23:49:07 Australia/Melbourne] PHP Fatal error:  Call to undefined method Application_Model_Tutors::checkTutorIsExist() in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 41
+[28-Sep-2014 20:44:45 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[28-Sep-2014 20:59:59 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[28-Sep-2014 20:59:59 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[28-Sep-2014 22:29:03 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[28-Sep-2014 23:00:07 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 17:34:26 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 18:20:15 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 19:01:27 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 20:50:58 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 21:18:04 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 23:21:49 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[29-Sep-2014 23:22:09 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[30-Sep-2014 01:01:11 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[30-Sep-2014 01:01:22 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[30-Sep-2014 01:39:42 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[30-Sep-2014 13:21:11 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[01-Oct-2014 00:27:28 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:28:00 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:28:05 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:32:10 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:32:13 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:32:34 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:34:40 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:35:42 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:35:45 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:36:56 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:40:11 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:40:14 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[30-Sep-2014 14:41:15 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:15 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:15 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:15 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:17 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:17 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:18 UTC] PHP Warning:  require_once(Zend/Application.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/public/index.php on line 38
+[30-Sep-2014 14:41:18 UTC] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'Zend/Application.php' (include_path='/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/public/index.php on line 38
+[01-Oct-2014 00:49:19 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:58:29 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 00:58:33 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:33 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:37 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:41 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:42 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:43 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:11:48 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 01:14:45 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/controllers/UserController.php on line 16
+[01-Oct-2014 01:15:48 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 62
+[01-Oct-2014 01:16:18 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '.' in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[01-Oct-2014 01:17:40 Australia/Melbourne] PHP Notice:  Use of undefined constant _DIR_ - assumed '_DIR_' in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[01-Oct-2014 01:20:35 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth\Storage\MultipleIdentities' not found in /home/gia53c14/public_html/library/TBS/Auth.php on line 42
+[01-Oct-2014 01:25:37 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 01:25:57 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 01:46:16 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 09:16:57 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[01-Oct-2014 13:43:07 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 18:55:00 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:06:27 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:06:30 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:06:32 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:06:33 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:06:39 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:17:29 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:17:34 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:17:38 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:17:44 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:19:23 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:19:27 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:25:21 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:25:27 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:25:29 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:27:22 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:29:24 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:25 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:31 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:32 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:34 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:35 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:37 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:29:38 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:30:38 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:31:22 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:31:23 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:31:25 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:31:26 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:33:03 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:33:03 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:33:06 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:33:07 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:35:13 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:35:14 Australia/Melbourne] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /home/gia53c14/public_html/application/Bootstrap.php on line 18
+[01-Oct-2014 19:36:48 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:36:49 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:36:53 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:36:53 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:37:12 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:37:13 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 28
+[01-Oct-2014 19:37:35 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:38:13 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 39
+[01-Oct-2014 19:38:13 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING in /home/gia53c14/public_html/application/Bootstrap.php on line 39
+[01-Oct-2014 19:38:33 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[01-Oct-2014 19:39:19 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_NS_SEPARATOR, expecting T_STRING in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[01-Oct-2014 19:39:52 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_NS_SEPARATOR, expecting T_STRING in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:40:12 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 19:51:07 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 19:52:22 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 19:52:25 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 20:25:16 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 20:52:22 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 20:54:35 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 20:54:54 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[01-Oct-2014 20:58:49 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 21:09:26 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[01-Oct-2014 21:12:22 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Function/counter.php on line 154
+[01-Oct-2014 21:12:22 Australia/Melbourne] PHP Notice:  Undefined offset: 2 in /home/gia53c14/public_html/library/Function/counter.php on line 155
+[01-Oct-2014 21:13:48 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[01-Oct-2014 21:41:02 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[01-Oct-2014 22:07:07 Australia/Melbourne] PHP Warning:  shell_exec() has been disabled for security reasons in /home/gia53c14/public_html/application/controllers/UserController.php on line 19
+[02-Oct-2014 02:29:25 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 03:00:32 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 05:27:13 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 06:14:16 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 07:42:27 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 08:27:48 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 09:19:23 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 10:25:09 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 12:26:51 Australia/Melbourne] PHP Fatal error:  Call to protected TBS\Auth::__construct() from context 'UserController' in /home/gia53c14/public_html/application/controllers/UserController.php on line 61
+[02-Oct-2014 12:43:27 Australia/Melbourne] PHP Warning:  require_once(/home/gia53c14/public_html/application/controllers/../library/TBS/Auth.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[02-Oct-2014 12:43:27 Australia/Melbourne] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/gia53c14/public_html/application/controllers/../library/TBS/Auth.php' (include_path='/home/gia53c14/public_html/application/../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[02-Oct-2014 12:43:50 Australia/Melbourne] PHP Warning:  require_once(/home/gia53c14/public_html/application/controllers../../library/TBS/Auth.php) [<a href='function.require-once'>function.require-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[02-Oct-2014 12:43:50 Australia/Melbourne] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required '/home/gia53c14/public_html/application/controllers../../library/TBS/Auth.php' (include_path='/home/gia53c14/public_html/application/../library:/../library:/../../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/application/controllers/UserController.php on line 2
+[02-Oct-2014 03:06:41 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in /home/gia53c14/public_html/application/configs/application.ini on line 117
+' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:181
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(201): Zend_Config_Ini->_parseIniFile('/home/gia53c14/...')
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/gia53c14/...')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(61): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 181
+[02-Oct-2014 03:06:45 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in /home/gia53c14/public_html/application/configs/application.ini on line 117
+' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:181
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(201): Zend_Config_Ini->_parseIniFile('/home/gia53c14/...')
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/gia53c14/...')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(61): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 181
+[02-Oct-2014 03:06:47 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in /home/gia53c14/public_html/application/configs/application.ini on line 117
+' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:181
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(201): Zend_Config_Ini->_parseIniFile('/home/gia53c14/...')
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/gia53c14/...')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(61): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 181
+[02-Oct-2014 03:07:01 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in /home/gia53c14/public_html/application/configs/application.ini on line 117
+' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:181
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(201): Zend_Config_Ini->_parseIniFile('/home/gia53c14/...')
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/gia53c14/...')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(61): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 181
+[02-Oct-2014 03:07:03 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'syntax error, unexpected $end, expecting TC_DOLLAR_CURLY or TC_QUOTED_STRING or '"' in /home/gia53c14/public_html/application/configs/application.ini on line 117
+' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:181
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(201): Zend_Config_Ini->_parseIniFile('/home/gia53c14/...')
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(125): Zend_Config_Ini->_loadIniFile('/home/gia53c14/...')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(61): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 181
+[02-Oct-2014 15:54:50 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 17:08:01 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[02-Oct-2014 23:57:13 Australia/Melbourne] PHP Fatal error:  Class 'TBS\Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 62
+[02-Oct-2014 23:58:38 Australia/Melbourne] PHP Fatal error:  Class 'TBS_Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[02-Oct-2014 23:59:42 Australia/Melbourne] PHP Fatal error:  Class 'TBS_Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[02-Oct-2014 23:59:53 Australia/Melbourne] PHP Fatal error:  Class 'TBS_Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[02-Oct-2014 23:59:55 Australia/Melbourne] PHP Fatal error:  Class 'TBS_Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[02-Oct-2014 23:59:57 Australia/Melbourne] PHP Fatal error:  Class 'TBS_Auth' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 60
+[03-Oct-2014 00:59:53 Australia/Melbourne] PHP Parse error:  syntax error, unexpected $end in /home/gia53c14/public_html/application/controllers/UserController.php on line 78
+[03-Oct-2014 01:03:14 Australia/Melbourne] PHP Parse error:  syntax error, unexpected $end in /home/gia53c14/public_html/application/controllers/UserController.php on line 78
+[03-Oct-2014 01:05:12 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/TBS/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 01:07:58 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/TBS/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 02:09:16 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/TBS/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:29:06 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:29:25 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:30:40 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:32:00 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:34:49 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:34:55 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:38:49 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:39:14 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:41:11 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:41:49 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:42:16 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 12:43:32 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:11:29 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:12:32 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:13:43 Australia/Melbourne] PHP Warning:  Missing argument 1 for Tbs_Auth_Adapter_Google::__construct(), called in /home/gia53c14/public_html/application/controllers/UserController.php on line 108 and defined in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 8
+[03-Oct-2014 13:13:43 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 52
+[03-Oct-2014 13:13:43 Australia/Melbourne] PHP Notice:  Undefined variable: requestToken in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 11
+[03-Oct-2014 13:14:00 Australia/Melbourne] PHP Warning:  Missing argument 1 for Tbs_Auth_Adapter_Google::__construct(), called in /home/gia53c14/public_html/application/controllers/UserController.php on line 108 and defined in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 8
+[03-Oct-2014 13:14:00 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 52
+[03-Oct-2014 13:14:00 Australia/Melbourne] PHP Notice:  Undefined variable: requestToken in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 11
+[03-Oct-2014 13:17:24 Australia/Melbourne] PHP Warning:  Missing argument 1 for Tbs_Auth_Adapter_Google::__construct(), called in /home/gia53c14/public_html/application/controllers/UserController.php on line 106 and defined in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 8
+[03-Oct-2014 13:17:24 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 52
+[03-Oct-2014 13:17:24 Australia/Melbourne] PHP Notice:  Undefined variable: requestToken in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 11
+[03-Oct-2014 13:19:07 Australia/Melbourne] PHP Warning:  Missing argument 1 for Tbs_Auth_Adapter_Google::__construct(), called in /home/gia53c14/public_html/application/controllers/UserController.php on line 107 and defined in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 8
+[03-Oct-2014 13:19:07 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 52
+[03-Oct-2014 13:19:07 Australia/Melbourne] PHP Notice:  Undefined variable: requestToken in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 11
+[03-Oct-2014 13:46:57 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:47:04 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:48:44 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:51:33 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 13:59:58 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 37
+[03-Oct-2014 14:02:48 Australia/Melbourne] PHP Notice:  Undefined index: google in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Google.php on line 35
+[03-Oct-2014 14:09:00 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Section 'run' cannot be found in /home/gia53c14/public_html/application/configs/appkeys.ini' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:150
+Stack trace:
+#0 /home/gia53c14/public_html/application/Bootstrap.php(51): Zend_Config_Ini->__construct('/home/gia53c14/...', 'run')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initConfig()
+#2 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('config')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/gia53c14/public_html/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/gia53c14/public_html/public/index.php(50): Zend_Application->bootstrap()
+#6 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 150
+[03-Oct-2014 14:09:01 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Section 'run' cannot be found in /home/gia53c14/public_html/application/configs/appkeys.ini' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:150
+Stack trace:
+#0 /home/gia53c14/public_html/application/Bootstrap.php(51): Zend_Config_Ini->__construct('/home/gia53c14/...', 'run')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initConfig()
+#2 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('config')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap(NULL)
+#4 /home/gia53c14/public_html/library/Zend/Application.php(355): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap(NULL)
+#5 /home/gia53c14/public_html/public/index.php(50): Zend_Application->bootstrap()
+#6 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 150
+[03-Oct-2014 14:10:44 Australia/Melbourne] PHP Notice:  Use of undefined constant config - assumed 'config' in /home/gia53c14/public_html/application/Bootstrap.php on line 53
+[03-Oct-2014 14:10:45 Australia/Melbourne] PHP Notice:  Use of undefined constant config - assumed 'config' in /home/gia53c14/public_html/application/Bootstrap.php on line 53
+[03-Oct-2014 14:18:58 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:01 Australia/Melbourne] PHP Notice:  Undefined variable: _SESSION in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 40
+[03-Oct-2014 14:19:03 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:14 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:16 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:34 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:36 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:19:38 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:23:43 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:25:03 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(52): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:27:41 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(50): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:27:42 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(50): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 04:28:28 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 04:28:28 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 04:28:32 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 04:28:32 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 04:28:54 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 04:28:55 UTC] PHP Fatal error:  Class 'Zend_Session' not found in /home/gia53c14/public_html/public/index.php on line 45
+[03-Oct-2014 14:31:44 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(51): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:31:47 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(51): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:31:50 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(51): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 14:32:54 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Session_Exception' with message 'Session must be started before any output has been sent to the browser; output started in /home/gia53c14/public_html/application/Bootstrap.php/1' in /home/gia53c14/public_html/library/Zend/Session.php:454
+Stack trace:
+#0 /home/gia53c14/public_html/public/index.php(54): Zend_Session::start()
+#1 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Session.php on line 454
+[03-Oct-2014 15:35:31 Australia/Melbourne] PHP Fatal error:  Call to undefined method Zend_Controller_Request_Http::getAllParams() in /home/gia53c14/public_html/application/controllers/UserController.php on line 68
+[03-Oct-2014 15:37:56 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[03-Oct-2014 15:40:59 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[03-Oct-2014 15:41:04 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[03-Oct-2014 19:20:40 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[03-Oct-2014 19:24:12 Australia/Melbourne] PHP Catchable fatal error:  Argument 1 passed to Tbs_Auth::setStorage() must implement interface Zend_Auth_Storage_Interface, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth.php on line 43 and defined in /home/gia53c14/public_html/library/Tbs/Auth.php on line 30
+[03-Oct-2014 19:27:37 Australia/Melbourne] PHP Catchable fatal error:  Object of class Tbs_Auth_Identity_Container could not be converted to string in /home/gia53c14/public_html/library/Tbs/Auth/Storage/MultipleIdentities.php on line 51
+[03-Oct-2014 19:30:35 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[03-Oct-2014 20:07:52 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:14:54 Australia/Melbourne] PHP Notice:  Undefined property: Tbs_Auth_Identity_Container::$profile in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:15:50 Australia/Melbourne] PHP Parse error:  syntax error, unexpected ')' in /home/gia53c14/public_html/application/controllers/UserController.php on line 98
+[03-Oct-2014 20:16:09 Australia/Melbourne] PHP Parse error:  syntax error, unexpected ')' in /home/gia53c14/public_html/application/controllers/UserController.php on line 98
+[03-Oct-2014 20:16:29 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:17:12 Australia/Melbourne] PHP Fatal error:  Call to undefined method Tbs_Auth_Identity_Container::toArray() in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:17:59 Australia/Melbourne] PHP Fatal error:  Call to undefined method Tbs_Auth_Identity_Container::toArray() in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:18:30 Australia/Melbourne] PHP Fatal error:  Cannot use object of type Tbs_Auth_Identity_Container as array in /home/gia53c14/public_html/application/controllers/UserController.php on line 99
+[03-Oct-2014 20:26:00 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_ECHO, expecting T_CASE or T_DEFAULT or '}' in /home/gia53c14/public_html/application/controllers/UserController.php on line 114
+[03-Oct-2014 20:57:28 Australia/Melbourne] PHP Warning:  include_once(Tbs/Auth/AdapterTwitter.php) [<a href='function.include-once'>function.include-once</a>]: failed to open stream: No such file or directory in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[03-Oct-2014 20:57:28 Australia/Melbourne] PHP Warning:  include_once() [<a href='function.include'>function.include</a>]: Failed opening 'Tbs/Auth/AdapterTwitter.php' for inclusion (include_path='/home/gia53c14/public_html/application/../library:/../library:/home/gia53c14/public_html/library:.:/usr/lib/php:/usr/local/lib/php') in /home/gia53c14/public_html/library/Zend/Loader.php on line 146
+[03-Oct-2014 20:57:28 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_AdapterTwitter' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 74
+[03-Oct-2014 21:09:20 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 60
+[03-Oct-2014 21:09:20 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 61 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:19:20 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 60
+[03-Oct-2014 21:19:20 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 61 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:19:22 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 60
+[03-Oct-2014 21:19:22 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 61 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:35:26 Australia/Melbourne] PHP Notice:  Undefined variable: _SESSION in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 62
+[03-Oct-2014 21:35:26 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 63 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:36:45 Australia/Melbourne] PHP Notice:  Undefined index: Zend_Auth in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 63
+[03-Oct-2014 21:36:45 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 64 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:37:30 Australia/Melbourne] PHP Notice:  Undefined index: Zend_Auth in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 64
+[03-Oct-2014 21:37:30 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 65 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:38:15 Australia/Melbourne] PHP Notice:  Undefined index: Zend_Auth in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 64
+[03-Oct-2014 21:38:15 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 65 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 21:39:16 Australia/Melbourne] PHP Notice:  Undefined variable: _SESSION in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 64
+[03-Oct-2014 21:45:10 Australia/Melbourne] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/gia53c14/public_html/library/Zend/Session.php on line 728
+[03-Oct-2014 21:46:05 Australia/Melbourne] PHP Warning:  session_destroy() [<a href='function.session-destroy'>function.session-destroy</a>]: Trying to destroy uninitialized session in /home/gia53c14/public_html/library/Zend/Session.php on line 728
+[03-Oct-2014 22:23:20 Australia/Melbourne] PHP Notice:  A session had already been started - ignoring session_start() in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 44
+[03-Oct-2014 22:28:55 Australia/Melbourne] PHP Fatal error:  Call to protected Zend_Session::__construct() from context 'Tbs_Auth_Adapter_Twitter' in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 42
+[03-Oct-2014 22:52:58 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Circular resource dependency detected' in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php:659
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(626): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap('session')
+#2 /home/gia53c14/public_html/application/Bootstrap.php(40): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap('session')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initSession()
+#4 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#5 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/Bo in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 659
+[03-Oct-2014 22:54:24 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Circular resource dependency detected' in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php:659
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(626): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap('session')
+#2 /home/gia53c14/public_html/application/Bootstrap.php(40): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap('session')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initSession()
+#4 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#5 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/Bo in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 659
+[03-Oct-2014 22:56:23 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Resource matching "session" not found' in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php:691
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(626): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap('session')
+#2 /home/gia53c14/public_html/application/Bootstrap.php(40): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap('session')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initSessionDb()
+#4 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('sessiondb')
+#5 /home/gia53c14/public_html/library/Zend/Application/Bootstra in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 691
+[03-Oct-2014 22:56:26 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Resource matching "session" not found' in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php:691
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(626): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap('session')
+#2 /home/gia53c14/public_html/application/Bootstrap.php(40): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap('session')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initSessionDb()
+#4 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('sessiondb')
+#5 /home/gia53c14/public_html/library/Zend/Application/Bootstra in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 691
+[03-Oct-2014 22:57:24 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'Zend_Application_Bootstrap_Exception' with message 'Resource matching "session" not found' in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php:691
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(626): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('session')
+#1 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(583): Zend_Application_Bootstrap_BootstrapAbstract->_bootstrap('session')
+#2 /home/gia53c14/public_html/application/Bootstrap.php(40): Zend_Application_Bootstrap_BootstrapAbstract->bootstrap('session')
+#3 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(666): Bootstrap->_initSessionDb()
+#4 /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php(619): Zend_Application_Bootstrap_BootstrapAbstract->_executeResource('sessiondb')
+#5 /home/gia53c14/public_html/library/Zend/Application/Bootstra in /home/gia53c14/public_html/library/Zend/Application/Bootstrap/BootstrapAbstract.php on line 691
+[03-Oct-2014 23:38:25 Australia/Melbourne] PHP Notice:  Undefined variable: log_file in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 65
+[03-Oct-2014 23:38:25 Australia/Melbourne] PHP Warning:  file_put_contents() [<a href='function.file-put-contents'>function.file-put-contents</a>]: Filename cannot be empty in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 65
+[03-Oct-2014 23:38:56 Australia/Melbourne] PHP Notice:  Undefined variable: twitterToken in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 65
+[03-Oct-2014 23:49:57 Australia/Melbourne] PHP Notice:  Undefined variable: token in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 102
+[03-Oct-2014 23:49:57 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 126 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 106
+[03-Oct-2014 23:49:57 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 108 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 23:50:33 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 126 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 105
+[03-Oct-2014 23:50:33 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 107 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[03-Oct-2014 23:53:42 Australia/Melbourne] PHP Parse error:  syntax error, unexpected ')', expecting T_PAAMAYIM_NEKUDOTAYIM in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 105
+[04-Oct-2014 00:06:10 Australia/Melbourne] PHP Parse error:  syntax error, unexpected $end in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 92
+[04-Oct-2014 00:07:04 Australia/Melbourne] PHP Parse error:  syntax error, unexpected $end in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 92
+[04-Oct-2014 00:08:21 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 126 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 107
+[04-Oct-2014 00:08:21 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 108 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[04-Oct-2014 00:10:24 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 0 of 126 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 107
+[04-Oct-2014 00:10:24 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 108 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[04-Oct-2014 00:11:06 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 37 of 42 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 107
+[04-Oct-2014 00:11:06 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 108 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[04-Oct-2014 00:12:35 Australia/Melbourne] PHP Notice:  unserialize() [<a href='function.unserialize'>function.unserialize</a>]: Error at offset 37 of 42 bytes in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 107
+[04-Oct-2014 00:12:35 Australia/Melbourne] PHP Catchable fatal error:  Argument 2 passed to Zend_Oauth_Consumer::getAccessToken() must be an instance of Zend_Oauth_Token_Request, boolean given, called in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 108 and defined in /home/gia53c14/public_html/library/Zend/Oauth/Consumer.php on line 186
+[04-Oct-2014 00:18:17 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Twitter' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 107
+[04-Oct-2014 00:19:46 Australia/Melbourne] PHP Parse error:  syntax error, unexpected $end in /home/gia53c14/public_html/library/Tbs/Auth/Adapter/Twitter.php on line 50
+[04-Oct-2014 00:24:00 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[04-Oct-2014 21:50:03 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 76
+[04-Oct-2014 21:55:36 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_CATCH in /home/gia53c14/public_html/application/controllers/UserController.php on line 42
+[04-Oct-2014 21:55:51 Australia/Melbourne] PHP Parse error:  syntax error, unexpected ';' in /home/gia53c14/public_html/application/controllers/UserController.php on line 42
+[04-Oct-2014 21:56:12 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 76
+[04-Oct-2014 21:59:24 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 76
+[05-Oct-2014 16:08:18 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[07-Oct-2014 00:42:48 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 81
+[07-Oct-2014 00:43:57 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 81
+[06-Oct-2014 13:45:00 UTC] PHP Warning:  Unknown: POST Content-Length of 46860733 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[07-Oct-2014 00:45:00 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqFileUploader' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 170
+[07-Oct-2014 00:46:04 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqFileUploader' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 170
+[07-Oct-2014 00:46:07 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqFileUploader' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 170
+[07-Oct-2014 00:46:10 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 81
+[07-Oct-2014 00:47:50 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 81
+[07-Oct-2014 18:26:22 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqFileUploader' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 188
+[07-Oct-2014 18:26:48 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 89
+[07-Oct-2014 18:28:25 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 89
+[07-Oct-2014 18:33:52 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 89
+[07-Oct-2014 18:33:59 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 89
+[07-Oct-2014 07:35:48 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:35:49 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:35:52 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:35:53 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:35:54 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:35:55 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:36:01 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 07:36:01 UTC] PHP Fatal error:  Uncaught exception 'Zend_Config_Exception' with message 'Invalid key 'autoloadernamespaces.'' in /home/gia53c14/public_html/library/Zend/Config/Ini.php:301
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Config/Ini.php(260): Zend_Config_Ini->_processKey(Array, 'autoloadernames...', Array)
+#1 /home/gia53c14/public_html/library/Zend/Config/Ini.php(152): Zend_Config_Ini->_processSection(Array, 'production')
+#2 /home/gia53c14/public_html/library/Zend/Application.php(383): Zend_Config_Ini->__construct('/home/gia53c14/...', 'production')
+#3 /home/gia53c14/public_html/library/Zend/Application.php(85): Zend_Application->_loadConfig('/home/gia53c14/...')
+#4 /home/gia53c14/public_html/public/index.php(51): Zend_Application->__construct('production', '/home/gia53c14/...')
+#5 {main}
+  thrown in /home/gia53c14/public_html/library/Zend/Config/Ini.php on line 301
+[07-Oct-2014 18:36:56 Australia/Melbourne] PHP Fatal error:  Class 'Common_FileUploader_qqUploadedFileXhr' not found in /home/gia53c14/public_html/application/controllers/TutorsController.php on line 89
+[07-Oct-2014 18:41:38 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[07-Oct-2014 18:41:38 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[07-Oct-2014 18:41:53 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:42:41 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:42:43 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:43:12 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:43:14 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:47:28 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:47:29 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:47:30 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:47:32 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 18:47:35 Australia/Melbourne] PHP Fatal error:  Class 'Tbs_Auth_Adapter_Google' not found in /home/gia53c14/public_html/application/controllers/UserController.php on line 120
+[07-Oct-2014 19:38:31 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Tbs/OAuth2/Consumer.php on line 48
+[07-Oct-2014 19:39:26 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Tbs/OAuth2/Consumer.php on line 48
+[07-Oct-2014 23:35:48 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[08-Oct-2014 03:36:26 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:39:57 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:48:32 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:50:50 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:52:35 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:53:41 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 03:56:36 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/controllers/UserController.php on line 208
+[08-Oct-2014 04:01:53 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[08-Oct-2014 04:01:53 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[08-Oct-2014 04:29:52 Australia/Melbourne] PHP Notice:  Undefined index: access_token in /home/gia53c14/public_html/library/Tbs/Resource/Facebook.php on line 50
+[08-Oct-2014 04:30:43 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/controllers/UserController.php on line 194
+[08-Oct-2014 04:34:36 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/application/models/Abstract.php on line 147
+[08-Oct-2014 15:31:58 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[08-Oct-2014 15:31:58 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[09-Oct-2014 00:32:13 Australia/Melbourne] PHP Notice:  Undefined variable: tutors in /home/gia53c14/public_html/application/views/scripts/tutors/detail.phtml on line 12
+[09-Oct-2014 00:32:13 Australia/Melbourne] PHP Notice:  Trying to get property of non-object in /home/gia53c14/public_html/application/views/scripts/tutors/detail.phtml on line 12
+[09-Oct-2014 22:31:16 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 120
+[10-Oct-2014 00:21:23 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[10-Oct-2014 00:21:23 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[10-Oct-2014 20:26:09 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Function/counter.php on line 154
+[10-Oct-2014 20:26:09 Australia/Melbourne] PHP Notice:  Undefined offset: 2 in /home/gia53c14/public_html/library/Function/counter.php on line 155
+[10-Oct-2014 20:35:05 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Function/counter.php on line 154
+[10-Oct-2014 20:35:05 Australia/Melbourne] PHP Notice:  Undefined offset: 2 in /home/gia53c14/public_html/library/Function/counter.php on line 155
+[10-Oct-2014 20:35:11 Australia/Melbourne] PHP Notice:  Undefined offset: 1 in /home/gia53c14/public_html/library/Function/counter.php on line 154
+[10-Oct-2014 20:35:11 Australia/Melbourne] PHP Notice:  Undefined offset: 2 in /home/gia53c14/public_html/library/Function/counter.php on line 155
+[10-Oct-2014 22:20:54 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[10-Oct-2014 22:20:54 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[10-Oct-2014 22:23:54 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[10-Oct-2014 22:23:54 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[10-Oct-2014 22:32:21 Australia/Melbourne] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 47
+[11-Oct-2014 13:20:04 Australia/Melbourne] PHP Warning:  copy() [<a href='function.copy'>function.copy</a>]: The first argument to copy() function cannot be a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 46
+[11-Oct-2014 13:20:04 Australia/Melbourne] PHP Warning:  unlink(/home/gia53c14/public_html/uploads/images/tmp/) [<a href='function.unlink'>function.unlink</a>]: Is a directory in /home/gia53c14/public_html/library/Common/FileUploader/qqUploadedFileXhr.php on line 47
+[11-Oct-2014 17:47:56 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 123
+[13-Oct-2014 08:19:38 Australia/Melbourne] PHP Fatal error:  Call to a member function toArray() on a non-object in /home/gia53c14/public_html/application/controllers/ClassesController.php on line 123
+[14-Oct-2014 02:44:50 Australia/Melbourne] PHP Fatal error:  Class 'SocialCount' not found in /home/gia53c14/public_html/application/controllers/IndexController.php on line 34
+[14-Oct-2014 02:45:17 Australia/Melbourne] PHP Fatal error:  Class 'SocialCount' not found in /home/gia53c14/public_html/application/controllers/IndexController.php on line 34
+[14-Oct-2014 02:46:51 Australia/Melbourne] PHP Fatal error:  Class 'SocialCount' not found in /home/gia53c14/public_html/application/controllers/IndexController.php on line 34
+[14-Oct-2014 02:48:08 Australia/Melbourne] PHP Fatal error:  Class 'SocialCount' not found in /home/gia53c14/public_html/application/controllers/IndexController.php on line 34
+[14-Oct-2014 02:51:06 Australia/Melbourne] PHP Fatal error:  Class 'SocialCount' not found in /home/gia53c14/public_html/application/controllers/IndexController.php on line 34
+[14-Oct-2014 09:37:57 Australia/Melbourne] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/lib/mysql/mysql.sock' (2)' in /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php:129
+Stack trace:
+#0 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(129): PDO->__construct('mysql:host=loca...', 'gia53c14_giasu', 'gia53c14', Array)
+#1 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(96): Zend_Db_Adapter_Pdo_Abstract->_connect()
+#2 /home/gia53c14/public_html/library/Zend/Db/Adapter/Abstract.php(459): Zend_Db_Adapter_Pdo_Mysql->_connect()
+#3 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php(238): Zend_Db_Adapter_Abstract->query('DESCRIBE `Menus...', Array)
+#4 /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Mysql.php(156): Zend_Db_Adapter_Pdo_Abstract->query('DESCRIBE `Menus...')
+#5 /home/gia53c14/public_html/library/Zend/Db/Table/Abstract.php(823): Zend_Db_Adapter_Pdo_Mysql->describeTable('Menus', NULL)
+#6 /ho in /home/gia53c14/public_html/library/Zend/Db/Adapter/Pdo/Abstract.php on line 144

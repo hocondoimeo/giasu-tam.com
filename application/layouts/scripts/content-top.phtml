@@ -2,7 +2,7 @@
 	    <div class="container">
 	        <div class="row-fluid">
 	        	<?php //if(count($this->LeftContentTop)):?>
-	        	<div id="content-top-left" class="span2 content-top-left"> 
+	        	<div id="content-top-left" class="span2 content-top-left <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>"> 
 	        			<div class="content-top-left-title">
 	        					<img src="/images/icons/16x16/graduation-hat.png" />
 	        					PHỤ HUYNH 
@@ -35,7 +35,7 @@
 					<?php endif; ?>
 						    <div class="<?php echo ($key < 1)?'active ':'';?>item">
 						    <?php  if(isset($item->ImageUrl) &&  !empty($item->ImageUrl) && file_exists(IMAGE_CAROUSEL_UPLOAD_PATH.$item->ImageUrl)):?>
-						    	<img src=<?php echo IMAGE_CAROUSEL_UPLOAD_URL.$item->ImageUrl; ?>" alt="">
+						    	<img src="<?php echo IMAGE_CAROUSEL_UPLOAD_URL.$item->ImageUrl; ?>" alt="">
 						    <?php else:?>
 				                <img class="desc-news1" src="/images/carousel/bootstrap-mdo-sfmoma-01.jpg"/>
 				             <?php endif; ?>
@@ -89,7 +89,7 @@ Quý Phụ Huynh!
 	        	</div>
 	        	<script>$('.carousel').carousel();</script>
 	        	<?php //if(count($this->RightContentTop)):?>
-	        	<div id="content-top-right" class="span2 content-top-right">
+	        	<div id="content-top-right" class="span2 content-top-right <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>">
 	        		  <div class="content-top-right-title">
 	        					<img src="/images/icons/16x16/leather-bag.png" style="vertical-align: top;"/>
 	        					GIA SƯ

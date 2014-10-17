@@ -28,7 +28,7 @@ $lf_name = "hits.txt";
 // Save new log file each month
 //   0 = No
 //   1 = Yes
-$monthly = 1;
+$monthly = 0;
 
 // Path to store old files:
 // Default for June, 2012:

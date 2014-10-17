@@ -11,7 +11,7 @@
 			            <?php endif;?>
 			            <a href="/news/detail/id/<?php echo $lastestNews->NewsId.(empty($this->cate)?'':'/cate/'.$this->cate); ?>">
 			            <div class="pull-left">
-			                <?php  if(isset($lastestNews->ImageUrl) &&  !empty($lastestNews->ImageUrl)  && file_exists(IMAGE_UPLOAD_PATH.$lastestNews->ImageUrl)):?>
+			                <?php  if(isset($lastestNews->ImageUrl) &&  !empty($lastestNews->ImageUrl) && file_exists(IMAGE_UPLOAD_PATH.$lastestNews->ImageUrl)):?>
 			                <img class="desc-news" src="<?php echo IMAGE_UPLOAD_URI.$lastestNews->ImageUrl?>" alt="<?php echo $lastestNews->ImageUrl?>"/>
 			                <img class="small-news" src="<?php echo IMAGE_UPLOAD_URI.$lastestNews->ImageUrl?>" alt="<?php echo $lastestNews->ImageUrl?>"/>
 			                <?php else:?>

@@ -494,7 +494,7 @@ qq.FileUploader = function(o){
                 
         template: '<div class="qq-uploader">' + 
                 '<div class="qq-upload-drop-area" title="close" onclick="$(this).hide()"><span>Thả hình ảnh tại đây</span></div>' +
-                '<div class="qq-upload-button btn btn-large btn-primary">Click hoặc kéo thả tại đây</div>' +
+                '<div class="qq-upload-button btn btn-large btn-primary">Nhấp chuột hoặc kéo thả tại đây</div>' +
 //                '<ul class="qq-upload-list"></ul>' + 
              '</div>',
 

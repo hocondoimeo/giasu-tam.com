@@ -15,6 +15,10 @@ $subjectModel = new Application_Model_Subjects();
 $subjects = $subjectModel->fetchAll($subjectModel->getAllAvaiabled());
 $form =  $this->form;
 $class = $this->class;
+$gradeModel = new Application_Model_Grades();
+$grade = $gradeModel->getGradeById($class->GradeId);
+$districtModel = new Application_Model_Districts();
+$district = $districtModel->getDistrictById($class->DistrictId);
 ?>                 <!--People Sections-->
                     <div id="people-block">
                         <h3> Ứng tuyển vị trí gia sư cho lớp học</h3>
@@ -66,7 +70,7 @@ $class = $this->class;
 							            <fieldset class="well the-fieldset">
 							            	<legend>Mã số lớp học: <?php echo $class->ClassId?></legend>
 								            <div class="lastest-date1 desc-news"><span>Lớp học: </span>
-								            		<?php echo $class['ClassGrade']; ?>
+								            		<?php echo $grade->GradeName; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Môn học: </span>
 								            		<?php 
@@ -92,6 +96,9 @@ $class = $this->class;
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Liên hệ: </span>
 								            		<?php echo $class['ClassContact']; ?>
+								            </div>
+											<div class="lastest-date1 desc-news"><span>Quận: </span>
+								            		<?php echo $district->DistrictName; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Địa chỉ: </span>
 								            		<?php echo $class['ClassAddress'];?>

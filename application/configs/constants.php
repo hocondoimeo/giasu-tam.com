@@ -53,7 +53,7 @@ define('IMAGE_UPLOAD_PATH_TMP', IMAGE_UPLOAD_PATH .'tmp/');
 define('IMAGE_UPLOAD_PATH_BACKUP', IMAGE_UPLOAD_PATH .'backup/');
 
 define('IMAGE_CAROUSEL_UPLOAD_PATH', IMAGE_UPLOAD_PATH . 'carousel/');
-define('IMAGE_CAROUSEL_UPLOAD_TMP', IMAGE_CAROUSEL_UPLOAD_PATH . 'tmp');
+define('IMAGE_CAROUSEL_UPLOAD_TMP', IMAGE_CAROUSEL_UPLOAD_PATH . 'tmp/');
 define('IMAGE_CAROUSEL_UPLOAD_BACKUP', IMAGE_CAROUSEL_UPLOAD_PATH . 'backup/');
 
 define('IMAGE_UPLOAD_URI', '/uploads/images/');
@@ -93,6 +93,6 @@ define('TUTORS_ITEMS', 5);
 
 
 /************************* Classes *******************************/
-define('CLASSES_ITEMS', 6);
+define('CLASSES_ITEMS', 12);
 $grades = array('Mầm Non','Lớp 1','Lớp 2','Lớp 3','Lớp 4','Lớp 5','Lớp 6','Lớp 7','Lớp 8','Lớp 9','Lớp 10','Lớp 11','Lớp 12','Ôn Thi Tốt Nghiệp','Luyện Thi ĐH');
 define('CLASSES_GRADE' , serialize($grades));

@@ -12,7 +12,7 @@ h3.bottom-news { line-height: 20px !important}
 .form-horizontal .the-fieldset {padding-top: 30px; min-height:310px !important;}
 
 .all-popular-block{
-    padding: 10px;
+    padding: 0px;
 }
 
 .form-actions{ margin-top: 50px;}
@@ -102,6 +102,25 @@ h3.bottom-news { line-height: 20px !important}
        margin-left: 20px !important;
     }
 }
+
+@media screen and (max-width: 1200px){
+	.lastest-block img{
+		margin-left: 15px !important;
+	}
+	.form-horizontal .form-actions{
+		padding-left: 20px !important; 
+	}	
+	.form-actions{ margin-top: 80px;}	
+	.form-horizontal .control-label{
+		width: auto  !important;
+		margin-left: 20px;
+	}
+}
+@media screen and (max-width: 979px){
+	.lastest-block img{
+		margin-left: 0px !important;
+	}
+}
 @media screen and (max-width: 767px){
 	.author-news{
 	    border-radius: 0px 0px 10px 10px;
@@ -120,9 +139,9 @@ h3.bottom-news { line-height: 20px !important}
         font-weight: bold;
     }
     .content{
-        /* margin-bottom: -30px; */
+        /* margin-bottom: -30px; 
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 10px;*/
     }
     
     #content-page{
@@ -133,7 +152,7 @@ h3.bottom-news { line-height: 20px !important}
         padding-top: -10px\9 !important;
        *padding-top: 10px !important; */
     }
-    .content-news{
+    .content-news1{
 	    border-radius: 10px 10px 0px 0px;
         margin-top: 0px !important;
         /*padding-top: -10px%\9 !important;*/
@@ -147,13 +166,39 @@ h3.bottom-news { line-height: 20px !important}
        position: relative;
        top: 0px;
     }
-/* hack css for only IE9 */
-:root .all-popular-block{
-       margin-top: 0px\9;
-    }
+	/* hack css for only IE9 */
+	:root .all-popular-block{
+	       margin-top: 0px\9;
+	    }
     
 	.desc-news{
 		display: block  !important;
 		text-align: center  !important;
+	}
+
+	.form-horizontal .the-fieldset , .classes .the-fieldset{
+		padding-top: 30px;
+		 min-height: 0px !important; 
+	}
+	#Save{
+		margin-left: 20px;
+		margin-bottom: 15px;
+	}
+	.or-seperator{
+		position: relative;
+		min-height: 40px !important;
+	}
+	.box-seperator{
+		height: 30px;
+		margin-left: 50px !important;
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 200px;
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
 	}
 }

@@ -21,7 +21,7 @@
 							            <fieldset class="well the-fieldset">
 							            	<legend>Mã số lớp học: <?php echo $class->ClassId; ?></legend>
 								            <div class="lastest-date1 desc-news"><span>Lớp học: </span>
-								            		<?php echo $class->ClassGrade; ?>
+								            		<?php echo $class->GradeName; ?>
 								            </div>
 								            <div class="lastest-date1 desc-news"><span>Môn học: </span>
 								            		<?php 
@@ -60,7 +60,10 @@
 								            <div class="lastest-date1 desc-news"><span>Liên hệ: </span>
 								            		<?php echo $class->ClassContact; ?>
 								            </div>
-								            <div class="lastest-date1 desc-news class-address"><span>Địa chỉ: </span>
+								            <div class="lastest-date1 desc-news"><span>Quận: </span>
+								            		<?php echo $class->DistrictName; ?>
+								            </div>
+											<div class="lastest-date1 desc-news class-address"><span>Địa chỉ: </span>
 								            		<?php echo $class->ClassAddress; ?>
 								            </div>
 								            <?php if(!$class->ClassStatus):?>
@@ -87,4 +90,4 @@
 			<div class="loadmorenews"><div class="read-more-news">Xem thêm</div></div>
 			<?php endif;?>
       </div>
-<?php endif;?>                        
+<?php else: echo '<b>Rất tiếc! Không có lớp học.</b>'; endif;?>                        

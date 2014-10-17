@@ -10,7 +10,7 @@ h3.bottom-news { line-height: 20px !important}
 .classes  legend{ margin-bottom: 0px !important;}
 .form-horizontal {padding-top: 20px;}
 .form-horizontal .the-fieldset {
-	padding-top: 30px; min-height:350px !important;
+	padding-top: 30px; min-height:380px !important;
 }
 
 .all-popular-block{
@@ -98,6 +98,29 @@ h3.bottom-news { line-height: 20px !important}
        margin-left: 20px !important;
     }
 }
+
+@media screen and (max-width: 979px){
+	.form-horizontal .control-label {
+		width: 120px !important; 
+	}
+
+	#Reset {
+		margin-left: 70px;
+	}
+	
+	.form-actions {
+		margin-top: 90px;
+	}
+	
+	.form-horizontal .form-actions {
+		padding-left: 110px;
+	}
+	
+	.form-horizontal .the-fieldset {
+		padding-top: 30px; min-height:420px !important;
+	}
+}
+
 @media screen and (max-width: 767px){
 	.author-news{
 	    border-radius: 0px 0px 10px 10px;
@@ -116,9 +139,9 @@ h3.bottom-news { line-height: 20px !important}
         font-weight: bold;
     }
     .content{
-        /* margin-bottom: -30px; */
+        /* margin-bottom: -30px; 
         padding-left: 10px;
-        padding-right: 10px;
+        padding-right: 10px;*/
     }
     
     #content-page{
@@ -143,13 +166,26 @@ h3.bottom-news { line-height: 20px !important}
        position: relative;
        top: 0px;
     }
-/* hack css for only IE9 */
-:root .all-popular-block{
+	/* hack css for only IE9 */
+	:root .all-popular-block{
        margin-top: 0px\9;
     }
     
 	.desc-news{
 		display: block  !important;
 		text-align: center  !important;
+	}
+	
+	#Save{
+		margin-left: 20px;
+		margin-bottom: 15px;
+	}
+	
+	.form-horizontal .the-fieldset {
+		padding-top: 30px; min-height:250px !important;
+	}
+	
+	.form-horizontal .form-actions {
+		 padding-left: 0px !important;
 	}
 }

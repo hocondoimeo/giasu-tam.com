@@ -4,9 +4,6 @@ abstract class Application_Model_Abstract extends Zend_Db_Table_Abstract{
     protected $_fields;
     protected $_search;
     protected $_sort;
-    public $searchFields;
-    public $sortFields;
-    private $_messenger;
 
     /**
      * Enter description here ...
@@ -20,13 +17,13 @@ abstract class Application_Model_Abstract extends Zend_Db_Table_Abstract{
     	$orWhere = array();
     	foreach ($params as $field => $value) {
     		if ($field === 'fieldsearch'){
-    			$andWhere[] = str_replace('{{param}}', addslashes(trim($params['keywords'])), $this->searchFields[$value]);
+    			$andWhere[] = str_replace('{{param}}', addslashes(trim($params['keywords'])), $this->_search[$value]);
     		}
     		elseif ($field !== 'keywords' && $value !== 'none'){
-    			if(isset($this->searchFields[$field])){
-    				$orWhere[] = str_replace('{{param}}', $params[$field], $this->searchFields[$field]);
-    			} elseif(isset($this->sortFields[$field])){
-    				$select->order(str_replace('{{param}}', $params[$field], $this->sortFields[$field]));
+    			if(isset($this->_search[$field])){
+    				$orWhere[] = str_replace('{{param}}', $params[$field], $this->_search[$field]);
+    			} elseif(isset($this->_sort[$field])){
+    				$select->order(str_replace('{{param}}', $params[$field], $this->_sort[$field]));
     			}
     		}
     	}
@@ -62,10 +59,12 @@ abstract class Application_Model_Abstract extends Zend_Db_Table_Abstract{
     	$select = $this->createSQL($_select, $params);
     
     	if(isset($params['foreign']) && is_array($params['foreign'])){
-    		$table = $params['foreign']['table'];
-    		$foreignKey = $params['foreign']['key'];
-    		$cols = isset($params['foreign']['cols']) && is_array($params['foreign']['cols'])?$params['foreign']['cols']:array();
-    		$select->joinLeft("{$table}", "{$this->_name}.{$foreignKey} = {$table}.{$foreignKey}", $cols);
+			foreach ($params['foreign'] as $value){
+				$table = $value['table'];
+				$foreignKey = $value['key'];
+				$cols = isset($value['cols']) && is_array($value['cols']) ? $value['cols'] : array();
+				$select->joinLeft("{$table}", "{$this->_name}.{$foreignKey} = {$table}.{$foreignKey}", $cols);
+			}
     	}
     
     	if(isset($params['where']) && is_array($params['where']) && count($params['where'])){

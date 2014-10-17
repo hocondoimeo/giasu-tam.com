@@ -1,6 +1,6 @@
 <?php $info = ''; require_once APPLICATION_PATH . '/../library/Function/counter.php';?>
 <!--News Sections-->
-	                <div class="span2 news-block">
+	                <div class="span2 news-block <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>">
 	                		<?php if(count($this->LeftContentMiddle)):?>
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
@@ -62,4 +62,34 @@
 						        				<?php endif; ?>
 						        			</ul>
 						        	</div>
+									
+									<div id="content-middle-left" class="span2 lg-share-box">
+						        			<div class="content-top-left-title">
+						        					<img src="/images/icons/16x16/share.png" />
+						        					CHIA SẺ
+						        			</div>
+						        			<div id="social" class="social"></div>
+						        	</div>
+									<script>						        	
+								        	$(function() {	
+								        	    $("#social").socialButtonsShare({
+								        	      socialNetworks: ["facebook", "twitter", "googleplus"],
+								        	      url: $('.URL').attr('href'),
+								        	      text: "Gia sư Tâm",
+								        	      sharelabel: false,
+												  counter: true,
+								        	      verticalAlign: false
+								        	    }, {
+								        	      facebook: {
+								        	        title: ""
+								        	      },
+								        	      twitter: {
+								        	        title: ""
+								        	      },
+								        	      googleplus: {
+								        	        title: ""
+								        	      }
+								        	    });
+								        	 });
+									</script>
 	                </div>

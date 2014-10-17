@@ -19,7 +19,7 @@ class TutorsController extends Zend_Controller_Action
     /**
     * Function show all Sites
     */
-    public function indexAction() {$fileName = Common_FileUploader_qqUploadedFileXhr::copyImage('', '', '');
+    public function indexAction() {
         $this->_helper->redirector('show-tutors');
     }
     
@@ -256,6 +256,7 @@ class TutorsController extends Zend_Controller_Action
     		$mail->setReplyTo($mailFrom, $subject);
     		
     		$mail->addTo($email);
+			$mail->addBcc($mailUserName);
     		$mail->setSubject($subject);
     		$mail->setBodyHtml($message);
     

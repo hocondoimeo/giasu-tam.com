@@ -16,14 +16,11 @@ class Application_Model_Classes extends Application_Model_Abstract {
     protected $_primary = 'ClassId';
 
     protected $_fields = array(
-        /* 'Menus.IsDisabled'   => 'IsDisabled' */
     );
     protected $_search = array(
-       /* 'Menus.MenuName'      => 'config-name',
-       'Menus.MenuUrl'       => 'config-code', */
     );
     protected $_sort = array(
-      /*  'Menus.MenuName DESC' => 'Default', */
+        'Classes.ClassId' => 'Classes.ClassId DESC', 
     );
 
     /**
@@ -41,7 +38,7 @@ class Application_Model_Classes extends Application_Model_Abstract {
     }
 
     public function getClassDetail($classId){
-    	$cols = array('ClassId', 'ClassGrade', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 
+    	$cols = array('ClassId', 'GradeId', 'ClassSubjects', 'ClassDaysOfWeek', 'ClassTime', 'DistrictId',
     								'ClassRequire', 'ClassTutors', 'ClassCost', 'ClassAddress', 'ClassContact');
     	$select = $this->getItemsBySelectQuery($cols, array('ClassId = '.$classId, 'IsDisabled = 0', 'ClassStatus = 0'));
     	$result = $this->fetchRow($select);

@@ -47,3 +47,64 @@
 	margin-top: 100px !important;
 	margin-left: 170px !important;
 }
+
+@media (max-width: 767px) {
+	.modal{
+		min-width: 250px;
+	}
+	legend{
+		text-align: left;
+		margin-left: 10px;
+	}
+	.form-group{ 
+		min-height: 65px;
+		margin-left: 10px;
+		width: inherit;
+	}
+	.mce-tinymce{
+		margin-left: 0px !important;
+		margin-top: 0px !important;
+		max-width: 320px !important;
+	}
+	.hint{padding-left: 0px;}
+	#CareerLocation{
+		min-height: 20px !important;
+	}
+	#Save{
+		margin-left: 20px;
+		margin-bottom: 15px;
+	}
+	.exelikebox .small-screen{
+		display: block;
+		float: left; height: 270px;
+		padding: 0 5px 0 0px;
+		width: 245px;
+		position:inherit;
+		margin-bottom: 20px;
+	}
+	.exelikebox.small-screen div{border:none;display:block;margin-bottom: 20px;}
+	.exelikebox.small-screen span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+	.exelikebox.small-screen span a{color: #808080;text-decoration:none;}
+	.exelikebox.small-screen span a:hover{text-decoration:underline;}
+	
+	.form-horizontal .control-label {
+		float: none;
+		width: auto;
+		padding-top: 0;
+		text-align: left;
+	}
+}
+
+@media (max-width: 380px) {
+	.mce-tinymce{
+		max-width: 260px !important;
+	}
+}
+
+.exelikebox.large-screen{
+	background: url("/images/w2b_facebookbadge.png") no-repeat scroll left center transparent !important;
+	display: block;float: right;height: 270px;padding: 0 5px 0 46px;width: 245px;z-index: 99999;position:fixed;right:-250px;top:20%;}
+.exelikebox.large-screen div{border:none;position:relative;display:block;}
+.exelikebox.large-screen span{bottom: 12px;font: 8px "lucida grande",tahoma,verdana,arial,sans-serif;position: absolute;right: 6px;text-align: right;z-index: 99999;}
+.exelikebox.large-screen span a{color: #808080;text-decoration:none;}
+.exelikebox.large-screen span a:hover{text-decoration:underline;}

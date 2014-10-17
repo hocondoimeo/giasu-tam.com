@@ -142,8 +142,8 @@ h3.bottom-news { line-height: 20px}
        margin-bottom: 10px;
     }
     .lastest-block img, .popular-block img{
-        width: auto;
-        height: auto;
+        width: 100px;
+        height: 100px;
     }
     .medium-image{
        margin-left: 0px\9 !important;

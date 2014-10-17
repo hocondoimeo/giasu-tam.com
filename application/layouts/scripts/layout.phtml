@@ -8,6 +8,7 @@ $menusModel = new Application_Model_Menus();
 $menus = $menusModel->groupMenuByParent($menusModel->fetchAll($menusModel->getAllAvaiabled()));
 
 $configsModel = new Application_Model_Configs();
+$violetBg = $configsModel->getConfigValue('VioletBackgroundColor');
 $menuTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('TopMenu')); 
 $leftContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('LeftContentTopParent'), true);
 $rightContentTop = $menusModel->getMenu($menus, $configsModel->getConfigValue('RightContentTopParent'), true);
@@ -15,7 +16,8 @@ $leftContentMiddle = $menusModel->getMenu($menus, $configsModel->getConfigValue(
 
 $imagesModel = new Application_Model_Images();
 $middleContentTop = $imagesModel->fetchAll($imagesModel->getAllAvaiabled($configsModel->getConfigValue('TopContentMiddle')));
-$contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $middleContentTop, 'RightContentTop' => $rightContentTop);
+$contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $middleContentTop, 'RightContentTop' => $rightContentTop, 'violetBg' => $violetBg);
+$leftContent = array('LeftContentMiddle' => $leftContentMiddle, 'violetBg' => $violetBg);
 ?>
 <html>
     <head>
@@ -36,7 +38,17 @@ $contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $
         <link href="/images/logo_256px.ico" rel="SHORTCUT ICON">
     </head>
 
-    <body data-spy="scroll">
+    <body data-spy="scroll1">
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-55647043-1', 'auto');
+		  ga('send', 'pageview');
+
+		</script>
         <div id="contentall">
             <?php echo $this->render('header.phtml'); ?>
             <?php echo $this->renderLayoutBlock('menu-top.phtml', $this, array('TopMenu' => $menuTop)); ?>            
@@ -47,7 +59,7 @@ $contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $
 						<div class="container">
 				            <div class="row-fluid">
 									<!--News Sections-->
-				                	<?php echo $this->renderLayoutBlock('content-left.phtml', $this, array('LeftContentMiddle' => $leftContentMiddle)); ?>
+				                	<?php echo $this->renderLayoutBlock('content-left.phtml', $this, $leftContent); ?>
 				             		<!--Main Sections-->
 					                <div class="span10 content-block">            
 	            						<?php echo $this->layout()->content; ?>            
@@ -57,7 +69,9 @@ $contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $
 				        </div>
 					</div>
 				</div>
+				<div class="scrollToTop" title="Đầu trang" style="bottom: 25px;"><i class="icon-chevron-up"></i></div>
         	<?php echo $this->render('footer.phtml'); ?>
        	 </div>
+		<?php if ($controller != 'index'){?> <script>scrollToViewContent();</script><?php } ?>
     </body>
 </html>

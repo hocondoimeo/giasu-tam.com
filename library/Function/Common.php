@@ -120,17 +120,5 @@ class Function_Common {
         return $count;
     }
     
-    static public function convertString2Array($string){
-    	$newStr = str_replace('[', ',[', $string);
-    	$newStr = str_replace('[', "", $newStr);
-    	$newStr = str_replace(']', "", $newStr);
-    	$newStr = ltrim($newStr, " , ");
-    	$your_array = explode(",", $newStr);
-    	$arr = array();
-    	foreach ($your_array as $value) {
-    		$nArr = explode("=>", $value);
-    		$arr[trim($nArr[0])] = trim($nArr[1]);
-    	}
-    	return $arr;
-    }
+
 }

@@ -40,10 +40,11 @@
 
 /* tooltip styling. by default the element to be styled is .tooltip */
 .tooltip {
-    display:none;
+    /*display:none;*/
     font-size:12px;
     width:120px;
     color:#eee;
+	max-width: 35px;
     text-decoration: none !important;
 }
 .tooltip a{text-decoration: none !important;}
@@ -71,6 +72,32 @@
 #count-followers-twitter{padding-left: 5px;text-align: left;}
 
 .color-a-customize{color:#0066CC !important;}
+
+.menu {
+	position: relavtive !important;
+}
+.my-close{
+	border-radius: 2px;
+	cursor: pointer;
+	width: 30px;
+	height: 30px;
+	text-align: center;
+	top: 29%;
+	right: 15px;
+	height: 30px;
+	z-index: 9999;
+	display: none;
+	position: fixed;	
+	overflow-y: hidden;
+	border: 1px solid #ccc;
+	background-color: transparent;
+}
+
+.my-close  i {
+	font-size: 13px;
+	margin: 8.3px 0 0 0;
+	font-weight: normal;
+}
 /* ----------------------------------------- start customize button follow of twitter ----------------------------------------- */
 
 /* --------------------- vertical button --------------------- */
@@ -279,7 +306,7 @@
     height: 73px;    
 }
 
-.logo  img {
+.logo img {
     border: 0px;
     vertical-align: center;
 }
@@ -369,7 +396,7 @@
 }
 
 #home-page .news-block , #home-page .content-block {
-	min-height: 1960px;	
+	/*min-height: 1960px;	/*/
 }
 
 #home-page .news-block .img {
@@ -575,7 +602,7 @@
         margin-top: 0px;
     }
     #home-page .news-block , #home-page .content-block{
-    	min-height: 2160px;    	
+    	/*min-height: 2160px; */   	
     }    
 
     #home-page .people-left-block, #home-page .people-right-block {
@@ -655,6 +682,15 @@
         background: linear-gradient(to bottom, #2aa1cc 0%,#015A82 100%); /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2aa1cc', endColorstr='#015A82',GradientType=0 );
     }
+	
+	.footer [class*="span"]{
+		width: initial;
+	}
+	
+	.padding-top-footer {
+		padding-top: 0px !important; 
+	}
+	
     .crazyegg-legend{
         left: 21px;
         width: 93%;
@@ -817,7 +853,7 @@
 		margin-right: 10px !important;
 		width: 97% !important;
 	}
-	.top-banner { margin: 0 20px 10px 20px;}
+	.top-banner { margin: 0 10px 10px 10px;}
      #menus {
 		margin-left: 20px !important;
 		margin-right: 20px !important;
@@ -836,13 +872,23 @@
 
 	#content-top-center {
 		margin-right: 20px !important;
-		width: 95% !important;
+		width: 93% !important;
 	}
 	.content-block{margin-right: 20px !important;}
 	#menus {
-		margin-left: 20px !important;
-		margin-right: 20px !important;
-		width: 91% !important;
+		margin-left: 10px !important;
+		margin-right: 10px !important;
+		width: 93% !important;
+		overflow-y: overlay;
+		max-height: 380px;		
+		top:25%;
+     	position: fixed;
+		right: 0;
+		left: 0;
+		z-index: 9999;
+		-webkit-transform: translate3d(0,0,0);
+		-o-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
 	}	
     .crazyegg-legend{
         left: 12px;
@@ -888,7 +934,7 @@
 		min-height: 370px !important;
 	}
 	#home-page .news-block, #home-page .content-block {
-		min-height: 2120px;
+		/*min-height: 2120px;*/
 	}
 	#content-top-center{
 		width: 64.95744680851064%;
@@ -933,7 +979,7 @@
 	}
 	
 	#content-top-left, #content-top-right, #content-top-center {
-		min-height: 280px !important;
+		min-height: 312px !important;
 	}
 
     #home-page .content-block, #about-page .about-left-block {
@@ -1053,7 +1099,7 @@
     .carousel h1 {
         font-size: 20px;
     }
-    .banner h1,h2{line-height: 5px;}
+    .banner h1,h2{line-height: 40px;}
     .carousel h2 {
         font-size: 15px;
     }  
@@ -1064,9 +1110,9 @@
         margin-left: 0%;
         margin-left: 0%\9;
         *margin-left: 0%;    
-        padding-right: 0%;
-        padding-right: 0%\9;
-        *padding-right: 0%;
+        padding-right: 2%;
+        padding-right: 2%\9;
+        *padding-right: 2%;
     }    
 
     #home-page .news-block, #about-page .about-right-block {
@@ -1126,9 +1172,9 @@
 
     #logo-footer{display: none;}
     .copyright{font-size: 12px !important;}
-    .social-link-custom-div1{width: 15%;float: left;display: block !important;}
-    .social-link-custom-div2{width: 70%;float: left;}
-    .social-link-custom-div3{width: 15%;float: left;display: block !important;}
+    .social-link-custom-div1{width: 5%;float: left;display: block !important;}
+    .social-link-custom-div2{width: 55%;float: left;}
+    .social-link-custom-div3{width: 65%;float: left;display: block !important;}
     .featurette-crazy-egg-metrics-small{width: 100% !important;}
 
     .about-right-block h3{padding-top: 20px;}
@@ -1179,8 +1225,8 @@
     .heat-map-crazy-egg-large{top:4px !important;}
 
     .social-link-custom-div1{width: 2%;float: left;display: block !important;}
-    .social-link-custom-div2{width: 96%;float: left;}
-    .social-link-custom-div3{width: 2%;float: left;display: block !important;}
+    .social-link-custom-div2{width: 60%;float: left;}
+    .social-link-custom-div3{width: 38%;float: left;display: block !important;}
 
     .technology .people-title h2{line-height: 5px; font-size: 15px;}
     .technology .padding-customize-technology-1 h3{font-size: 20px;}

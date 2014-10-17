@@ -6,7 +6,7 @@ $(document).ready(function() {
         var url = '/news/ajax-get-lastest-news/page/'+(currentpage + 1)+cate;
         $(".loadmorenews").hide();
 
-        $('.lastest-news-content').append('<div class="loading-news"><img src="/images/preloading.gif"/><div>');
+        $('.lastest-news-content').append('<div class="loading-news"><img src="/images/icons/preloading.gif"/><div>');
         $.ajax({
             url : url,
             method: 'get',

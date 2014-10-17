@@ -67,4 +67,10 @@ class Application_Model_Grades extends Application_Model_Abstract {
     	return $content;
     }
 
+	public function getGradeById($gradeId){
+    	$select = $this->getItemsBySelectQuery(array('GradeName'), array('GradeId = '.$gradeId, 'IsDisabled = 0'));
+    	$result = $this->fetchRow($select);
+    	if(count($result)) return $result;
+    	else return null;
+    }
 }

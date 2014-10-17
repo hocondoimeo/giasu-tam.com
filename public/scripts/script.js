@@ -1,85 +1,68 @@
+$(window).load(function() {
+	makeTwoDivSameHeight();
+	//Check to see if the window is top if not then display button
+	var p = $( ".scrollToTop" );
+	$(window).scroll(function(){
+		toogleScrollToTop($(this).scrollTop());
+	});
+	var offset = p.offset();
+	toogleScrollToTop(offset.top);
+	changeSocialTooltip();
+	showTooltipSmallScreen();
+});
 //ready for loading js 
 $(document).ready(function() {
 	showNewsInSmallViewPort();
+	makeTwoDivSameHeight();
+	$('.scrollToTop').live('click', function(){
+		$('html,body').animate({scrollTop: $("body").offset().top}, 1200);
+	});
 });
 //when window is resized by customer
 $(window).resize(function () {
+	changeSocialTooltip();
     showNewsInSmallViewPort();
+	makeTwoDivSameHeight();
+	showTooltipSmallScreen();
 });
+
 jQuery(function(){    
 	var menu = $("#menus");
 	menu.find('ul.sf-menu').superfish({
-        	delay:0, 
+        	delay: 800, 
         	speed: 'fast',
-        	autoArrows:    false,
-            dropShadows:   false,
-            disableHI: true,
-            onHide:        function(){
-                if (this.parent().is('.sfPersist')) {
-                    this.show().css('visibility','visible').parent().addClass('sfHover');
-                }
-            }
-    }).find('li > ul > li').click(function(){
-        // hide previously persistent children (LOL that just sounds wrong)
-        menu.find('.sfPersist')
-            .removeClass('sfPersist sfHover')
-            .find('> ul').hide().css('visibility','hidden');
-
-        // add children that should be persistent
-        if ($(this).is('.sfSelected')) {
-            // if previously selected, keep hidden
-            menu.find('li.sfSelected').removeClass('sfSelected');
-        } else {
-            // Hide other selected classes
-            menu.find('li.sfSelected').removeClass('sfSelected');
-            // if newly selected, then show
-            $(this)
-                .addClass('sfSelected') // remember which one is selected
-                .parent()
-                .show().css('visibility','visible')
-                .parent().addClass('sfHover sfPersist');
-        }
+        	autoArrows:  true,
+            dropShadows:   false
     });
-
-    //    $('.sf-sub-indicator').parent().next('ul').find('li:last-child').corner('bottom');
-    //    $('div[class^=pitch]').corner();
-    // active the top menu
-    //if (typeof activeMenu != "undefined") 
-    	//activeMenuFunction(activeMenu);
-    // active the sub menu
-    //if (typeof activeSubMenu != "undefined")
-    	//activeMenuFunction(activeSubMenu);
-    
-    /**show menu small**/    
-    //$(".dark-yellow-menu.news").children().eq(0).addClass("border-bottom-menu-small");
-  
-    $(".menu-small-viewport").click(function(){
-        if($(".sf-menu").hasClass("display-menu")){
-            $(".sf-menu").removeClass("display-menu");
-        	$(".menu").each(function(){
-                $(this).show();
-            });            
-        }else{
-            $(".sf-menu").addClass("display-menu");
-        	$(".menu").each(function(){
-                $(this).hide();
-            });
-        }
-        
-        if(!$(".left-nav-triangle").hasClass("collapsed")){
-            $(".left-nav-triangle").removeClass("expanded");
-            $(".right-nav-triangle").removeClass("expanded");
-            $(".left-nav-triangle").addClass("collapsed");
-            $(".right-nav-triangle").addClass("collapsed");
-        }else{
-            $(".left-nav-triangle").removeClass("collapsed");
-            $(".right-nav-triangle").removeClass("collapsed");
-            $(".left-nav-triangle").addClass("expanded");
-            $(".right-nav-triangle").addClass("expanded");
-        }
-        
+    $("#menu-small-viewport, .my-close").live('click', function(e){
+		$(".sf-menu").toggleClass("display-menu");
+		$(".menu").toggle();
+		$(".left-nav-triangle").toggleClass("collapsed expanded");
+		$(".right-nav-triangle").toggleClass("collapsed expanded");        
+		$(".my-close").hide();
+		//e.stopPropagation();
+		//e.preventDefault();
     });
+	menu.bind('scroll', function()
+	  {
+		if($(this).scrollTop() + $(this).innerHeight()>=$(this)[0].scrollHeight)
+		{
+		  $(".my-close").show();
+		}
+	  });
 });
+
+function makeTwoDivSameHeight(){
+    maxHeight = 0;
+    $("#home-page .content-block").css('min-height',maxHeight);
+    $("#home-page .news-block").css('min-height',maxHeight);
+    if ($('.menu-small-viewport').css('display') != 'block'){
+       maxHeight = ($("#home-page .content-block").height() > $("#home-page .news-block").height()) ? $("#home-page .content-block").height(): $("#home-page .news-block").height();
+       maxHeight +=20;
+       $("#home-page .content-block").css('min-height',maxHeight);
+       $("#home-page .news-block").css('min-height',maxHeight);
+    }
+}
 
 function activeMenuFunction(activeMenu) {
     var menu = $('.navigation li li.' + activeMenu);
@@ -121,9 +104,53 @@ function hideDeviceTablet(){
 	 }
 }
 
+function changeSocialTooltip(){
+	var bodyWidth = $(window).width();
+	if(bodyWidth <= 1200 && bodyWidth > 767){
+		$("#social li").addClass('vertical');
+		$("#social li").attr('style', 'margin-bottom:10px; margin-left: 5px !important');
+		$('.social-facebook').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'right' }).tooltip('show');
+		$('.social-googleplus').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'right' }).tooltip('show');
+		$('.social-twitter').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'right' }).tooltip('show');
+	}else{
+		$("#social li").removeClass('vertical');	
+		$("#social li").attr('style', 'margin-bottom:0px;margin-left: 10px !important');
+		$('.social-facebook').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+		$('.social-googleplus').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+		$('.social-twitter').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+	}
+}
+
+function showTooltipSmallScreen(){
+	var bodyWidth = $(window).width();
+    if(bodyWidth <= 767){    	
+		if(!$('.share-box #social').length){
+			$('.share-box').append($('#social'));
+			var topTooltip = $('.detail-content').scrollTop() + $(window).height() + $('.detail-content').innerHeight();
+			$("#social li").removeClass('vertical');	
+			$("#social li").attr('style', 'margin-bottom:0px;margin-left: 10px !important');
+			$('.social-facebook').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+			$('.social-googleplus').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+			$('.social-twitter').tooltip('destroy').tooltip({ trigger: 'manual', placement : 'bottom' }).tooltip('show');
+			if($(window).height() < 380){
+				topTooltip += $(window).height()+10;
+			}
+			topTooltip -= 64;
+			$('.social-facebook').next().attr('style', 'top:'+topTooltip+'px !important; left: 26px !important; width: 40px;');
+			$('.social-googleplus').next().attr('style', 'top:'+topTooltip+'px !important; left: 76px !important; width: 40px;');
+			$('.social-twitter').next().attr('style', 'top:'+topTooltip+'px !important; left: 126px !important; width: 40px;');
+			$('.like-facebook-home').show();
+			$('.share-box').show();
+		} 
+	}else{
+		$('.like-facebook-home').hide();
+		$('.share-box').hide();
+	} 
+}
+
 function showNewsInSmallViewPort(){
     var bodyWidth = $(window).width();
-    if(bodyWidth < 768){    	   
+    if(bodyWidth <= 767){    	
         //hide all
     	$(".menu").each(function(){
             $(this).hide();
@@ -147,10 +174,8 @@ function showNewsInSmallViewPort(){
     	$(".menu-small-viewport").each(function(){
             $(this).show();
         });
-      //show carousel control small viewport
-    	/*$(".carousel-control").each(function(){
-            $(this).show();
-        });*/
+		
+		$("#myCarousel").carousel('pause');
     	
     	$("#myCarousel").swiperight(function() {  
     	      $("#myCarousel").carousel('prev');  
@@ -158,15 +183,19 @@ function showNewsInSmallViewPort(){
 	   $("#myCarousel").swipeleft(function() {  
 	      $("#myCarousel").carousel('next');  
 	   }); 
+	   
+	   if($(".exelikebox").length && $(".exelikebox").hasClass('large-screen'))
+		  $(".exelikebox").toggleClass('large-screen small-screen');
     }
     else{
+		$('.carousel').carousel('cycle');
+		
     	//hide small menu viewport
     	if($('#menu-small-viewport').css('display') == 'block'){
     		$("#menu-small-viewport").each(function(){
                 $(this).hide();
             });  
-    	}
-    	
+    	}    	
         //show all
     	$(".menu").each(function(){
             $(this).show();
@@ -186,8 +215,9 @@ function showNewsInSmallViewPort(){
         $(".news-block .featurette-divider-social").each(function(){
             $(this).show();
         });
-        //add number attribute for new-block div tag
-        //$(".news-block").attr('news-number', 5);
+        if(!$('.lg-share-box #social').length) $('.lg-share-box').append($('#social'));
+		if($(".exelikebox").length && $(".exelikebox").hasClass('small-screen')) 
+			$(".exelikebox").toggleClass('large-screen small-screen');
     }
 }
 
@@ -233,4 +263,26 @@ function loadModal(content){
     }).one('hide.bs.modal',  function (e) {
 		$("#contentall").css("cssText", "transition:all 0.2s ease !important");
     }).modal('show');
+}
+
+function scrollToViewContent(){
+	var bodyWidth = $(window).width();
+    if(bodyWidth < 768){
+    	var offset = $(".menu").offset().top + 3*$(".content-top").offset().top;
+    if(offset < $(window).height())
+    	offset += $(window).height()-(offset+$(".menu").offset().top+40);
+    	
+    	$('html, body').animate({scrollTop:offset}, 1200);
+    }else{
+    	var aTag = $("#home-page");
+        $('html, body').animate({scrollTop: aTag.offset().top}, 1200);
+    }
+}
+
+function toogleScrollToTop(offset){
+	if (offset > 300) {
+		$('.scrollToTop').fadeIn();
+	} else {
+		$('.scrollToTop').fadeOut();
+	}
 }

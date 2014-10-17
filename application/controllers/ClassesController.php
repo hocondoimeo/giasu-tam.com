@@ -43,7 +43,10 @@ class ClassesController extends Zend_Controller_Action
     				  $tutors = $this->_model->getTutorsOfClass($data['ClassId']);
     				  /* check tutor id exist in class */
     				  if(!in_array($data['TutorId'], explode(',' ,$tutors['ClassTutors']))){
-    				  		$data['ClassTutors'] = $tutors['ClassTutors'].','.$data['TutorId'];
+							if(!empty($tutors['ClassTutors']))
+								$data['ClassTutors'] = $tutors['ClassTutors'].','.$data['TutorId'];
+							else
+								$data['ClassTutors'] = $data['TutorId'];
     				  		if($this->_model->edit($data)){
     				  			$tutor = $tutorModel->getTutorInfo($data['TutorId']);
     				  			$email = $tutor["Email"];
@@ -131,13 +134,23 @@ class ClassesController extends Zend_Controller_Action
     	$subjectModel = new Application_Model_Subjects();
     	$subjects = $subjectModel->fetchAll($subjectModel->getAllAvaiabled());
     	$this->view->subjects = $subjects;
+		
+		$gradeModel = new Application_Model_Grades();
+    	$grades = $gradeModel->fetchAll($gradeModel->getAllAvaiabled());
+    	$this->view->grades = $grades;
     	
     	$districtModel = new Application_Model_Districts();
     	$districts = $districtModel->fetchAll($districtModel->getAllAvaiabled());
     	$this->view->districts = $districts;
     	
         /*Get all data*/    	
-        $paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled());
+		$params            = array('Classes.ClassId' => 'DESC');
+		$params['where'] = array('Classes.IsDisabled = 0');
+		$params['foreign'] = array(
+			array('table' => 'Grades', 'key' => 'GradeId', 'cols' => array('GradeName')), 
+			array('table' => 'Districts', 'key' => 'DistrictId', 'cols' => array('DistrictName'))
+		);
+        $paginator = Zend_Paginator::factory($this->_model->getQuerySelectAll($params));
         $paginator->setItemCountPerPage(CLASSES_ITEMS);
     	$page = $this->_getParam('page',1);
     	$this->view->page = $page;
@@ -155,22 +168,29 @@ class ClassesController extends Zend_Controller_Action
     	$this->view->subjects = $subjects;
     	
     	$page = $this->_getParam('page',1);
-    	$params = array();
+    	$params            = array('Classes.ClassId' => 'DESC');
+		$params['foreign'] = array(
+			array('table' => 'Grades', 'key' => 'GradeId', 'cols' => array('GradeName')), 
+			array('table' => 'Districts', 'key' => 'DistrictId', 'cols' => array('DistrictName'))
+		);
+		$where = array('Classes.IsDisabled = 0');
     	$class = $this->_getParam('class', null);
     	$district = $this->_getParam('district', null);
     	$subject = $this->_getParam('subject', null);
-    	if(!is_null($class)) $params[] = 'ClassGrade='.$class;
-    	if(!is_null($district)) $params[] =  'DistrictId='.$district;
+    	if(!is_null($class)) $where[] = 'Classes.GradeId='.$class;
+    	if(!is_null($district)) $where[] =  'Classes.DistrictId='.$district;
     	if (!is_null($subject)){ 
-    		$sub = "ClassSubjects like '{$subject},%' ";
+			$sub = "ClassSubjects = '{$subject}' ";
+    		$sub .= "OR ClassSubjects like '{$subject},%' ";
     		$sub .= "OR ClassSubjects like '%,{$subject},%' ";
     		$sub .= "OR ClassSubjects like '%,{$subject}' ";
-    		$params[] = $sub;
+			$where[] = $sub;
     	}
+		$params['where'] = $where;
     
     	//set Lastest News pagination
     	$this->view->page = $page;
-    	$paginator = Zend_Paginator::factory($this->_model->getAllAvaiabled($params));
+    	$paginator = Zend_Paginator::factory($this->_model->getQuerySelectAll($params));
     	$paginator->setItemCountPerPage(CLASSES_ITEMS);
     	$paginator->setCurrentPageNumber($page);
     
@@ -244,6 +264,7 @@ class ClassesController extends Zend_Controller_Action
     		$mail->setReplyTo($mailFrom, $subject);
     		
     		$mail->addTo($email);
+			$mail->addBcc($mailUserName);
     		$mail->setSubject($subject);
     		$mail->setBodyHtml($message);
     

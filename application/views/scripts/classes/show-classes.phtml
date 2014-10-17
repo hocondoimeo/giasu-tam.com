@@ -2,6 +2,7 @@
     $classes = array(1,2,3,4,5,6,7,8,9,10,11,12);
 	$tutorModel = new Application_Model_Tutors();
 	$this->tutor = $tutorModel;
+	$date = new Zend_Date();
 ?>
 <!--People Sections-->
           <div id="people-block">
@@ -9,13 +10,14 @@
                 <!--Lastest News Sections-->
                 <div class="span12 only-popular load-more-news1">
                     <div class="row-fluid">
+					<h3 class="bottom-news">Các lớp hiện có ngày <?php echo $date->toString(DATE_FORMAT_ZEND);?></h3> 
 	                    <div class="form-actions">
 				        	<div class="span12">
 					        	<span>Lớp học:
 					        		<select id="classes-select">
 						        		<option value="">- Chọn lớp -</option>
-						        		<?php foreach ($classes as $key =>$value) :?>			        			
-						        			<option value="<?php echo $key+1 ?>" label="<?php echo $value; ?>"><?php echo $value; ?></option>
+						        		<?php foreach ($this->grades as $key =>$value) :?>			        			
+						        			<option value="<?php echo $value->GradeId ?>" label="<?php echo $value->GradeName; ?>"><?php echo $value->GradeName; ?></option>
 						        		<?php endforeach;?>
 									 </select>
 					        	</span>

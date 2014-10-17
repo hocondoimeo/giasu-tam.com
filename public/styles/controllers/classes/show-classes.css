@@ -20,7 +20,7 @@ h3.bottom-news { line-height: 20px}
 
 .third-class{ margin-left: 0px !important;}
 .classes .the-fieldset {
-	min-height:440px !important;
+	min-height:480px !important;
 	position: relative;
 }
 .classes  legend{ margin-bottom: 0px !important;}
@@ -128,21 +128,32 @@ h3.bottom-news { line-height: 20px}
     color: #000;
 }
 
-@media (min-width: 980px) and (max-width: 1199px) {
+.form-actions span{
+	font-size: 14px;
+}
+
+@media (min-width: 980px) and (max-width: 1200px) {
 	.classes .the-fieldset {
-			min-height: 440px !important;
+			min-height: 480px !important;
 	}
     .btn-apply { 
 		left: 70px !important;
+	}
+	.form-actions span:nth-child(2){
+		padding-right: 100%;
 	}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
 	.classes .the-fieldset {
-		min-height: 480px !important;
+		min-height: 525px !important;
 	}
     .btn-apply { 
-		left: 40px !important;
+		left: 20px !important;
+	}
+	
+	.form-actions span{
+		padding-right: 100%;
 	}
 }
 
@@ -208,6 +219,10 @@ h3.bottom-news { line-height: 20px}
 		text-align: center  !important;
 	}
 	.more-news-append  { display: block;}
+	
+	.form-actions span{
+		padding-right: 100%;
+	}
 }
 @media screen and (max-width: 380px){
 	.btn-apply { 

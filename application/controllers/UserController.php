@@ -343,6 +343,7 @@ class UserController extends Zend_Controller_Action
     		$mail->setReplyTo($mailFrom, $subject);
     		
     		$mail->addTo($email);
+			$mail->addBcc($mailUserName);
     		$mail->setSubject($subject);
     		$mail->setBodyHtml($message);
     
