@@ -57,8 +57,8 @@ foreach ($arrCategories as $key => $arrCategory) {
                         <?php if (!empty($likeFaceBookUser)):?>
                         <li class="one-link-footer <?php echo (($this->format()->isShowClassFB($followLinkedInUser, $followTwitterUser)))?'footer-link-media':"";?>" <?php if (empty($likeFaceBookUser)) echo 'style="display:none;" show="0"';else echo ' show="1"'; ?>>
                             <a href="http://www.facebook.com/<?php echo $likeFaceBookUser; ?>" target="_blank">
-                                <img class="social-links-facebook" src= "/images/footer/facebook.png" rel="tooltip" data-placement="bottom"
-                                     data-original-title="<?php echo "Open $likeFaceBookUser's Facebook page"; ?>"/></a>
+                                <span class="social-links-facebook" rel="tooltip" data-placement="bottom"
+                                     data-original-title="<?php echo "Open $likeFaceBookUser's Facebook page"; ?>"></span></a>
                         </li>
                         <?php endif;?>
                         <?php if (!empty($folowGooglePlusUser)):?>

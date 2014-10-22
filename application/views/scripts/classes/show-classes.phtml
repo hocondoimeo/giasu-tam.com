@@ -1,5 +1,4 @@
 <?php if(count($this->paginator)):
-    $classes = array(1,2,3,4,5,6,7,8,9,10,11,12);
 	$tutorModel = new Application_Model_Tutors();
 	$this->tutor = $tutorModel;
 	$date = new Zend_Date();
@@ -10,7 +9,7 @@
                 <!--Lastest News Sections-->
                 <div class="span12 only-popular load-more-news1">
                     <div class="row-fluid">
-					<h3 class="bottom-news">Các lớp hiện có ngày <?php echo $date->toString(DATE_FORMAT_ZEND);?></h3> 
+					<h3 class="bottom-news1">Các lớp hiện có ngày <?php echo $date->toString(DATE_FORMAT_ZEND);?></h3> 
 	                    <div class="form-actions">
 				        	<div class="span12">
 					        	<span>Lớp học:
@@ -46,5 +45,4 @@
                 </div>
             </div>
         </div>
-       </div>
 <?php endif;?>                               

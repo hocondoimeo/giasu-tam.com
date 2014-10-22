@@ -119,9 +119,14 @@ h3.bottom-news { line-height: 20px !important}
 @media screen and (max-width: 979px){
 	.lastest-block img{
 		margin-left: 0px !important;
+		margin-right: 0px !important;
+		max-width: 168px !important;
 	}
 }
 @media screen and (max-width: 767px){
+	.lastest-block img{
+		max-width: 100% !important;
+	}
 	.author-news{
 	    border-radius: 0px 0px 10px 10px;
 	}

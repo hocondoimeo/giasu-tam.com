@@ -39,6 +39,15 @@ class Application_Model_News extends Application_Model_Abstract{
     	$select = $this->getItemsBySelectQuery($cols, array('NewsCategoryId = '.$cateId, 'IsDisabled = 0'));
     	 return $select;
     }
+	
+	public function getOtherNews($newsId, $cateId = null){
+    	$cols = array('NewsId', 'Title', 'ImageUrl', 'CreatedDate');
+    	$select = $this->getItemsBySelectQuery($cols, array('NewsId != '.$newsId, 'NewsCategoryId = '.$cateId, 'IsDisabled = 0'), array('NewsId DESC'));
+    	$select->limit('4');
+		$result = $this->fetchAll($select);
+		if(count($result)) return $result;
+    	else return null; 
+    }
     
     public function getNewsByPrivate(){
     	$cols = array('NewsId', 'Title', 'Summary', 'Content', 'ImageUrl', 'CreatedDate');

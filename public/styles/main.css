@@ -1,3 +1,84 @@
+.content-top-left-title span, .content-top-right-title span{
+	width: 16px;
+	height: 16px;
+	padding-left: 20px;
+	padding-bottom: 5px;
+	vertical-align: top;
+}
+
+.content-top-menu span{
+	width: 8px;
+	height: 8px;
+	padding-left: 10px;
+	vertical-align: bottom;
+}	
+
+.content-top-left-title > .graduation-hat{
+	background: url(../images/icons/icons.png) 0px -166px no-repeat;
+}
+
+.content-top-menu .small-graduation-hat{
+	background: url(../images/icons/icons.png) 0px -303px no-repeat;
+}
+
+.content-top-right-title > .leather-bag{
+	padding-top: 3px;
+	background: url(../images/icons/icons.png) 0px -218px no-repeat;
+}
+
+.content-top-menu .small-leather-bag{
+	background: url(../images/icons/icons.png) 0px -340px no-repeat;
+}
+
+.content-top-left-title > .abc{
+	background: url(../images/icons/icons.png) 0px -114px no-repeat;
+}
+
+.content-top-menu .small-abc{
+	background: url(../images/icons/icons.png) 0px -267px no-repeat;
+}
+
+.content-top-left-title > .laptop{
+	background: url(../images/icons/icons.png) 0px -192px no-repeat;
+}
+
+.content-top-left-title > .globe{
+	background: url(../images/icons/icons.png) 0px -140px no-repeat;
+}
+
+.content-top-menu .small-globe{
+	background: url(../images/icons/icons.png) 0px -285px no-repeat;
+}
+
+.content-top-left-title > .share{
+	background: url(../images/icons/icons.png) 0px -244px no-repeat;
+}
+
+.group-social-link-footer .social-links-facebook{
+	display: inline-block;
+	opacity: .8;
+	border-radius: 5px;
+	width: 40px;
+	height: 40px;
+	background: url(../images/icons/icons.png) 0px -32px no-repeat;
+}
+
+.lets-talk .phone-number-icon{
+	opacity: .8;
+	border-radius: 5px;
+	padding-left: 30px;
+	background: url(../images/icons/icons.png) 0px -84px no-repeat;
+}
+
+.lets-talk .email-icon{
+	opacity: .8;
+	border-radius: 5px;
+	padding-left: 30px;
+	width: 22px;
+	height: 35px;
+	background: url(../images/icons/icons.png) 0px -2px no-repeat;
+}
+
 body{
     /*padding: 10px;*/
 	text-align: center;
@@ -7,17 +88,6 @@ body{
 div#contentall{
 	/* max-width: 1004px; */
 	text-align: center;	
-}
-
-div.top-banner { 
-	overflow:hidden;
-    -moz-border-bottom-left-radius: 6px; 
-    -webkit-border-bottom-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-	-moz-border-bottom-right-radius: 6px; 
-    -webkit-border-bottom-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    display:inline-block;	
 }
 
 div.top-banner  img{
@@ -129,6 +199,10 @@ ul.content-top-menu,  ul.content-top-rmenu, .content-left{
 	background: url(../images/danhmuc.png) repeat-y;
 }
 
+.fb-like{
+	background: url(../images/icons/like.png) no-repeat;
+}
+
 .content-left{
 	padding: 10px 0px 1px 0px;
 }
@@ -187,11 +261,40 @@ ul.content-top-menu,  ul.content-top-rmenu, .content-left{
 	background-color: #3fc2da !important;	
 }
 
+.top-banner .top-logo{
+	background: url(../images/top_banner.jpg) no-repeat scroll 0 0 / 100% 100% transparent !important;
+    background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height:241px;
+	overflow:hidden;
+    -moz-border-bottom-left-radius: 6px; 
+    -webkit-border-bottom-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+	-moz-border-bottom-right-radius: 6px; 
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
 @media screen and (max-width: 767px) {        
 	.scrollToTop, .scrollToTop:hover{
 		background-color: transparent !important;
 		border: 1px solid #ccc;
 	}
+	
+	.top-banner .top-logo{
+		background: url(../images/top_banner_small.jpg) no-repeat scroll 0 0 / 100% 100% transparent !important;
+		background-position: center center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		min-height:154px;
+		width:auto !important;
+	}
+	div.top-banner { display: block; }
 }
 .social-facebook+ .tooltip > .tooltip-inner , .social-googleplus+ .tooltip > .tooltip-inner , .social-twitter+ .tooltip > .tooltip-inner {	
 		background-color: #000;
@@ -247,6 +350,13 @@ ul.content-top-menu,  ul.content-top-rmenu, .content-left{
             box-shadow:  0px 0px 0px 0px #000;
 }
 
+.carousel-indicators{
+	background: rgba(0, 0, 0, 0.45);
+}
+.carousel-indicators li:nth-child(1){
+	margin-left: 0px;
+}
+
 /********************************* FORM **************************************/
 .form-group  input, .form-group  select, .form-group  textarea{
 	margin-bottom: 10px;
@@ -264,3 +374,7 @@ ul.content-top-menu,  ul.content-top-rmenu, .content-left{
 	width: 500px;
 }
 
+/********************************* SHOW/HIDE **************************************/
+html.no-message .menu, html.no-message .content-top-left, html.no-message .content-top-right, html.no-message .news-block,
+html.no-message .news-block .featurette, html.no-message .news-block .featurette-divider-social
+{ display:none; }

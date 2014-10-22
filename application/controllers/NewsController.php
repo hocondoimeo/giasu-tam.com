@@ -1,5 +1,4 @@
 <?php
-
 class NewsController extends Zend_Controller_Action
 {
     protected $_model;
@@ -18,6 +17,9 @@ class NewsController extends Zend_Controller_Action
             $this->_helper->redirector('show-news');
         }
 		$this->view->news = $this->_model->getNewsDetail($id);
+		$cate = $this->_request->getParam('cate',null);
+		$this->view->cate = $cate;
+		$this->view->otherNews = $this->_model->getOtherNews($id, $cate);
     }
     
     public function showNewsAction(){

@@ -1,19 +1,24 @@
-<?php $info = ''; require_once APPLICATION_PATH . '/../library/Function/counter.php';?>
+<?php $info = ''; require_once APPLICATION_PATH . '/../library/Function/counter.php';
+$bg = (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';
+$contentLayout = (isset($this->contentLayout) && $this->contentLayout == 'Left') ? 'left': '';
+?>
 <!--News Sections-->
-	                <div class="span2 news-block <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>">
+	                <div class="span2 news-block <?php echo $bg.' '.$contentLayout; ?>">
 	                		<?php if(count($this->LeftContentMiddle)):?>
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
-						        					<img src="/images/icons/16x16/abc.png" />
+													<span class="abc">
 						        					TIN TỨC
+													</span>
 						        			</div>
 						        			<ul class="content-top-menu">
 						        				<?php foreach ($this->LeftContentMiddle as $item):?>
 						        				<li>
-						        					<img src="/images/icons/8x8/abc.png" />
-						        					 <a href="<?php echo $item['MenuUrl']; ?>">
-						        					 	<?php echo $item['MenuName']; ?>
-						        					 </a>
+													<span class="small-abc">
+														 <a href="<?php echo $item['MenuUrl']; ?>">
+															<?php echo $item['MenuName']; ?>
+														 </a>
+													</span>
 						        				</li>
 						        				<?php endforeach; ?>
 						        			</ul>
@@ -21,8 +26,9 @@
 						     <?php endif; ?>
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
-						        					<img src="/images/icons/16x16/laptop.png" />
+													<span class="laptop">
 						        					HỖ TRỢ
+													</span>
 						        			</div>
 						        			<div class="content-left">
 								             	<form>
@@ -46,18 +52,21 @@
 						        	
 						        	<div id="content-middle-left" class="span2">
 						        			<div class="content-top-left-title">
-						        					<img src="/images/icons/16x16/globe.png" />
+													<span class="globe">
 						        					THỐNG KÊ
+													</span>
 						        			</div>
 						        			<ul class="content-top-menu">
 						        				<?php if(!empty($info)): $info = explode(':', $info);?>
 						        				<li>
-						        					<img src="/images/icons/8x8/globe.png" />
-						        					 <strong>Tổng truy cập: <?php echo $info[0];?></strong>
+													<span class="small-globe">
+														<strong>Tổng truy cập: <?php echo $info[0];?></strong>
+													 </span>
 						        				</li>
 						        				<li>
-						        					<img src="/images/icons/8x8/globe.png" />
-						        					 <strong>Đang truy cập:  <?php echo $info[1];?></strong>
+						        					<span class="small-globe">
+														<strong>Đang truy cập:  <?php echo $info[1];?></strong>
+													</span>
 						        				</li>
 						        				<?php endif; ?>
 						        			</ul>
@@ -65,8 +74,9 @@
 									
 									<div id="content-middle-left" class="span2 lg-share-box">
 						        			<div class="content-top-left-title">
-						        					<img src="/images/icons/16x16/share.png" />
+													<span class="share">
 						        					CHIA SẺ
+													</span>
 						        			</div>
 						        			<div id="social" class="social"></div>
 						        	</div>

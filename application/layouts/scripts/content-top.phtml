@@ -4,16 +4,18 @@
 	        	<?php //if(count($this->LeftContentTop)):?>
 	        	<div id="content-top-left" class="span2 content-top-left <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>"> 
 	        			<div class="content-top-left-title">
-	        					<img src="/images/icons/16x16/graduation-hat.png" />
+								<span class="graduation-hat">
 	        					PHỤ HUYNH 
+								</span>
 	        			</div>
 	        			<ul class="content-top-menu">
 	        				<?php foreach ($this->LeftContentTop as $item):?>
 	        				<li>
-	        					<img src="/images/icons/8x8/graduation-hat.png" />
-	        					 <a href="<?php echo $item['MenuUrl']; ?>">
-	        					 	<?php echo $item['MenuName']; ?>
-	        					 </a>
+								<span class="small-graduation-hat">
+									 <a href="<?php echo $item['MenuUrl']; ?>">
+										<?php echo $item['MenuName']; ?>
+									 </a>
+								 </span>
 	        				</li>
 	        				<?php endforeach; ?>
 	        			</ul>
@@ -91,16 +93,18 @@ Quý Phụ Huynh!
 	        	<?php //if(count($this->RightContentTop)):?>
 	        	<div id="content-top-right" class="span2 content-top-right <?php echo (isset($this->violetBg) && $this->violetBg)?$this->violetBg:'';?>">
 	        		  <div class="content-top-right-title">
-	        					<img src="/images/icons/16x16/leather-bag.png" style="vertical-align: top;"/>
+								<span class="leather-bag">
 	        					GIA SƯ
+								</span>
 	        			</div>
 	        			<ul class="content-top-menu">
 	        				<?php foreach ($this->RightContentTop as $item):?>
 		        				<li>
-		        					<img src="/images/icons/8x8/leather-bag.png" />
-		        					 <a href="<?php echo $item['MenuUrl']; ?>">
-		        					 	<?php echo $item['MenuName']; ?>
-		        					 </a>
+									<span class="small-leather-bag">
+										 <a href="<?php echo $item['MenuUrl']; ?>">
+											<?php echo $item['MenuName']; ?>
+										 </a>
+									 </span>
 		        				</li>
 		        				<?php endforeach; ?>
 		        			</ul>

@@ -17,7 +17,9 @@ $leftContentMiddle = $menusModel->getMenu($menus, $configsModel->getConfigValue(
 $imagesModel = new Application_Model_Images();
 $middleContentTop = $imagesModel->fetchAll($imagesModel->getAllAvaiabled($configsModel->getConfigValue('TopContentMiddle')));
 $contentTop = array('LeftContentTop' => $leftContentTop, 'MiddleContentTop' => $middleContentTop, 'RightContentTop' => $rightContentTop, 'violetBg' => $violetBg);
-$leftContent = array('LeftContentMiddle' => $leftContentMiddle, 'violetBg' => $violetBg);
+
+$contentLayout = $configsModel->getConfigValue('ContentLayout');
+$leftContent = array('LeftContentMiddle' => $leftContentMiddle, 'violetBg' => $violetBg, 'contentLayout' => $contentLayout);
 ?>
 <html>
     <head>
@@ -58,12 +60,21 @@ $leftContent = array('LeftContentMiddle' => $leftContentMiddle, 'violetBg' => $v
 					<div id="home-page">
 						<div class="container">
 				            <div class="row-fluid">
+								<?php if(!empty($contentLayout) && $contentLayout == 'Left'):?>
+				             		<!--Main Sections-->
+					                <div class="span10 content-block left">            
+	            						<?php echo $this->layout()->content; ?>            
+	            	                </div>
+									<!--News Sections-->
+				                	<?php echo $this->renderLayoutBlock('content-left.phtml', $this, $leftContent); ?>
+								<?php else: ?>            
 									<!--News Sections-->
 				                	<?php echo $this->renderLayoutBlock('content-left.phtml', $this, $leftContent); ?>
 				             		<!--Main Sections-->
 					                <div class="span10 content-block">            
 	            						<?php echo $this->layout()->content; ?>            
 	            	                </div>
+								<?php endif; ?>            
 				               </div> 	
 				            </div>
 				        </div>

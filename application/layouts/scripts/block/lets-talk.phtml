@@ -5,7 +5,7 @@
 	   	$letTalkFooter =  @unserialize(base64_decode(!empty($letTalk->StaticContent)?$letTalk->StaticContent:NULL)); //decode first
 	   	//$letTalkFooter = array_map('base64_encode', $letTalkFooter ); // encode the array again
    	}
-    $o =  base64_encode(serialize(Array ( 'name' => '157 Lâm Văn Bền, P.Bình Thuận, Q7, TP.HCM', 'phone' => '0909 361963 - 0919 176446' ,'email' =>' lienhe@giasu-tam.com hoặc info@giasu-tam.com')));
+    //$o =  base64_encode(serialize(Array ( 'name' => '157 Lâm Văn Bền, P.Bình Thuận, Q7, TP.HCM', 'phone' => '0909 361963 - 0919 176446' ,'email' =>' lienhe@giasu-tam.com hoặc info@giasu-tam.com')));
     //echo $o ;die;
 ?>
 <div class="lets-talk">
@@ -14,9 +14,9 @@
             <li><strong><?php echo (!empty($letTalkFooter['name']))?$letTalkFooter['name']:"";?></strong></li>
             <?php if (!empty($letTalkFooter['phone'])) : ?>
                 <li>
-                    <img src="/images/footer/phone-icon.png"/>
-                    <span class="phone-number-with-command"><a href="tel:<?php echo $letTalkFooter['phone']; ?>"><?php echo $letTalkFooter['phone']; ?></a></span>
-                    <span class="phone-number-without-command"><?php echo $letTalkFooter['phone']; ?></span>
+						<span class="phone-number-icon"></span>
+						<span class="phone-number-with-command"><a href="tel:<?php echo $letTalkFooter['phone']; ?>"><?php echo $letTalkFooter['phone']; ?></a></span>
+						<span class="phone-number-without-command"><?php echo $letTalkFooter['phone']; ?></span>
                 </li>
             <?php endif;
                 $mail = array('', '');
@@ -24,12 +24,13 @@
 					$mail = explode('hoặc', $letTalkFooter['email']);
 				}
             ?>
-            <li><img src="/images/footer/email-icon.png"/>
-                <a style="color: white" href="mailto:<?php echo (!empty($mail[0]))?$mail[0]:"";?>">
-                <?php echo !empty($mail[0])?$mail[0]:"";?></a> hoặc 
-                <a style="color: white" href="mailto:<?php echo (!empty($mail[1]))?$mail[1]:"";?>">
-                <?php echo !empty($mail[1])?$mail[1]:"";?></a>                
-                </li>
+            <li>
+				<span class="email-icon"></span>
+					<a style="color: white" href="mailto:<?php echo (!empty($mail[0]))?$mail[0]:"";?>">
+					<?php echo !empty($mail[0])?$mail[0]:"";?></a> hoặc 
+					<a style="color: white" href="mailto:<?php echo (!empty($mail[1]))?$mail[1]:"";?>">
+					<?php echo !empty($mail[1])?$mail[1]:"";?></a>                
+             </li>
          </ul>
 </div>
 <div class="clear-both"></div>
